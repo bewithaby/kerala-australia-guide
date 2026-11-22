@@ -5,7 +5,7 @@
   "siteName": "കേരളം → ഓസ്‌ട്രേലിയ",
   "siteNameEn": "Kerala to Australia Guide",
   "tagline": "നാട്ടിലെ ശീലം, ഇവിടത്തെ രീതി",
-  "taglineEn": "A practical settlement guide for Malayali migrants in Australia",
+  "taglineEn": "The Australia playbook for Malayali families",
   "description": "ബിൻ ഏത് നിറത്തിൽ, പാർക്കിംഗ് സൈൻ എങ്ങനെ വായിക്കണം, Medicare ആർക്ക് കിട്ടും. ഓസ്‌ട്രേലിയയിൽ പുതുതായി എത്തുന്ന മലയാളി കുടുംബങ്ങൾക്ക്. ഒറ്റയിരിപ്പിന് വായിക്കാനുള്ളതല്ല, സേവ് ചെയ്തുവെച്ചാൽ ആവശ്യം വരുമ്പോൾ ഉപയോഗിക്കാം.",
   "descriptionEn": "A practical, plain-Malayalam guide to everyday life in Australia for migrants from Kerala: etiquette, bins, bathrooms, food, Medicare and GP referrals, workplace culture, road and parking rules, beach and UV safety, schools, money and job hunting.",
   "lang": "ml",
@@ -200,6 +200,176 @@
       "descriptionEn": "A printable 22-item checklist for your first month in Australia, in priority order, from Tax File Number and myGov through to buying a winter coat.",
       "keywords": "moving to australia checklist, first month in australia, tax file number apply, new migrant australia to do list",
       "icon": "check"
+    }
+  ],
+  "brand": "Vazhi വഴി",
+  "heroPill": "പുതിയതായി എത്തുന്ന മലയാളി കുടുംബങ്ങൾക്ക് · For newly-arrived Malayali families",
+  "heroStats": [
+    {
+      "icon": "check",
+      "value": "22 steps",
+      "label": "ആദ്യ 30 ദിവസത്തെ ചെക്ക്‌ലിസ്റ്റ്"
+    },
+    {
+      "icon": "wage",
+      "value": "$26.44/hr",
+      "label": "2026 മിനിമം വേതനം"
+    }
+  ],
+  "navHighlights": [
+    "whats-changed-2026",
+    "health-services",
+    "roads-parking-safety",
+    "comparison"
+  ],
+  "quickChips": [
+    {
+      "slug": "health-services",
+      "label": "Medicare ആർക്ക് കിട്ടും"
+    },
+    {
+      "slug": "home-bathroom-bins",
+      "label": "ബിൻ നിറങ്ങൾ"
+    },
+    {
+      "slug": "roads-parking-safety",
+      "label": "പാർക്കിംഗ് സൈൻ"
+    },
+    {
+      "slug": "food-groceries",
+      "label": "കോഫി ഓർഡർ"
+    },
+    {
+      "slug": "first-30-days",
+      "label": "ചെക്ക്‌ലിസ്റ്റ്"
+    }
+  ],
+  "journey": [
+    {
+      "phase": "PHASE 0",
+      "slug": "food-groceries",
+      "title": "പറക്കും മുൻപ് · Before you fly",
+      "body": "Biosecurity: വിത്ത്, മാംസം, മുട്ട, തേൻ, അച്ചാർ — സംശയമുണ്ടെങ്കിൽ പ്രഖ്യാപിക്കുക."
+    },
+    {
+      "phase": "PHASE 1",
+      "slug": "first-30-days",
+      "title": "ആദ്യ ആഴ്ച · Week 1",
+      "body": "TFN, myGov, PayID, GP രജിസ്ട്രേഷൻ, 000 കുടുംബത്തെ പഠിപ്പിക്കുക."
+    },
+    {
+      "phase": "PHASE 2",
+      "slug": "home-bathroom-bins",
+      "title": "ഒന്നാം മാസം · Month 1",
+      "body": "ബിൻ കലണ്ടർ, സ്കൂൾ ചേർക്കൽ, ട്രാൻസ്പോർട്ട് കാർഡ്, condition report."
+    },
+    {
+      "phase": "PHASE 3",
+      "slug": "money-time-jobs",
+      "title": "മൂന്നാം മാസം · Month 3",
+      "body": "ജോലി തേടൽ, ഓസ്‌ട്രേലിയൻ റെസ്യൂമെ, WWCC, നികുതി റിട്ടേൺ."
+    }
+  ],
+  "changes2026": [
+    {
+      "when": "1 OCT 2026 · RBA",
+      "icon": "card",
+      "tint": "var(--indigo-deep)",
+      "tintBg": "var(--indigo-soft)",
+      "title": "കാർഡ് സർചാർജ് നിരോധിച്ചു",
+      "body": "Visa, Mastercard, eftpos കാർഡുകൾക്ക് സർചാർജ് ഇല്ല. Amex-ന് ഇപ്പോഴും ഉണ്ടാകാം."
+    },
+    {
+      "when": "1 JAN 2026 · ACCC",
+      "icon": "cash",
+      "tint": "var(--teal-deep)",
+      "tintBg": "var(--teal-soft)",
+      "title": "പണം സ്വീകരിക്കൽ നിർബന്ധം",
+      "body": "വലിയ പലചരക്ക്-പെട്രോൾ കടകൾ 7am–9pm, $500-ൽ താഴെ പണം സ്വീകരിക്കണം. പിഴ ജൂലൈ 1 മുതൽ."
+    },
+    {
+      "when": "1 JUL 2026 · FAIR WORK",
+      "icon": "wage",
+      "tint": "var(--amber)",
+      "tintBg": "var(--amber-soft)",
+      "title": "മിനിമം വേതനം $26.44/മണിക്കൂർ",
+      "body": "ആഴ്ചയിൽ $1,004.90. Award നിരക്കുകൾ 4.75% വർധിച്ചു."
+    },
+    {
+      "when": "10 DEC 2025 · eSAFETY",
+      "icon": "alert",
+      "tint": "var(--rose)",
+      "tintBg": "var(--rose-soft)",
+      "title": "16 വയസ്സിന് താഴെ സോഷ്യൽ മീഡിയ ഇല്ല",
+      "body": "10 പ്ലാറ്റ്ഫോമുകൾ. രക്ഷിതാവിന്റെ സമ്മതം ഒരു ഇളവല്ല; ഉത്തരവാദിത്തം പ്ലാറ്റ്ഫോമിന്."
+    },
+    {
+      "when": "1 JUL 2026 · ATO",
+      "icon": "bank",
+      "tint": "var(--indigo-deep)",
+      "tintBg": "var(--indigo-soft)",
+      "title": "Payday Super",
+      "body": "തൊഴിലുടമ super ശമ്പളത്തിനൊപ്പം അടയ്ക്കണം. myGov-ൽ ഓരോ payslip-ഉം പരിശോധിക്കാം."
+    },
+    {
+      "when": "1 NOV 2025 · MEDICARE",
+      "icon": "health",
+      "tint": "var(--teal-deep)",
+      "tintBg": "var(--teal-soft)",
+      "title": "Bulk billing എല്ലാവർക്കും",
+      "body": "Incentive ഇപ്പോൾ എല്ലാ Medicare രോഗികൾക്കും. നിരക്ക് ~81%. പക്ഷേ നിർബന്ധമല്ല."
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Flat white",
+      "desc": "<b>Flat white</b> — എസ്പ്രെസ്സോ + steamed milk, നേർത്ത പത. ഏറ്റവും ഓസ്‌ട്രേലിയൻ ഓർഡർ."
+    },
+    {
+      "name": "Latte",
+      "desc": "<b>Latte</b> — Flat white-നേക്കാൾ കൂടുതൽ പാൽ, ഗ്ലാസിൽ വരാം."
+    },
+    {
+      "name": "Cappuccino",
+      "desc": "<b>Cappuccino</b> — കൂടുതൽ പത, മുകളിൽ ചോക്ലേറ്റ് പൊടി."
+    },
+    {
+      "name": "Long black",
+      "desc": "<b>Long black</b> — ചൂടുവെള്ളത്തിന് മുകളിൽ എസ്പ്രെസ്സോ (അമേരിക്കാനോയോട് സമാനം)."
+    },
+    {
+      "name": "Short black",
+      "desc": "<b>Short black</b> — സാധാരണ എസ്പ്രെസ്സോ."
+    },
+    {
+      "name": "Piccolo",
+      "desc": "<b>Piccolo</b> — ചെറിയ ഗ്ലാസിൽ ശക്തമായ latte."
+    },
+    {
+      "name": "Chai latte",
+      "desc": "<b>Chai latte</b> — മസാല ചായയല്ല. മധുരമുള്ള സിറപ്പ് + പാൽ. യഥാർത്ഥ മസാല ചായ ഇന്ത്യൻ റെസ്റ്റോറന്റിലോ വീട്ടിലോ മാത്രം."
+    }
+  ],
+  "emergency": [
+    {
+      "what": "പോലീസ് · ഫയർ · ആംബുലൻസ് (100/108 അല്ല)",
+      "number": "000"
+    },
+    {
+      "what": "healthdirect — 24 മണിക്കൂർ നഴ്സ് ലൈൻ",
+      "number": "1800 022 222"
+    },
+    {
+      "what": "Kids Helpline — 5–25 വയസ്സ്",
+      "number": "1800 55 1800"
+    },
+    {
+      "what": "1800RESPECT — ഗാർഹിക പീഡനം",
+      "number": "1800 737 732"
+    },
+    {
+      "what": "Fair Work — വേതന ചൂഷണ പരാതി",
+      "number": "13 13 94"
     }
   ]
 }

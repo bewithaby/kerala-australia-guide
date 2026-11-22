@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A practical settlement guide for Malayali migrants in Australia — static multi-page site.",
+  "description": "A practical settlement guide for Malayali migrants in Australia. Static multi-page site.",
   "scripts": {
     "build": "node build.mjs",
     "og": "node og.mjs",

@@ -1,5 +1,8 @@
 node_modules/
+node_modules_pw
 dist/
 .DS_Store
 *.log
-.shot.mjs
+
+# scratch test harnesses (screenshots, overflow probes, functional checks)
+.*.mjs

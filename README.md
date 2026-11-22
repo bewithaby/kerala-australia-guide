@@ -2,7 +2,7 @@
 
 A practical settlement guide for Malayali migrants in Australia, published as a
 static multi-page site. Each of the 11 sections is its own page with its own URL,
-so a reader can be sent straight to the one thing they need — which is how this
+so a reader can be sent straight to the one thing they need, which is how this
 actually gets shared, in WhatsApp family groups, one link at a time.
 
 ---
@@ -11,17 +11,40 @@ actually gets shared, in WhatsApp family groups, one link at a time.
 
 **`content/guide.html` is the single source of truth.** It is the complete guide
 as one document. The build splits it into pages. You never edit the generated
-pages — edit the source, run the build.
+pages. Edit the source, run the build.
 
 ```
 content/guide.html      ← all the writing lives here (edit this)
+content/photos/*.jpg    ← section photographs, matched by filename to slug
 content/og/*.png        ← link-preview cards (regenerate only if titles change)
-site.config.json        ← domain, slugs, English titles, dates (edit this)
+site.config.json        ← domain, slugs, titles, dates, home-page blocks (edit this)
+theme.css.mjs           ← the whole design system, one exported string
 build.mjs               ← splits the source into dist/
 og.mjs                  ← renders the link-preview PNGs
 serve.mjs               ← local preview
 dist/                   ← generated. Never edit, never commit.
 ```
+
+### Photographs
+
+`photo(slug)` looks in `content/photos/` for `<slug>.jpg|jpeg|png|webp`. Drop a
+file named after a section's slug and that section's page and home-page card use
+it. Leave it out and the build draws a generated banner instead, so a missing
+photo is never a broken page. `hero.jpg` is the home page; `coffee.jpg` sits
+behind the coffee-ordering panel.
+
+**Check the rights on anything you add here.** These sit on a public page under
+a named author, so a photograph needs to be yours, licensed, or public domain,
+and the licence needs to be recorded somewhere you can find it again.
+
+### Theming
+
+`theme.css.mjs` exports one `THEME_CSS` string and is the only place colour,
+type and spacing are decided. It has two layers, and the second one is
+load-bearing. The inline SVG diagrams inside `content/guide.html` paint
+themselves using the **older** variable names, so the bottom of the file maps
+those onto the current palette. Read the comment at the top of the file before
+you rename or delete a variable, and grep `content/guide.html` first.
 
 ## First run
 
@@ -32,7 +55,7 @@ npm run dev         # builds, then serves at http://localhost:4321
 
 No dependencies are needed for the build. Node 18+ is enough.
 
-## Before going live — do this first
+## Before going live: do this first
 
 Open `site.config.json` and set **`siteUrl`** to your real address:
 
@@ -45,8 +68,8 @@ Every canonical URL, Open Graph tag, sitemap entry and the service worker is
 generated from that one value. The CI workflow refuses to deploy while it still
 says `example.com`.
 
-If you are serving from a sub-path instead of a subdomain — say
-`yourdomain.com/australia-guide/` — set both:
+If you are serving from a sub-path instead of a subdomain (say
+`yourdomain.com/australia-guide/`) set both:
 
 ```json
 "siteUrl": "https://yourdomain.com",
@@ -58,9 +81,26 @@ can report an error, and bump `lastVerified` whenever you re-check the content.
 
 `description` does double duty: it is the paragraph under the home-page heading
 *and* the text WhatsApp, Facebook and Google show. Keep it short enough to
-survive a link preview, which shows roughly two lines. If you ever want the page
-copy to run longer than the share copy, add a `heroText` field — the build uses
-it for the page and leaves `description` for the preview.
+survive a link preview, which shows roughly two lines.
+
+### Home-page content blocks
+
+The home page is assembled from `site.config.json`, not from the guide source.
+These keys drive it, and each one is safe to shorten or drop:
+
+| Key | What it drives |
+|---|---|
+| `brand`, `tagline`, `taglineEn` | masthead and hero heading |
+| `heroPill`, `heroStats` | the badge and the two figures beside the hero |
+| `quickChips` | the one-tap jump chips under the hero |
+| `journey` | the four-phase "where are you now" picker |
+| `changes2026` | the what-changed cards |
+| `coffee` | the coffee-ordering panel, one tab per drink |
+| `emergency` | the numbers in the emergency drawer |
+| `navHighlights` | the promoted links in the sidebar |
+
+`heroStats` and `changes2026` carry figures that go stale. They belong in the
+1 July review along with everything under `volatile`.
 
 ---
 
@@ -112,7 +152,7 @@ Then commit the PNGs. CI never runs this, so it stays fast and browser-free.
 ## Adding or renaming a section
 
 1. Add a `<section id="sN">…</section>` to `content/guide.html`.
-2. Add a matching entry to `sections` in `site.config.json` — `id` must match,
+2. Add a matching entry to `sections` in `site.config.json`. `id` must match,
    `slug` becomes the URL, `titleEn` and `descriptionEn` are what Google and the
    link previews read.
 3. `node build.mjs`, then `npm run og` if you want its preview card.
@@ -120,7 +160,7 @@ Then commit the PNGs. CI never runs this, so it stays fast and browser-free.
 The build warns if the config lists a section the source does not have.
 
 **Changing a `slug` changes a public URL.** If the old one has been shared, add a
-redirect — on Cloudflare Pages a `_redirects` file in `dist`, on Netlify the
+redirect: on Cloudflare Pages a `_redirects` file in `dist`, on Netlify the
 same, on GitHub Pages a small stub page with a `<meta http-equiv="refresh">`.
 
 ---
@@ -129,7 +169,7 @@ same, on GitHub Pages a small stub page with a `<meta http-equiv="refresh">`.
 
 This guide states wage rates, thresholds, fines and visa rules. **Most of those
 change on 1 July each year, and stale figures on a public page are worse than no
-page** — people act on them.
+page**, because people act on them.
 
 - Sections with volatile facts declare them in `site.config.json` under
   `volatile`. The build renders a `⟳` box at the end of the page listing what
@@ -149,7 +189,7 @@ The disclaimer in `site.config.json` appears on every page. Keep it.
 | Pages | `index.html` + one directory per section + `404.html` |
 | Per page | canonical URL, Open Graph + Twitter card, JSON-LD `Article`, bilingual title |
 | Search | `search-index.json`, 84 entries, filtered client-side in the sidebar |
-| Offline | `sw.js` pre-caches every page — useful for a new arrival with no SIM yet |
+| Offline | `sw.js` pre-caches every page, useful for a new arrival with no SIM yet |
 | Also | `sitemap.xml`, `robots.txt`, `manifest.webmanifest`, print stylesheet |
 
 The print stylesheet drops the navigation and expands tables, so the 30-day
@@ -159,7 +199,7 @@ checklist prints cleanly on one or two pages.
 
 ## Licence and credit
 
-Written by Abhilash Emmanuel. Decide on a licence before you publish — if you
+Written by Abhilash Emmanuel. Decide on a licence before you publish. If you
 want it reused and translated, CC BY 4.0 is the usual choice for this kind of
 community resource; if you would rather it not be copied wholesale, say
 "all rights reserved" in the footer. Either way, state it.
