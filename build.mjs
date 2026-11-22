@@ -375,7 +375,7 @@ const homeBody = `<header class="hero wrap">
   <div class="route"><span class="dot" style="background:var(--lat)"></span><span>കേരളം</span>
   <span style="color:var(--rule)">———</span><span class="dot" style="background:var(--euc)"></span><span>ഓസ്‌ട്രേലിയ</span></div>
   <h1>${CFG.tagline}</h1>
-  <p class="sub">${CFG.description} വിനോദസഞ്ചാര വിവരങ്ങളല്ല — ആദ്യത്തെ ആറു മാസത്തിൽ മിക്കവരും ചെയ്യുന്ന, വിലകൊടുക്കേണ്ടിവരുന്ന പിഴവുകളാണ് വിഷയം.</p>
+  <p class="sub">${CFG.heroText || CFG.description}</p>
   <div class="meta"><span>അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</span><span>${sections.length} വിഭാഗം · സൗജന്യം · പങ്കുവെക്കാം</span></div>
 </header>
 <div class="wrap">
