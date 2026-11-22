@@ -273,6 +273,275 @@ figure{margin-left:0;margin-right:0;border-radius:14px}
   wrapBody(inner) { return `<div class="ed"><div class="ed-col">${inner}</div></div>`; },
 };
 
+/* ========== B · field manual ========== */
+VARIANTS.b = {
+  name: 'Field manual',
+  nameMl: 'ഫീൽഡ് മാനുവൽ',
+  note: 'സാന്ദ്രവും പ്രായോഗികവും. നമ്പറിട്ട നിയമങ്ങൾ, ഉറച്ച പട്ടികകൾ, ഇടതുവശത്ത് എപ്പോഴും കാണുന്ന സൂചിക. അലങ്കാരമില്ല, വേഗത്തിൽ കണ്ടെത്താം.',
+  font: 'https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500;600;700&family=Manjari:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap',
+  css: `
+:root{
+  --paper:#f7f7f5;--surface:#fff;--surface-2:#ecedea;--ink:#111312;--ink-soft:#4a4f4c;--ink-faint:#7d837f;
+  --rule:#d4d7d3;--euc:#145c3f;--euc-soft:#e6efea;--lat:#9c3b22;--lat-soft:#f8e9e4;
+  --f-display:'Anek Malayalam',system-ui,sans-serif;
+  --f-body:'Manjari','Noto Sans Malayalam',system-ui,sans-serif;
+  --f-ui:'IBM Plex Sans',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0e100f;--surface:#161918;--surface-2:#1f2321;--ink:#e9ece9;--ink-soft:#a3aaa6;--ink-faint:#787f7b;
+  --rule:#2a2f2c;--euc:#5fbf92;--euc-soft:#132520;--lat:#e0836a;--lat-soft:#2a1813;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0e100f;--surface:#161918;--surface-2:#1f2321;--ink:#e9ece9;--ink-soft:#a3aaa6;--ink-faint:#787f7b;
+  --rule:#2a2f2c;--euc:#5fbf92;--euc-soft:#132520;--lat:#e0836a;--lat-soft:#2a1813;color-scheme:dark}
+body{font-size:17.5px;line-height:1.7}
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .mark{font-family:var(--f-ui);font-weight:700;letter-spacing:-.01em}
+.shell{display:grid;grid-template-columns:minmax(0,1fr);max-width:1320px;margin:0 auto;gap:0}
+@media(min-width:1000px){.shell{grid-template-columns:272px minmax(0,1fr)}}
+.rail{display:none;font-family:var(--f-ui)}
+@media(min-width:1000px){.rail{display:block;position:sticky;top:46px;align-self:start;max-height:calc(100vh - 60px);
+  overflow-y:auto;border-right:1px solid var(--rule);padding:26px 22px 40px}}
+.rail .lbl{font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
+.rail ol{list-style:none;margin:0 0 22px;padding:0;counter-reset:r}
+.rail li{counter-increment:r;border-bottom:1px solid var(--rule)}
+.rail li:first-child{border-top:1px solid var(--rule)}
+.rail a{display:grid;grid-template-columns:30px 1fr;gap:8px;padding:9px 4px;text-decoration:none;color:var(--ink-soft);font-size:13.5px;line-height:1.35}
+.rail a::before{content:counter(r,decimal-leading-zero);font-family:var(--f-mono);font-size:11px;color:var(--ink-faint);padding-top:2px}
+.rail a:hover{color:var(--ink);background:var(--surface-2)}
+.rail a.on{color:var(--euc);font-weight:600}
+.rail a.on::before{color:var(--euc)}
+.rail a em{grid-column:2;display:block;font-style:normal;font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em;line-height:1.3;margin-top:2px}
+main{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-block:0 60px}
+@media(min-width:1000px){main{padding-left:38px;padding-right:38px}}
+.wrap{max-width:72ch}
+.bhead{border-bottom:2px solid var(--ink);padding:30px 0 18px;margin-bottom:8px}
+.bhead .no{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--lat)}
+.bhead h1{font-family:var(--f-display);font-size:clamp(26px,4.6vw,40px);line-height:1.18;margin-top:9px}
+.bhead .en{display:block;font-family:var(--f-ui);font-size:13px;font-weight:500;color:var(--ink-faint);margin-top:7px;letter-spacing:.03em}
+.bhead p{margin-top:13px;color:var(--ink-soft);font-size:17px;max-width:70ch}
+.sechead{display:none}.wrap>p.lede:first-of-type{display:none}
+h3{font-family:var(--f-display);font-size:21px;margin-top:40px;margin-bottom:10px;padding-left:0;counter-increment:h3c}
+h3::before{content:counter(h3c) ". ";font-family:var(--f-mono);font-size:15px;color:var(--lat);font-weight:600}
+main{counter-reset:h3c}
+h4{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);margin-top:26px}
+.call{border-radius:4px;border-left-width:4px;border-left-style:solid}
+.call.stop{border-left-color:var(--danger)}.call.warn{border-left-color:var(--signal)}
+.call.law{border-left-color:var(--euc)}.call.money{border-left-color:var(--lat)}.call.good{border-left-color:var(--ok)}
+.tscroll{border-radius:4px}
+thead th{font-family:var(--f-mono);font-size:10.5px}
+figure{border-radius:4px;box-shadow:none}
+.onpage{border-radius:4px;font-family:var(--f-ui)}
+.onpage a{border-radius:3px;background:var(--surface-2);color:var(--ink)}
+.pager a{border-radius:4px}
+/* home */
+.bhome{padding:34px 0 10px}
+.bhome h1{font-family:var(--f-display);font-size:clamp(30px,6vw,50px);line-height:1.12}
+.bhome p{margin-top:16px;color:var(--ink-soft);max-width:62ch;font-size:18px}
+.btab{width:100%;border-collapse:collapse;margin-top:32px;font-size:16.5px}
+.btab th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);
+  text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink)}
+.btab td{padding:14px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.btab tr:hover td{background:var(--surface-2)}
+.btab .n{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-faint);width:1%;white-space:nowrap}
+.btab a{font-family:var(--f-display);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none}
+.btab a:hover{color:var(--euc);text-decoration:underline}
+.btab em{display:block;font-family:var(--f-ui);font-style:normal;font-size:11.5px;color:var(--ink-faint);margin-top:2px}
+.btab .d{color:var(--ink-soft);font-size:15.5px;line-height:1.55}
+@media(max-width:700px){.btab .d{display:none}}
+`,
+  rail(active) {
+    return `<nav class="rail"><div class="lbl">Contents</div><ol>${sections.map((s) =>
+      `<li><a href="${BP}/preview/b/${s.slug}/"${s.slug === active ? ' class="on"' : ''}>${s.title}<em>${esc(s.titleEn)}</em></a></li>`
+    ).join('')}</ol></nav>`;
+  },
+  cover(s, n) {
+    return `<div class="bhead"><div class="no">SECTION ${String(n).padStart(2, '0')}</div>
+      <h1>${s.title}<span class="en">${esc(s.titleEn)}</span></h1><p>${s.blurb}</p></div>`;
+  },
+  home() {
+    const rows = sections.map((s, i) => `<tr>
+      <td class="n">${String(i + 1).padStart(2, '0')}</td>
+      <td><a href="${BP}/preview/b/${s.slug}/">${s.title}<em>${esc(s.titleEn)}</em></a></td>
+      <td class="d">${s.blurb}</td></tr>`).join('');
+    return `<div class="bhome"><h1>${CFG.tagline}</h1><p>${CFG.description}</p>
+      <table class="btab"><thead><tr><th></th><th>വിഭാഗം</th><th>എന്താണ് ഉള്ളത്</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  },
+  wrapBody(inner) { return `<div class="wrap">${inner}</div>`; },
+};
+
+/* ========== C · task first ========== */
+VARIANTS.c = {
+  name: 'Task first',
+  nameMl: 'ആവശ്യം ആദ്യം',
+  note: 'ഒരു ആപ്പ് പോലെ. വലിയ തിരയൽ പെട്ടി, ടാപ്പ് ചെയ്യാവുന്ന ടൈലുകൾ, ഫോണിൽ താഴെ സ്ഥിരം മെനു, വായിച്ച വിഭാഗങ്ങൾ അടയാളപ്പെടുത്തും.',
+  font: 'https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500;600;700&family=Manjari:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap',
+  css: `
+:root{
+  --paper:#eef1f4;--surface:#fff;--surface-2:#e3e8ed;--ink:#0f1720;--ink-soft:#4a5765;--ink-faint:#7d8a98;
+  --rule:#d6dde4;--euc:#0e6b4f;--euc-soft:#dff0e8;--lat:#b0452c;--lat-soft:#fae6e0;
+  --radius:18px;
+  --f-display:'Anek Malayalam',system-ui,sans-serif;
+  --f-body:'Manjari','Noto Sans Malayalam',system-ui,sans-serif;
+  --f-ui:'IBM Plex Sans',system-ui,sans-serif;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0c1116;--surface:#151c23;--surface-2:#1d262f;--ink:#e8eef4;--ink-soft:#9fb0c0;--ink-faint:#748595;
+  --rule:#26323c;--euc:#4fc496;--euc-soft:#102a21;--lat:#e8927a;--lat-soft:#2a1711;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0c1116;--surface:#151c23;--surface-2:#1d262f;--ink:#e8eef4;--ink-soft:#9fb0c0;--ink-faint:#748595;
+  --rule:#26323c;--euc:#4fc496;--euc-soft:#102a21;--lat:#e8927a;--lat-soft:#2a1711;color-scheme:dark}
+body{font-size:18px;line-height:1.78;padding-bottom:72px}
+@media(min-width:900px){body{padding-bottom:0}}
+.topbar{background:color-mix(in srgb,var(--paper) 86%,transparent);border-bottom:1px solid var(--rule)}
+.shell{max-width:980px;margin:0 auto;display:block}
+main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px}
+.wrap{max-width:66ch}
+/* search hero */
+.chero{padding:36px 0 10px}
+.chero h1{font-family:var(--f-display);font-size:clamp(27px,5.6vw,42px);line-height:1.16}
+.chero p{margin-top:12px;color:var(--ink-soft);font-size:17.5px;max-width:52ch}
+.cfind{margin-top:24px;position:relative}
+.cfind input{width:100%;font-family:var(--f-body);font-size:18px;padding:17px 20px 17px 52px;border-radius:99px;
+  border:1px solid var(--rule);background:var(--surface);color:var(--ink);box-shadow:0 2px 14px -8px rgba(0,0,0,.3)}
+.cfind input:focus{outline:2px solid var(--euc);outline-offset:2px}
+.cfind svg{position:absolute;left:19px;top:50%;transform:translateY(-50%);width:20px;height:20px;fill:none;stroke:var(--ink-faint);stroke-width:2}
+.cres{margin-top:10px;background:var(--surface);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.cres a{display:block;padding:13px 18px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);font-size:16px;line-height:1.5}
+.cres a:last-child{border-bottom:none}.cres a:hover{background:var(--euc-soft)}
+.cres b{display:block;font-family:var(--f-ui);font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--euc);margin-bottom:3px}
+.cres .none{padding:16px 18px;color:var(--ink-faint);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);align-self:center;margin-right:2px}
+.chips a{font-size:15px;padding:7px 15px;border-radius:99px;background:var(--surface);border:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.chips a:hover{border-color:var(--euc);color:var(--euc)}
+/* tiles */
+.tiles{display:grid;gap:13px;margin-top:34px;grid-template-columns:1fr}
+@media(min-width:600px){.tiles{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.tiles{grid-template-columns:1fr 1fr 1fr}}
+.tile{display:flex;flex-direction:column;gap:9px;padding:19px 20px 21px;border-radius:var(--radius);background:var(--surface);
+  border:1px solid var(--rule);text-decoration:none;color:var(--ink);position:relative;transition:transform .15s,border-color .15s}
+.tile:hover{transform:translateY(-2px);border-color:var(--euc)}
+.tile .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--euc-soft)}
+.tile .ic svg{width:22px;height:22px;fill:none;stroke:var(--euc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tile strong{font-family:var(--f-display);font-size:18.5px;font-weight:600;line-height:1.3}
+.tile em{font-family:var(--f-ui);font-style:normal;font-size:11.5px;color:var(--ink-faint);letter-spacing:.02em}
+.tile p{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+.tile .done{position:absolute;top:16px;right:16px;width:19px;height:19px;border-radius:50%;background:var(--euc);display:none}
+.tile.read .done{display:block}
+.tile.read{background:var(--euc-soft)}
+.tile .done::after{content:"";position:absolute;left:6px;top:4px;width:5px;height:9px;border-right:2px solid var(--surface);border-bottom:2px solid var(--surface);transform:rotate(42deg)}
+/* section page */
+.chead{padding:28px 0 6px}
+.chead .bk{font-family:var(--f-ui);font-size:13px;color:var(--euc);text-decoration:none}
+.chead h1{font-family:var(--f-display);font-size:clamp(25px,5vw,37px);line-height:1.18;margin-top:14px}
+.chead .en{display:block;font-family:var(--f-ui);font-size:12.5px;color:var(--ink-faint);margin-top:6px}
+.chead p{margin-top:12px;color:var(--ink-soft);font-size:17px}
+.sechead{display:none}.wrap>p.lede:first-of-type{display:none}
+h3{font-size:20.5px;margin-top:40px}
+.call,figure,.tscroll{border-radius:var(--radius)}
+.onpage{border-radius:var(--radius)}
+.onpage a{border-radius:99px}
+.pager a{border-radius:var(--radius)}
+/* bottom bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;background:color-mix(in srgb,var(--surface) 94%,transparent);
+  backdrop-filter:blur(14px);border-top:1px solid var(--rule);
+  padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+@media(min-width:900px){.tabbar{display:none}}
+.tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px 8px;text-decoration:none;
+  color:var(--ink-faint);font-family:var(--f-ui);font-size:10.5px;font-weight:500}
+.tabbar a svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tabbar a.on{color:var(--euc)}
+`,
+  cover(s, n) {
+    return `<div class="chead"><a class="bk" href="${BP}/preview/c/">← എല്ലാ വിഭാഗങ്ങളും</a>
+      <h1>${s.title}<span class="en">${String(n).padStart(2, '0')} · ${esc(s.titleEn)}</span></h1><p>${s.blurb}</p></div>`;
+  },
+  home() {
+    const ic = (n) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS_C[n] || ICONS_C.table}"/></svg>`;
+    const tiles = sections.map((s, i) => `<a class="tile" data-slug="${s.slug}" href="${BP}/preview/c/${s.slug}/">
+      <span class="done"></span><span class="ic">${ic(s.icon)}</span>
+      <strong>${s.title}</strong><em>${esc(s.titleEn)}</em><p>${s.blurb}</p></a>`).join('');
+    const chips = [
+      ['roads-parking-safety', 'പാർക്കിംഗ്'], ['home-bathroom-bins', 'ബിൻ'],
+      ['health-services', 'Medicare'], ['children-school', 'സ്കൂൾ'], ['first-30-days', 'ചെക്ക്‌ലിസ്റ്റ്'],
+    ].map(([sl, l]) => `<a href="${BP}/preview/c/${sl}/">${l}</a>`).join('');
+    return `<div class="chero">
+      <h1>എന്താണ് അറിയേണ്ടത്?</h1>
+      <p>${CFG.description}</p>
+      <div class="cfind"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+        <input type="search" id="q" placeholder="ബിൻ, പാർക്കിംഗ്, Medicare…" autocomplete="off" aria-label="Search"></div>
+      <div class="cres" id="results" hidden></div>
+      <div class="chips"><span>പെട്ടെന്ന്</span>${chips}</div>
+    </div><div class="tiles">${tiles}</div>`;
+  },
+
+  js: `
+(function(){
+  var BASE=${JSON.stringify(BP)};
+  /* remember which sections have been opened */
+  try{
+    var read=JSON.parse(localStorage.getItem('kag-read')||'[]');
+    document.querySelectorAll('.tile[data-slug]').forEach(function(t){
+      if(read.indexOf(t.dataset.slug)>-1) t.classList.add('read');
+    });
+    var here=location.pathname.replace(/\\/$/,'').split('/').pop();
+    if(here && here!=='c' && read.indexOf(here)<0){ read.push(here);
+      localStorage.setItem('kag-read',JSON.stringify(read)); }
+  }catch(e){}
+  /* search */
+  var q=document.getElementById('q'), box=document.getElementById('results');
+  if(!q||!box) return;
+  var idx=null,t=null;
+  function load(){ if(idx) return Promise.resolve(idx);
+    return fetch(BASE+'/search-index.json').then(function(r){return r.json()})
+      .then(function(j){ idx=j.map(function(r){ return {s:r.s,h:r.h,t:r.t,u:r.u.replace(BASE+'/',BASE+'/preview/c/')}; }); return idx; }); }
+  function run(){
+    var v=q.value.trim().toLowerCase();
+    if(v.length<2){box.hidden=true;box.innerHTML='';return}
+    load().then(function(rows){
+      var hits=[];
+      for(var i=0;i<rows.length&&hits.length<12;i++){
+        var r=rows[i];
+        if(r.h.toLowerCase().indexOf(v)>-1||r.t.toLowerCase().indexOf(v)>-1) hits.push(r);
+      }
+      box.innerHTML = hits.length
+        ? hits.map(function(r){return '<a href="'+r.u+'"><b>'+r.s+'</b>'+r.h+'</a>'}).join('')
+        : '<p class="none">ഒന്നും കിട്ടിയില്ല · No matches</p>';
+      box.hidden=false;
+    }).catch(function(){box.hidden=true});
+  }
+  q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(run,110)});
+  q.addEventListener('focus',load);
+})();
+`,
+  wrapBody(inner) { return `<div class="wrap">${inner}</div>`; },
+  tabbar(active) {
+    const i = {
+      home: 'M4 10.5 12 4l8 6.5M6 9.8V20h12V9.8',
+      search: 'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM16.5 16.5l4 4',
+      check: 'M20.5 11.2V18a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9M8.5 12.2l3 3 8-8.5',
+    };
+    const t = (href, k, label, on) => `<a href="${href}"${on ? ' class="on"' : ''}><svg viewBox="0 0 24 24"><path d="${i[k]}"/></svg>${label}</a>`;
+    return `<nav class="tabbar">${t(`${BP}/preview/c/`, 'home', 'വിഭാഗങ്ങൾ', active === 'home')}
+      ${t(`${BP}/preview/c/#q`, 'search', 'തിരയുക', false)}
+      ${t(`${BP}/preview/c/first-30-days/`, 'check', 'ചെക്ക്‌ലിസ്റ്റ്', active === 'first-30-days')}</nav>`;
+  },
+};
+
+const ICONS_C = {
+  calendar: 'M7 3v3M17 3v3M3.5 9h17M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 19 20.5H5A1.5 1.5 0 0 1 3.5 19V7A1.5 1.5 0 0 1 5 5.5Z',
+  speech: 'M20.5 11.5c0 3.9-3.8 7-8.5 7-1 0-2-.15-2.9-.42L4 20l1.3-3.6C4.2 15.1 3.5 13.4 3.5 11.5c0-3.9 3.8-7 8.5-7s8.5 3.1 8.5 7Z',
+  home: 'M4 10.5 12 4l8 6.5M6 9.8V20h12V9.8M10 20v-5.5h4V20',
+  food: 'M7 3v8a2.5 2.5 0 0 0 5 0V3M9.5 11v10M17 3c1.7 1.3 2.5 3 2.5 5.5S18.7 13 17 14v7',
+  health: 'M12 20.5S4 15.6 4 10.2A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 8 2.2c0 5.4-8 10.3-8 10.3Z',
+  work: 'M3.5 8.5h17v11h-17zM9 8.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v2.5M3.5 13h17',
+  road: 'M8 4 5 20M16 4l3 16M12 4.5v3M12 11v3M12 17.5v3',
+  school: 'M12 4 3 8.5l9 4.5 9-4.5L12 4ZM6.5 11v5.5c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5V11',
+  money: 'M3.5 7.5h17v9h-17zM12 9.8a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4',
+  table: 'M3.5 6h17v12h-17zM3.5 10.5h17M3.5 14.5h17M9.5 6v12',
+  check: 'M20.5 11.2V18a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9M8.5 12.2l3 3 8-8.5',
+};
+
 /* ---------- shell ---------- */
 function shell(v, id, { slug, title, titleEn, desc, body }) {
   return `<!doctype html>
@@ -296,7 +565,8 @@ function shell(v, id, { slug, title, titleEn, desc, body }) {
   <span class="spacer"></span>
   <button class="iconbtn themebtn" id="themebtn" aria-label="Light or dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16Z" class="half"/></svg></button>
 </div>
-<div class="shell"><main id="main">${body}</main></div>
+<div class="shell">${v.rail ? v.rail(slug) : ''}<main id="main">${body}</main></div>
+${v.tabbar ? v.tabbar(slug || 'home') : ''}
 <script src="${BP}/preview/${id}/app.js" defer></script>
 </body></html>`;
 }
@@ -315,7 +585,7 @@ function buildVariant(id) {
   const dir = path.join(DIST, 'preview', id);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'theme.css'), baseCss.trim() + '\n' + SHARED_CSS + '\n' + pvCss + '\n' + v.css);
-  fs.writeFileSync(path.join(dir, 'app.js'), baseJs.trim());
+  fs.writeFileSync(path.join(dir, 'app.js'), baseJs.trim() + '\n' + (v.js || ''));
 
   sections.forEach((s, i) => {
     const p = prepare(sectionHtml[s.id], i + 1, s);

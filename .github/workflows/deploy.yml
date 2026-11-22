@@ -29,6 +29,11 @@ jobs:
       - name: Build
         run: node build.mjs
 
+      # Design variants at /preview/. Every preview page is noindex and is not
+      # listed in sitemap.xml. Delete this step once a design is chosen.
+      - name: Build design previews
+        run: node preview.mjs
+
       - name: Fail if siteUrl is still the placeholder
         run: |
           if grep -q 'example\.com' site.config.json; then
