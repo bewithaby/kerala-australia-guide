@@ -1,0 +1,205 @@
+{
+  "_README": "Edit siteUrl to your real address, then run `npm run build`. Every canonical URL, OG tag and sitemap entry is generated from it.",
+  "siteUrl": "https://bewithaby.github.io",
+  "basePath": "/kerala-australia-guide",
+  "siteName": "കേരളം → ഓസ്‌ട്രേലിയ",
+  "siteNameEn": "Kerala to Australia Guide",
+  "tagline": "നാട്ടിലെ ശീലം, ഇവിടത്തെ രീതി",
+  "taglineEn": "A practical settlement guide for Malayali migrants in Australia",
+  "description": "മലയാളി കുടിയേറ്റക്കാർക്കും കുടുംബങ്ങൾക്കും വേണ്ടി ഓസ്‌ട്രേലിയൻ ജീവിതത്തിന്റെ പ്രായോഗിക ഗൈഡ്.",
+  "descriptionEn": "A practical, plain-Malayalam guide to everyday life in Australia for migrants from Kerala: etiquette, bins, bathrooms, food, Medicare and GP referrals, workplace culture, road and parking rules, beach and UV safety, schools, money and job hunting.",
+  "lang": "ml",
+  "locale": "ml_IN",
+  "author": "Abhilash Emmanuel",
+  "authorUrl": "https://www.linkedin.com/in/abhilash-emmanuel/",
+  "feedbackEmail": "",
+  "feedbackUrl": "",
+  "lastVerified": "2026-10",
+  "analytics": "",
+  "disclaimer": "ഇത് പൊതുവായ വിവരമാണ്, വ്യക്തിഗത നിയമ, കുടിയേറ്റ, ആരോഗ്യ അല്ലെങ്കിൽ സാമ്പത്തിക ഉപദേശമല്ല. നിയമങ്ങളും നിരക്കുകളും സംസ്ഥാനം, കൗൺസിൽ, വിസ തരം അനുസരിച്ച് വ്യത്യാസപ്പെടും, കൂടാതെ എല്ലാ വർഷവും മാറും. തീരുമാനമെടുക്കുന്നതിന് മുൻപ് ഔദ്യോഗിക ഉറവിടങ്ങൾ പരിശോധിക്കുക.",
+  "disclaimerEn": "General information only, not personal legal, migration, health or financial advice. Rules and figures vary by state, council and visa type, and change every year. Verify against official sources before acting.",
+  "officialSources": [
+    {
+      "label": "Services Australia",
+      "url": "https://www.servicesaustralia.gov.au"
+    },
+    {
+      "label": "Fair Work Ombudsman",
+      "url": "https://www.fairwork.gov.au"
+    },
+    {
+      "label": "Australian Taxation Office",
+      "url": "https://www.ato.gov.au"
+    },
+    {
+      "label": "healthdirect",
+      "url": "https://www.healthdirect.gov.au"
+    },
+    {
+      "label": "eSafety Commissioner",
+      "url": "https://www.esafety.gov.au"
+    },
+    {
+      "label": "privatehealth.gov.au",
+      "url": "https://www.privatehealth.gov.au"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s0",
+      "slug": "whats-changed-2026",
+      "titleEn": "What changed in 2026",
+      "title": "2026-ൽ മാറിയ നിയമങ്ങൾ",
+      "blurb": "കാർഡ് സർചാർജ്, പണം സ്വീകരിക്കൽ, മിനിമം വേതനം, സോഷ്യൽ മീഡിയ പ്രായപരിധി — ഈ വർഷം പ്രാബല്യത്തിൽ വന്നവ.",
+      "descriptionEn": "The Australian rule changes that took effect through 2026: the card surcharge ban, mandatory cash acceptance, the new minimum wage and payday super, and the under-16 social media ban.",
+      "keywords": "australia 2026 law changes, card surcharge ban, cash acceptance rules, minimum wage 2026, under 16 social media ban",
+      "icon": "calendar",
+      "volatile": [
+        {
+          "what": "മിനിമം വേതനം, award നിരക്കുകൾ",
+          "source": "https://www.fairwork.gov.au/pay-and-wages/minimum-wages"
+        }
+      ]
+    },
+    {
+      "id": "s1",
+      "slug": "etiquette",
+      "titleEn": "Etiquette & everyday communication",
+      "title": "ദൈനംദിന പെരുമാറ്റവും ആശയവിനിമയവും",
+      "blurb": "പേര് വിളിക്കുന്ന രീതി, അഭിവാദ്യങ്ങളും അവയ്ക്കുള്ള മറുപടിയും, തുറിച്ചുനോട്ടം, ക്യൂ, \"Keep left\".",
+      "descriptionEn": "How Australians address each other, the greetings you will hear and exactly how to reply to each, personal space, staring, queueing and the stand-left-walk-right rule.",
+      "keywords": "how ya going reply, australian greetings, no worries meaning, stand left walk right escalator, australian etiquette for indians",
+      "icon": "speech"
+    },
+    {
+      "id": "s2",
+      "slug": "home-bathroom-bins",
+      "titleEn": "Home, bathroom & rubbish bins",
+      "title": "വീട്, ബാത്ത്റൂം, മാലിന്യം",
+      "blurb": "ഡ്രൈ ബാത്ത്റൂം, ഫ്ലഷ് ചെയ്യാവുന്നത്, മഞ്ഞൾ കറ, ബിൻ നിറങ്ങൾ, FOGO, ബോണ്ട് നഷ്ടപ്പെടാതിരിക്കാൻ.",
+      "descriptionEn": "Why Australian bathrooms have no floor drain outside the shower, what you must never flush, keeping your rental bond, and what goes in the red, yellow, green and purple bins including FOGO.",
+      "keywords": "australia bin colours, FOGO bin what goes in, bidet spray australia rental, rental bond cleaning, what not to flush australia",
+      "icon": "home",
+      "volatile": [
+        {
+          "what": "ബിൻ തരങ്ങളും FOGO-യും കൗൺസിൽ അനുസരിച്ച് മാറും",
+          "source": "https://www.directory.gov.au/local-government"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "slug": "food-groceries",
+      "titleEn": "Food, groceries & eating out",
+      "title": "ഭക്ഷണവും പലചരക്കും",
+      "blurb": "സൂപ്പർമാർക്കറ്റിൽ പണം ലാഭിക്കൽ, കോഫി ഓർഡർ ഭാഷ, ടിപ്പ്, കൈകൊണ്ട് കഴിക്കൽ, അലർജികൾ, biosecurity.",
+      "descriptionEn": "Shopping at Coles, Woolworths and Aldi, the Australian coffee vocabulary, whether to tip, eating with your hands, taking food allergies seriously, and what you may not bring in from India.",
+      "keywords": "flat white vs latte, tipping in australia, eating with hands australia, australia biosecurity food from india, aldi shopping tips",
+      "icon": "food"
+    },
+    {
+      "id": "s4",
+      "slug": "health-services",
+      "titleEn": "Healthcare, banking & services",
+      "title": "സേവനങ്ങളും ആരോഗ്യവും",
+      "blurb": "GP റഫറൽ, Medicare ആർക്ക് കിട്ടും, ambulance cover, LHC loading, PayID, TFN, tradies.",
+      "descriptionEn": "Why you must see a GP before a specialist, who is and is not eligible for Medicare on an Indian passport, why ambulance cover matters, the Lifetime Health Cover trap for new migrants, PayID, TFN and trade licensing.",
+      "keywords": "medicare 482 visa eligibility, OVHC OSHC india, GP referral specialist australia, ambulance cover nsw cost, lifetime health cover loading migrant",
+      "icon": "health",
+      "volatile": [
+        {
+          "what": "Medicare Levy Surcharge പരിധി, bulk billing നിരക്ക്",
+          "source": "https://www.servicesaustralia.gov.au/medicare"
+        },
+        {
+          "what": "Private health waiting periods, LHC loading",
+          "source": "https://www.privatehealth.gov.au"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "slug": "workplace",
+      "titleEn": "Workplace culture",
+      "title": "തൊഴിലിട സംസ്കാരം",
+      "blurb": "ബോസിനോട് വിയോജിക്കൽ, \"I don't know\", right to disconnect, super, മിനിമം വേതനം, Friday drinks.",
+      "descriptionEn": "Disagreeing with your manager without giving offence, saying I don't know, the right to disconnect, superannuation and payday super, award wages, and how to join Friday drinks without alcohol.",
+      "keywords": "australian workplace culture indian migrant, right to disconnect australia, payday super 2026, award wage check, superannuation 12 percent",
+      "icon": "work",
+      "volatile": [
+        {
+          "what": "National Minimum Wage, award rates, super rate",
+          "source": "https://www.fairwork.gov.au/pay-and-wages"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "slug": "roads-parking-safety",
+      "titleEn": "Roads, parking, law & safety",
+      "title": "നിയമം, റോഡ്, സുരക്ഷ",
+      "blurb": "സ്പീഡ്, ഫോൺ ക്യാമറ, കാർ സീറ്റ്, പാർക്കിംഗ് സൈൻ വായിക്കൽ, റിപ്പ് കറന്റ്, UV, പാമ്പുകടി.",
+      "descriptionEn": "Speed and phone detection cameras, child car seat law, how to read an Australian parking sign, where you may not stop even without a sign, rip currents and beach flags, UV protection and snake bite first aid.",
+      "keywords": "how to read australian parking sign, 2P parking meaning, no parking vs no stopping, rip current safety, australian child car seat law, UV index sunscreen",
+      "icon": "road",
+      "volatile": [
+        {
+          "what": "പിഴത്തുകകളും ഡീമെറിറ്റ് പോയിന്റുകളും",
+          "source": "https://www.nsw.gov.au/driving-boating-and-transport"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "slug": "children-school",
+      "titleEn": "Children, school & family",
+      "title": "കുട്ടികളും കുടുംബവും",
+      "blurb": "സ്കൂൾ രീതി, ശാരീരിക ശിക്ഷ, ലഞ്ച് ബോക്സ്, No Hat No Play, playdates, സോഷ്യൽ മീഡിയ പ്രായപരിധി.",
+      "descriptionEn": "How Australian schools teach, why smacking at home can trigger a child protection report, cold lunch boxes and nut-aware policies, No Hat No Play, playdates and junior sport, and the under-16 social media ban.",
+      "keywords": "australian school vs indian school, mandatory reporting smacking australia, school lunch box ideas indian, no hat no play, under 16 social media ban australia",
+      "icon": "school",
+      "volatile": [
+        {
+          "what": "സോഷ്യൽ മീഡിയ പ്ലാറ്റ്ഫോം പട്ടിക വികസിപ്പിക്കാം",
+          "source": "https://www.esafety.gov.au/social-media-age-restrictions"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "slug": "money-time-jobs",
+      "titleEn": "Time, money, transport & jobs",
+      "title": "സമയം, പണം, ഗതാഗതം, ജോലി",
+      "blurb": "ഋതുക്കൾ, DST, സാമ്പത്തിക വർഷം, ടാപ്പ് ഓഫ്, CTP vs ഇൻഷുറൻസ്, നികുതി, റെസ്യൂമെ, WWCC.",
+      "descriptionEn": "Upside-down seasons and daylight saving, the July-to-June financial year, tapping off public transport, why CTP green slip is not enough car insurance, tax returns, remittances, and how to rewrite an Indian resume for Australia.",
+      "keywords": "australian resume format no photo, CTP vs third party property damage, PPSR check used car, tax return october 31, opal tap off fine, send money india to australia cheapest",
+      "icon": "money",
+      "volatile": [
+        {
+          "what": "നികുതി തീയതികൾ, Centrelink കാത്തിരിപ്പ് കാലാവധി",
+          "source": "https://www.ato.gov.au"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "slug": "comparison",
+      "titleEn": "Kerala habit vs Australia expectation",
+      "title": "താരതമ്യ പട്ടിക",
+      "blurb": "26 ദൈനംദിന സന്ദർഭങ്ങൾ ഒറ്റനോട്ടത്തിൽ — നാട്ടിലെ പതിവും ഇവിടത്തെ രീതിയും.",
+      "descriptionEn": "A 26-row side-by-side table of everyday situations: what you would naturally do coming from Kerala, what is expected in Australia, and why it matters.",
+      "keywords": "kerala vs australia culture difference, indian habits australia mistakes, cultural differences table",
+      "icon": "table"
+    },
+    {
+      "id": "s10",
+      "slug": "first-30-days",
+      "titleEn": "First 30 days checklist",
+      "title": "ആദ്യ 30 ദിവസത്തെ ചെക്ക്‌ലിസ്റ്റ്",
+      "blurb": "TFN, myGov, PayID, GP, ambulance cover, ബിൻ കലണ്ടർ, സ്കൂൾ, ലൈബ്രറി — മുൻഗണനാ ക്രമത്തിൽ 22 ഇനം.",
+      "descriptionEn": "A printable 22-item checklist for your first month in Australia, in priority order, from Tax File Number and myGov through to buying a winter coat.",
+      "keywords": "moving to australia checklist, first month in australia, tax file number apply, new migrant australia to do list",
+      "icon": "check"
+    }
+  ]
+}

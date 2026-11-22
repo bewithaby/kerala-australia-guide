@@ -1,0 +1,1970 @@
+<title>കേരളം → ഓസ്‌ട്രേലിയ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500;600;700&family=Manjari:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky section index at left, one reading column, diagrams breaking wider */
+:root{
+  --paper:#f3f4ee;
+  --surface:#fffffb;
+  --surface-2:#eaece4;
+  --ink:#131c18;
+  --ink-soft:#4e5a54;
+  --ink-faint:#78837d;
+  --rule:#d6dad1;
+  --euc:#245f46;
+  --euc-soft:#e3ece7;
+  --lat:#a04a35;
+  --lat-soft:#f4e6e1;
+  --signal:#8a5a06;
+  --signal-soft:#f7ecd5;
+  --danger:#a1302a;
+  --danger-soft:#f8e4e1;
+  --ok:#2b6638;
+  --ok-soft:#e2eee4;
+  --bin-red:#c0392b;
+  --bin-yellow:#d8a400;
+  --bin-green:#5a9e3f;
+  --bin-purple:#7b4ea8;
+  --shadow:0 1px 2px rgba(19,28,24,.06),0 8px 24px -12px rgba(19,28,24,.14);
+  --f-display:'Anek Malayalam','Noto Sans Malayalam',system-ui,sans-serif;
+  --f-body:'Manjari','Noto Sans Malayalam',system-ui,sans-serif;
+  --f-ui:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#101410;--surface:#181e1a;--surface-2:#212823;
+  --ink:#e8ebe4;--ink-soft:#a7b1ab;--ink-faint:#7f8a84;--rule:#2d352f;
+  --euc:#79c2a2;--euc-soft:#1b2c25;
+  --lat:#e2937c;--lat-soft:#2e211d;
+  --signal:#dfb35e;--signal-soft:#2d2518;
+  --danger:#e8897c;--danger-soft:#2e1d1b;
+  --ok:#85c694;--ok-soft:#1a2a1e;
+  --bin-red:#e06a5c;--bin-yellow:#e0bb3e;--bin-green:#84c468;--bin-purple:#a983d6;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#101410;--surface:#181e1a;--surface-2:#212823;
+  --ink:#e8ebe4;--ink-soft:#a7b1ab;--ink-faint:#7f8a84;--rule:#2d352f;
+  --euc:#79c2a2;--euc-soft:#1b2c25;
+  --lat:#e2937c;--lat-soft:#2e211d;
+  --signal:#dfb35e;--signal-soft:#2d2518;
+  --danger:#e8897c;--danger-soft:#2e1d1b;
+  --ok:#85c694;--ok-soft:#1a2a1e;
+  --bin-red:#e06a5c;--bin-yellow:#e0bb3e;--bin-green:#84c468;--bin-purple:#a983d6;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:18.5px;line-height:1.82;
+  margin:0;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.25;text-wrap:balance;margin:0;font-weight:700}
+p{margin:0}
+a{color:var(--euc)}
+code,.mono{font-family:var(--f-ui);font-size:.88em;background:var(--surface-2);padding:.1em .38em;border-radius:4px}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:minmax(0,1fr);max-width:1240px;margin:0 auto}
+@media (min-width:1000px){
+  .shell{grid-template-columns:252px minmax(0,1fr);gap:48px;align-items:start}
+}
+
+/* ---------- top bar (mobile) ---------- */
+.topbar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;gap:12px;
+  padding-block:10px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+@media (min-width:1000px){.topbar{display:none}}
+.topbar .mark{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.01em}
+.topbar .spacer{flex:1}
+.iconbtn{
+  font-family:var(--f-ui);font-size:12.5px;font-weight:500;
+  background:var(--surface);color:var(--ink);border:1px solid var(--rule);
+  border-radius:7px;padding:7px 11px;cursor:pointer;line-height:1;
+}
+.iconbtn:hover{border-color:var(--euc)}
+.iconbtn:focus-visible{outline:2px solid var(--euc);outline-offset:2px}
+
+/* ---------- sidebar ---------- */
+.side{
+  font-family:var(--f-ui);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+@media (min-width:1000px){
+  .side{position:sticky;top:24px;max-height:calc(100vh - 48px);overflow-y:auto;padding-block:40px;padding-right:0}
+}
+@media (max-width:999px){
+  .side{display:none;padding-block:12px 24px;border-bottom:1px solid var(--rule)}
+  .side.open{display:block}
+}
+.side .eyebrow{
+  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);margin-bottom:10px;font-weight:600;
+}
+.toc{display:flex;flex-direction:column;gap:1px;margin:0 0 24px;padding:0;list-style:none}
+.toc a{
+  display:flex;gap:10px;align-items:baseline;
+  text-decoration:none;color:var(--ink-soft);
+  font-size:13.5px;line-height:1.4;padding:7px 10px;border-radius:6px;
+  border-left:2px solid transparent;
+}
+.toc a:hover{background:var(--surface);color:var(--ink)}
+.toc a .n{
+  font-variant-numeric:tabular-nums;font-size:11px;font-weight:600;
+  color:var(--ink-faint);min-width:13px;
+}
+.toc a.active{background:var(--euc-soft);color:var(--euc);border-left-color:var(--euc);font-weight:500}
+.toc a.active .n{color:var(--euc)}
+.sidenote{
+  font-size:11.5px;line-height:1.55;color:var(--ink-faint);
+  border-top:1px solid var(--rule);padding-top:14px;
+}
+
+/* ---------- main ---------- */
+main{
+  min-width:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 96px;
+}
+@media (min-width:1000px){main{padding-block:40px 120px;padding-left:0}}
+.wrap{max-width:62ch}
+
+/* ---------- hero ---------- */
+.hero{padding-block:36px 8px}
+.hero .route{
+  font-family:var(--f-ui);font-size:12px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-faint);
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:18px;
+}
+.hero .route .dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.hero h1{font-size:clamp(30px,6.4vw,50px);letter-spacing:-.015em}
+.hero .sub{
+  font-size:clamp(17px,2.4vw,20px);color:var(--ink-soft);
+  margin-top:16px;max-width:52ch;line-height:1.6;
+}
+.hero .meta{
+  font-family:var(--f-ui);font-size:12px;color:var(--ink-faint);
+  margin-top:22px;padding-top:16px;border-top:1px solid var(--rule);
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+
+/* ---------- sections ---------- */
+section{padding-block:40px 8px;scroll-margin-top:84px}
+.sechead{display:flex;gap:14px;align-items:flex-start;margin-bottom:8px}
+.sechead .num{
+  font-family:var(--f-ui);font-variant-numeric:tabular-nums;
+  font-size:12px;font-weight:600;color:var(--euc);
+  background:var(--euc-soft);border-radius:6px;
+  padding:4px 8px;line-height:1.2;margin-top:8px;flex:none;
+}
+.sechead h2{font-size:clamp(23px,3.9vw,31px);letter-spacing:-.01em;min-width:0}
+.lede{color:var(--ink-soft);margin-top:12px;font-size:19px;line-height:1.75}
+h3{font-size:22px;margin-top:46px;margin-bottom:12px;letter-spacing:-.005em}
+h4{font-size:16.5px;font-family:var(--f-ui);font-weight:600;margin-top:30px;margin-bottom:8px;color:var(--ink-soft)}
+.wrap > p{margin-top:16px}
+.en{font-family:var(--f-ui);font-size:.88em;color:var(--ink-soft)}
+
+/* ---------- lists ---------- */
+ul.plain,ol.steps{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+ul.plain > li{position:relative;padding-left:20px}
+ul.plain > li::before{
+  content:"";position:absolute;left:3px;top:.68em;
+  width:6px;height:6px;border-radius:50%;background:var(--euc);opacity:.55;
+}
+ol.steps{counter-reset:s}
+ol.steps > li{position:relative;padding-left:32px;counter-increment:s}
+ol.steps > li::before{
+  content:counter(s);position:absolute;left:0;top:.08em;
+  font-family:var(--f-ui);font-size:11.5px;font-weight:600;font-variant-numeric:tabular-nums;
+  width:21px;height:21px;border-radius:50%;
+  background:var(--surface-2);color:var(--ink-soft);
+  display:grid;place-items:center;
+}
+ul.plain ul{margin:10px 0 0;padding-left:16px;list-style:none;display:flex;flex-direction:column;gap:9px}
+ul.plain ul > li{position:relative;padding-left:14px;font-size:17px;color:var(--ink-soft)}
+ul.plain ul > li::before{
+  content:"";position:absolute;left:0;top:.75em;width:7px;height:1.5px;background:var(--rule);
+}
+ul.plain ul > li strong{color:var(--ink)}
+
+/* ---------- callouts ---------- */
+.call{
+  margin-top:26px;border-radius:12px;padding:20px 22px;
+  border:1px solid var(--rule);background:var(--surface);
+  display:flex;flex-direction:column;gap:10px;
+}
+.call .tag{
+  font-family:var(--f-ui);font-size:11px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;
+}
+.call p{font-size:17.5px;line-height:1.75}
+.call.warn{background:var(--signal-soft);border-color:color-mix(in srgb,var(--signal) 32%,transparent)}
+.call.warn .tag{color:var(--signal)}
+.call.stop{background:var(--danger-soft);border-color:color-mix(in srgb,var(--danger) 32%,transparent)}
+.call.stop .tag{color:var(--danger)}
+.call.good{background:var(--ok-soft);border-color:color-mix(in srgb,var(--ok) 32%,transparent)}
+.call.good .tag{color:var(--ok)}
+.call.law{background:var(--euc-soft);border-color:color-mix(in srgb,var(--euc) 32%,transparent)}
+.call.law .tag{color:var(--euc)}
+.call.money{background:var(--lat-soft);border-color:color-mix(in srgb,var(--lat) 30%,transparent)}
+.call.money .tag{color:var(--lat)}
+
+/* ---------- then / now pair ---------- */
+.pair{display:grid;gap:12px;margin-top:20px}
+@media (min-width:620px){.pair{grid-template-columns:1fr 1fr}}
+.pair > div{
+  border-radius:10px;padding:15px 17px;border:1px solid var(--rule);
+  background:var(--surface);display:flex;flex-direction:column;gap:6px;min-width:0;
+}
+.pair .k{border-top:3px solid var(--lat)}
+.pair .a{border-top:3px solid var(--euc)}
+.pair .lbl{
+  font-family:var(--f-ui);font-size:10.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;
+}
+.pair .k .lbl{color:var(--lat)}
+.pair .a .lbl{color:var(--euc)}
+.pair p{font-size:16px}
+
+/* ---------- tables ---------- */
+.tscroll{
+  margin-top:22px;overflow-x:auto;border:1px solid var(--rule);
+  border-radius:10px;background:var(--surface);
+}
+table{border-collapse:collapse;width:100%;font-size:16.5px;line-height:1.6;min-width:520px}
+.tscroll.wide table{min-width:760px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--f-ui);font-size:11px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);
+  background:var(--surface-2);white-space:nowrap;position:sticky;top:0;
+}
+tbody tr:last-child td{border-bottom:none}
+
+/* greeting → reply table */
+.say table{min-width:600px}
+.say td:first-child{font-family:var(--f-ui);font-weight:600;font-size:15px;color:var(--ink);white-space:nowrap}
+.say td:nth-child(2){color:var(--ink-faint);font-size:15.5px}
+.say td:last-child{font-family:var(--f-ui);font-weight:600;font-size:15px;color:var(--euc)}
+.say thead th:last-child{color:var(--euc)}
+.bank{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding:0;list-style:none;
+}
+.bank li{
+  font-family:var(--f-ui);font-size:14px;font-weight:500;
+  background:var(--euc-soft);color:var(--euc);
+  border:1px solid color-mix(in srgb,var(--euc) 22%,transparent);
+  border-radius:99px;padding:6px 13px;
+}
+.bank li small{font-family:var(--f-body);font-weight:400;color:var(--ink-faint);font-size:12.5px}
+td.num{font-family:var(--f-ui);font-variant-numeric:tabular-nums;color:var(--ink-faint);font-size:12.5px;width:1%}
+.cmp td:nth-child(3){color:var(--lat)}
+.cmp td:nth-child(4){color:var(--euc)}
+
+/* ---------- figures ---------- */
+figure{
+  margin:28px 0 0;padding:20px 20px 16px;
+  background:var(--surface);border:1px solid var(--rule);border-radius:12px;
+  box-shadow:var(--shadow);
+}
+@media (min-width:1000px){figure{margin-right:-56px}}
+figure svg{display:block;width:100%;height:auto;max-width:100%}
+figcaption{
+  font-family:var(--f-ui);font-size:12.5px;line-height:1.55;color:var(--ink-faint);
+  margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);
+}
+figcaption b{color:var(--ink-soft);font-weight:600}
+.figtitle{
+  font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--euc);margin-bottom:14px;
+}
+svg text{font-family:'IBM Plex Sans',system-ui,sans-serif}
+svg .ml{font-family:'Manjari','Noto Sans Malayalam',system-ui,sans-serif}
+
+/* ---------- checklist ---------- */
+.ckhead{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  flex-wrap:wrap;margin-top:22px;
+}
+.ckbar{
+  flex:1;min-width:160px;height:7px;border-radius:99px;
+  background:var(--surface-2);overflow:hidden;
+}
+.ckbar i{display:block;height:100%;width:0;background:var(--euc);transition:width .3s ease}
+.ckcount{font-family:var(--f-ui);font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink-faint)}
+.cklist{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.cklist li{border-bottom:1px solid var(--rule)}
+.cklist li:last-child{border-bottom:none}
+.cklist label{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:11px 4px;cursor:pointer;font-size:16.5px;line-height:1.6;
+}
+.cklist input{
+  appearance:none;flex:none;width:19px;height:19px;margin-top:.26em;
+  border:1.5px solid var(--rule);border-radius:5px;background:var(--surface);
+  cursor:pointer;position:relative;
+}
+.cklist input:checked{background:var(--euc);border-color:var(--euc)}
+.cklist input:checked::after{
+  content:"";position:absolute;left:5px;top:2px;width:5px;height:10px;
+  border-right:2px solid var(--paper);border-bottom:2px solid var(--paper);
+  transform:rotate(42deg);
+}
+.cklist input:focus-visible{outline:2px solid var(--euc);outline-offset:2px}
+.cklist input:checked + span{color:var(--ink-faint);text-decoration:line-through;text-decoration-thickness:1px}
+
+/* ---------- close ---------- */
+.close{
+  margin-top:48px;padding:28px 24px;border-radius:12px;
+  background:var(--euc-soft);border:1px solid color-mix(in srgb,var(--euc) 26%,transparent);
+}
+.close h3{margin-top:0;color:var(--euc)}
+.srconly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="topbar">
+  <span class="mark">കേരളം → ഓസ്‌ട്രേലിയ</span>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="navbtn" aria-expanded="false">ഉള്ളടക്കം</button>
+  <button class="iconbtn" id="themebtn" aria-label="Theme">◐</button>
+</div>
+
+<div class="shell">
+  <nav class="side" id="side" aria-label="ഉള്ളടക്കം">
+    <div class="eyebrow">ഉള്ളടക്കം</div>
+    <ul class="toc" id="toc">
+      <li><a href="#s1"><span class="n">1</span><span>പെരുമാറ്റവും ആശയവിനിമയവും</span></a></li>
+      <li><a href="#s2"><span class="n">2</span><span>വീട്, ബാത്ത്റൂം, മാലിന്യം</span></a></li>
+      <li><a href="#s3"><span class="n">3</span><span>ഭക്ഷണവും പലചരക്കും</span></a></li>
+      <li><a href="#s4"><span class="n">4</span><span>സേവനങ്ങളും ആരോഗ്യവും</span></a></li>
+      <li><a href="#s5"><span class="n">5</span><span>തൊഴിലിട സംസ്കാരം</span></a></li>
+      <li><a href="#s6"><span class="n">6</span><span>നിയമം, റോഡ്, സുരക്ഷ</span></a></li>
+      <li><a href="#s7"><span class="n">7</span><span>കുട്ടികളും കുടുംബവും</span></a></li>
+      <li><a href="#s8"><span class="n">8</span><span>സമയം, പണം, ജോലി തേടൽ</span></a></li>
+      <li><a href="#s9"><span class="n">9</span><span>താരതമ്യ പട്ടിക</span></a></li>
+      <li><a href="#s10"><span class="n">★</span><span>ആദ്യ 30 ദിവസം</span></a></li>
+    </ul>
+    <p class="sidenote">നിയമങ്ങൾ സംസ്ഥാനവും കൗൺസിലും അനുസരിച്ച് മാറും. അവസാന വാക്ക് നിങ്ങളുടെ കൗൺസിലിന്റെയും സംസ്ഥാന സർക്കാരിന്റെയും വെബ്സൈറ്റാണ്.</p>
+  </nav>
+
+  <main>
+    <header class="hero wrap">
+      <div class="route">
+        <span class="dot" style="background:var(--lat)"></span><span>കേരളം</span>
+        <span style="color:var(--rule)">———</span>
+        <span class="dot" style="background:var(--euc)"></span><span>ഓസ്‌ട്രേലിയ</span>
+      </div>
+      <h1>നാട്ടിലെ ശീലം, ഇവിടത്തെ രീതി</h1>
+      <p class="sub">മലയാളി കുടിയേറ്റക്കാർക്കും കുടുംബങ്ങൾക്കും വേണ്ടി ഒരു പ്രായോഗിക ഗൈഡ്. വിനോദസഞ്ചാര വിവരങ്ങളല്ല — ആദ്യത്തെ ആറു മാസത്തിൽ മിക്കവരും ചെയ്യുന്ന, വിലകൊടുക്കേണ്ടിവരുന്ന പിഴവുകളാണ് വിഷയം.</p>
+      <div class="meta">
+        <span>അവസാനം പുതുക്കിയത്: 2026 ഒക്ടോബർ</span>
+        <span>9 വിഭാഗം · 25 വരി താരതമ്യം · 22 ഇന ചെക്ക്‌ലിസ്റ്റ്</span>
+      </div>
+    </header>
+
+    <section class="wrap" id="s0" style="padding-top:20px">
+      <div class="call warn">
+        <span class="tag">രണ്ട് മുന്നറിയിപ്പ്</span>
+        <p><b>ഓസ്‌ട്രേലിയ ഒരൊറ്റ നിയമവ്യവസ്ഥയല്ല.</b> റോഡ് നിയമം, സ്കൂൾ നിയമം, വാടക നിയമം, മാലിന്യ സംസ്കരണം എന്നിവ സംസ്ഥാനം (State) അനുസരിച്ചും കൗൺസിൽ അനുസരിച്ചും വ്യത്യാസപ്പെടും. NSW-ലെ നിയമം വിക്ടോറിയയിൽ അതേപടി ബാധകമാവണമെന്നില്ല.</p>
+        <p><b>പിഴത്തുകകളും നിരക്കുകളും എല്ലാ വർഷവും മാറും</b> (സാധാരണ ജൂലൈ 1-ന്). ഇവിടെയുള്ള അക്കങ്ങൾ ഏകദേശ ധാരണയ്ക്ക് മാത്രം; വേതന നിരക്കുകൾ 2026 ജൂലൈ 1 മുതലുള്ളതാണ്.</p>
+      </div>
+
+      <figure>
+        <div class="figtitle">2026-ൽ മാറിയ നിയമങ്ങൾ</div>
+        <svg viewBox="0 0 760 230" role="img" aria-label="2025 ഡിസംബർ മുതൽ 2027 ഏപ്രിൽ വരെയുള്ള നിയമ മാറ്റങ്ങളുടെ ടൈംലൈൻ">
+          <line x1="40" y1="118" x2="720" y2="118" stroke="var(--rule)" stroke-width="2"/>
+          <!-- 1 -->
+          <circle cx="78" cy="118" r="7" fill="var(--euc)"/>
+          <line x1="78" y1="111" x2="78" y2="64" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="78" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink-faint)">10 Dec 2025</text>
+          <text x="78" y="146" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)" class="ml">16 വയസ്സ്</text>
+          <text x="78" y="163" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">സോഷ്യൽ മീഡിയ</text>
+          <text x="78" y="179" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">നിരോധനം</text>
+          <!-- 2 -->
+          <circle cx="238" cy="118" r="7" fill="var(--euc)"/>
+          <line x1="238" y1="111" x2="238" y2="64" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="238" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink-faint)">1 Jan 2026</text>
+          <text x="238" y="146" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)" class="ml">പണം സ്വീകരിക്കൽ</text>
+          <text x="238" y="163" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">നിർബന്ധം</text>
+          <text x="238" y="179" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">(വലിയ കടകൾ)</text>
+          <!-- 3 -->
+          <circle cx="398" cy="118" r="7" fill="var(--signal)"/>
+          <line x1="398" y1="111" x2="398" y2="64" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="398" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink-faint)">1 Jul 2026</text>
+          <text x="398" y="146" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">$26.44/hr</text>
+          <text x="398" y="163" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">മിനിമം വേതനം</text>
+          <text x="398" y="179" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">+ Payday Super</text>
+          <!-- 4 -->
+          <circle cx="558" cy="118" r="9" fill="var(--lat)"/>
+          <line x1="558" y1="109" x2="558" y2="64" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="558" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="var(--lat)">1 Oct 2026</text>
+          <text x="558" y="148" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--lat)" class="ml">കാർഡ് സർചാർജ്</text>
+          <text x="558" y="165" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">നിരോധിച്ചു</text>
+          <text x="558" y="181" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">Visa · MC · eftpos</text>
+          <!-- 5 -->
+          <circle cx="698" cy="118" r="6" fill="none" stroke="var(--ink-faint)" stroke-width="2"/>
+          <line x1="698" y1="112" x2="698" y2="64" stroke="var(--rule)" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="698" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink-faint)">1 Apr 2027</text>
+          <text x="698" y="146" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">വിദേശ കാർഡ്</text>
+          <text x="698" y="162" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">interchange</text>
+          <text x="40" y="212" font-size="11" fill="var(--ink-faint)" class="ml">പിഴ ഈടാക്കൽ തുടങ്ങിയത് 2026 ജൂലൈ 1 മുതൽ (പണം സ്വീകരിക്കൽ നിയമം)</text>
+        </svg>
+        <figcaption>നിങ്ങൾ എത്തിയ സമയത്ത് ഇവയെല്ലാം പ്രാബല്യത്തിൽ വന്നുകഴിഞ്ഞു. <b>പഴയ ഉപദേശം ശ്രദ്ധിക്കുക:</b> "എല്ലാം കാഷ്‌ലെസ്സ് ആണ്", "കാർഡിന് 1.5% സർചാർജ് ഉണ്ട്" എന്നിവ ഇന്ന് ശരിയല്ല.</figcaption>
+      </figure>
+    </section>
+    <section id="s1">
+      <div class="wrap">
+        <div class="sechead"><span class="num">01</span><h2>ദൈനംദിന പെരുമാറ്റവും ആശയവിനിമയവും</h2></div>
+        <p class="lede">ഭാഷ അറിയാമെങ്കിലും സൂചനകൾ അറിയില്ല. അതാണ് ആദ്യ മാസങ്ങളിലെ യഥാർത്ഥ പ്രശ്നം.</p>
+
+        <h3>പേര് വിളിക്കുന്ന രീതി</h3>
+        <ul class="plain">
+          <li>അധ്യാപകർ, ഡോക്ടർമാർ, മാനേജർമാർ, അയൽവാസികൾ — എല്ലാവരെയും <strong>ആദ്യ പേര്</strong> വിളിക്കുന്നതാണ് സാധാരണം. "Hi John", "Thanks Sarah".</li>
+          <li><strong>"Sir", "Madam" ഒഴിവാക്കുക.</strong> ഇവിടെ ഇത് ബഹുമാനമായല്ല, അകലം സൃഷ്ടിക്കുന്നതായോ പരിഹാസമായോ തോന്നിക്കും. കടയിൽ "Excuse me" എന്ന് തുടങ്ങിയാൽ മതി.</li>
+          <li><strong>ഒരു അപവാദം:</strong> സ്കൂളിൽ കുട്ടികൾ അധ്യാപകരെ <span class="en">Mr Smith / Ms Taylor</span> എന്ന് കുടുംബപ്പേരോടെ വിളിക്കും. പക്ഷേ രക്ഷിതാവായ നിങ്ങൾ അതേ അധ്യാപകനെ ആദ്യ പേര് വിളിക്കും.</li>
+          <li>പ്രായം കൊണ്ട് സ്വയമേവ ബഹുമാനം കിട്ടില്ല. 70 വയസ്സുള്ളയാളെയും ആദ്യ പേര് വിളിക്കാം. "അങ്കിൾ", "ചേട്ടാ", "ചേച്ചി" എന്നിവ മലയാളി സമൂഹത്തിനുള്ളിൽ മാത്രം.</li>
+        </ul>
+
+        <h3>സംസാരശൈലി</h3>
+        <ul class="plain">
+          <li><strong>"How ya going?" ഒരു ചോദ്യമല്ല, ഒരു "ഹലോ" ആണ്.</strong> "Good thanks, you?" മതി. ആരോഗ്യപ്രശ്നങ്ങളുടെ വിവരണം പ്രതീക്ഷിക്കുന്നില്ല.</li>
+          <li><strong>പരിഹാസം (sarcasm) സൗഹൃദത്തിന്റെ അടയാളമാണ്.</strong> വൈകി എത്തിയാൽ സഹപ്രവർത്തകൻ "Nice of you to join us" എന്ന് പറഞ്ഞേക്കാം. ഇത് ശകാരമല്ല. കളിയാക്കൽ സഹിക്കാൻ കഴിയുന്നത് ഇവിടെ ഒരു സാമൂഹിക ഗുണമാണ്.</li>
+          <li><strong>അമിത വിനയം ഒഴിവാക്കുക.</strong> "Kindly do the needful", "Please revert back", "Respected Sir" എന്നിവ വിചിത്രമായി തോന്നും. നേരിട്ട് പറയുക: "Could you send me the report by Friday?"</li>
+          <li><strong>പക്ഷേ "please", "thank you", "sorry", "no worries", "cheers", "ta" ധാരാളമായി ഉപയോഗിക്കുക.</strong></li>
+          <li>പൊതുസ്ഥലത്ത് ഉച്ചത്തിൽ സംസാരിക്കുന്നതും ഫോൺ സ്പീക്കറിൽ ഇട്ട് സംസാരിക്കുന്നതും അസ്വസ്ഥത ഉണ്ടാക്കും. ആരും നേരിട്ട് പറയില്ല, പക്ഷേ ശ്രദ്ധിക്കപ്പെടും.</li>
+        </ul>
+
+        <h3>വ്യക്തിഗത അതിരുകൾ</h3>
+        <ul class="plain">
+          <li><strong>ക്യൂ വിശുദ്ധമാണ്.</strong> ഏകദേശം ഒരു കൈനീളം അകലം. വരി മുറിച്ചു കടക്കുന്നത് ഏറ്റവും വലിയ സാമൂഹിക കുറ്റങ്ങളിൽ ഒന്നാണ്. വരി അദൃശ്യമാണെങ്കിലും ആരാണ് അവസാനം എന്ന് നോക്കി പിന്നിൽ നിൽക്കുക.</li>
+          <li><strong>സ്പർശനം കുറവാണ്.</strong> ഹസ്തദാനം മതി. തോളിൽ കൈയിടുക, കൈപിടിച്ചു നടക്കുക (പുരുഷ സുഹൃത്തുക്കൾ) എന്നിവ പതിവല്ല.</li>
+          <li><strong>അപ്രതീക്ഷിത സന്ദർശനം ഇല്ല.</strong> സുഹൃത്തിന്റെ വീട്ടിൽ പോകുന്നതിന് മുൻപ് സന്ദേശം അയച്ച് സമയം ഉറപ്പിക്കുക.</li>
+          <li><strong>സമയനിഷ്ഠ.</strong> അഞ്ചു മിനിറ്റ് വൈകുമെങ്കിൽ പോലും ഒരു സന്ദേശം അയക്കുക. ഒരു അപവാദം: വീട്ടിലെ ക്ഷണങ്ങളിൽ 5–10 മിനിറ്റ് വൈകുന്നത് കുഴപ്പമില്ല, പക്ഷേ നേരത്തെ എത്തരുത്.</li>
+        </ul>
+
+        <div class="call stop">
+          <span class="tag">ചോദിക്കരുതാത്ത ചോദ്യങ്ങൾ</span>
+          <p>ശമ്പളം എത്ര? വാടക എത്ര? കല്യാണം കഴിച്ചോ? കുട്ടികൾ ഇല്ലേ, എന്തുകൊണ്ട്? എത്ര വയസ്സായി? മതം ഏതാണ്? ആരെയാണ് വോട്ട് ചെയ്തത്? — നാട്ടിൽ ഇവ സാധാരണ കുശലാന്വേഷണമാണ്; ഇവിടെ കടന്നുകയറ്റമാണ്.</p>
+          <p>ശരീരത്തെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങളും പറയരുത്: "You've put on weight", "You look tired", "You've become dark". നാട്ടിൽ ഇത് സ്നേഹമായി കാണാം; ഇവിടെ അപമാനമാണ്.</p>
+        </div>
+
+        <h3>തുറിച്ചുനോട്ടം (staring)</h3>
+        <p>സംസാരിക്കുമ്പോൾ കണ്ണിൽ നോക്കുന്നതും അപരിചിതരെ നോക്കിനിൽക്കുന്നതും രണ്ടും രണ്ടാണ്.</p>
+        <div class="pair">
+          <div class="k">
+            <span class="lbl">നാട്ടിൽ</span>
+            <p>മുതിർന്നവരുടെ കണ്ണിൽ നോക്കാതിരിക്കുന്നത് ബഹുമാനം. ബസ്സിലും കടയിലും ആളുകളെ നോക്കിയിരിക്കുന്നത് സാധാരണം.</p>
+          </div>
+          <div class="a">
+            <span class="lbl">ഇവിടെ</span>
+            <p>സംസാരിക്കുമ്പോൾ ഇടയ്ക്കിടെ കണ്ണിൽ നോക്കണം. പക്ഷേ അപരിചിതരെ 1–2 സെക്കൻഡിൽ കൂടുതൽ നോക്കരുത്.</p>
+          </div>
+        </div>
+        <div class="call stop">
+          <span class="tag">ഇത് ഗൗരവമുള്ള കാര്യമാണ്</span>
+          <p><strong>പ്രത്യേകിച്ച് സ്ത്രീകളെ നോക്കിനിൽക്കുന്നത്</strong> ഉപദ്രവമായി (harassment) കണക്കാക്കാം, പോലീസിനെ വിളിക്കാൻ വരെ കാരണമാകാം. നമ്മുടെ സമൂഹത്തിൽ നിന്ന് വരുന്ന പുരുഷന്മാർക്കെതിരെ ഇത്തരം പരാതികൾ ഉയരാറുണ്ട്; പലർക്കും ഇത് ഒരു പ്രശ്നമാണെന്ന ബോധം പോലും ഉണ്ടാവില്ല.</p>
+          <p>കണ്ണ് തമ്മിൽ ഇടഞ്ഞാൽ ഒന്ന് പുഞ്ചിരിച്ച് തലയാട്ടി മാറ്റുക. <strong>ഫോട്ടോ/വീഡിയോ:</strong> അപരിചിതരെ, പ്രത്യേകിച്ച് കുട്ടികളെ, അനുമതിയില്ലാതെ ചിത്രീകരിക്കരുത്. സ്വന്തം കുട്ടിയുടെ സ്പോർട്സ് ഫോട്ടോ എടുക്കുമ്പോൾ പോലും മറ്റു കുട്ടികൾ ഫ്രെയിമിൽ വരാതെ ശ്രദ്ധിക്കുക.</p>
+        </div>
+
+        <h3>സമത്വബോധം — "Fair Go"</h3>
+        <ul class="plain">
+          <li><strong>ജോലിക്ക് ഉച്ചനീചത്വമില്ല.</strong> ക്ലീനർ, ഡ്രൈവർ, പ്ലംബർ, ഇലക്ട്രീഷ്യൻ (<span class="en">tradies</span>) — ഇവരോട് ഒരു ഡോക്ടറോട് സംസാരിക്കുന്ന അതേ ബഹുമാനത്തോടെ സംസാരിക്കണം. പല tradies-നും വൈറ്റ്-കോളർ ജോലിക്കാരേക്കാൾ വരുമാനമുണ്ട്.</li>
+          <li><strong>"Tall poppy syndrome":</strong> ബിരുദങ്ങൾ, ജോലിസ്ഥാനം, കാറിന്റെയോ വീടിന്റെയോ വില — ഇവ സ്വയമേവ പറഞ്ഞു നടക്കുന്നത് ഒഴിവാക്കുക. നാട്ടിൽ ഇത് ബഹുമാനം നേടിത്തരും; ഇവിടെ ഒറ്റപ്പെടുത്തും.</li>
+          <li>ഒരു കഫേയിൽ ജോലി ചെയ്യുന്ന കുട്ടി നാളെ നിങ്ങളുടെ കുട്ടിയുടെ അധ്യാപികയാകാം.</li>
+        </ul>
+
+        <h3>അഭിവാദ്യങ്ങളും അവയ്ക്കുള്ള മറുപടിയും</h3>
+        <p>ഈ ചെറിയ പദാവലി അറിയാത്തതാണ് പല കുടിയേറ്റക്കാർക്കും "തണുപ്പൻ" എന്ന പ്രതിച്ഛായ കിട്ടാൻ കാരണം. പഠിക്കാൻ എളുപ്പമാണ് — ഏതാണ്ട് മുഴുവൻ സാമൂഹിക ജീവിതവും ഈ ഇരുപതോളം വാക്യങ്ങളിലാണ് നടക്കുന്നത്.</p>
+
+        <div class="call law">
+          <span class="tag">ഒരു നിയമം മാത്രം ഓർത്താൽ മതി</span>
+          <p>മിക്ക അഭിവാദ്യങ്ങളും <strong>ചോദ്യമല്ല.</strong> അവ "ഹലോ" എന്നതിന്റെ മറ്റൊരു രൂപമാണ്. അതിനാൽ മറുപടിക്ക് ഒരേ ഘടനയാണ്: <strong>ചെറിയ ഉത്തരം + തിരിച്ചൊരു ചോദ്യം.</strong></p>
+          <p>"Good thanks, you?" — ഇതൊന്ന് മാത്രം അറിഞ്ഞാൽ 80% സന്ദർഭങ്ങളും കഴിഞ്ഞു.</p>
+        </div>
+
+        <h4>അവർ അഭിവാദ്യം ചെയ്യുമ്പോൾ</h4>
+        <div class="tscroll say">
+          <table>
+            <thead><tr><th>അവർ പറയുന്നത്</th><th>യഥാർത്ഥ അർത്ഥം</th><th>നിങ്ങൾ പറയേണ്ടത്</th></tr></thead>
+            <tbody>
+              <tr><td>How are you?</td><td>ഹലോ</td><td>Good thanks, you?</td></tr>
+              <tr><td>How's it going?</td><td>ഹലോ</td><td>Good thanks, how about you?</td></tr>
+              <tr><td>How ya going?</td><td>ഹലോ (ഏറ്റവും ഓസ്‌ട്രേലിയൻ)</td><td>Not bad, yourself?</td></tr>
+              <tr><td>You alright? / Y'alright?</td><td>ഹലോ</td><td>Yeah good thanks, you?</td></tr>
+              <tr><td>G'day</td><td>ഹലോ, അനൗപചാരികം</td><td>G'day · Hey, how's it going?</td></tr>
+              <tr><td>Morning! / Afternoon!</td><td>ഹലോ (സമയം അനുസരിച്ച്)</td><td>Morning! · Afternoon!</td></tr>
+              <tr><td>How are we today?</td><td>കടക്കാരന്റെ/ഡോക്ടറുടെ ഹലോ</td><td>Good thanks!</td></tr>
+              <tr><td>How's your day been?</td><td>ചെറിയ ഉത്തരം പ്രതീക്ഷിക്കുന്നു</td><td>Yeah good, busy one. Yours?</td></tr>
+              <tr><td>Keeping busy?</td><td>ചെറിയ ഉത്തരം</td><td>Yeah, flat out. You?</td></tr>
+              <tr><td>How was your weekend?</td><td>ഇത് ശരിക്കും ചോദ്യമാണ്</td><td>Pretty quiet, took the kids to the beach. Yours?</td></tr>
+              <tr><td>What have you been up to?</td><td>ഇതും ശരിക്കും ചോദ്യമാണ്</td><td>Not much, just work. How about you?</td></tr>
+              <tr><td>Long time no see!</td><td>സന്തോഷം</td><td>Yeah, too long! How've you been?</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>"Good thanks" മാത്രം മടുത്താൽ — മറുപടി ബാങ്ക്</h4>
+        <ul class="bank">
+          <li>Good thanks <small>— ഏറ്റവും സുരക്ഷിതം</small></li>
+          <li>Not bad <small>— "നല്ലത്" എന്നാണ് അർത്ഥം</small></li>
+          <li>Yeah, pretty good</li>
+          <li>Can't complain</li>
+          <li>All good</li>
+          <li>Flat out, but good <small>— തിരക്കാണ്</small></li>
+          <li>Busy but good</li>
+          <li>Surviving! <small>— ചെറിയ തമാശ</small></li>
+          <li>Living the dream <small>— പരിഹാസം, സുഹൃത്തുക്കളോട്</small></li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">ഒരു സൂക്ഷ്മത</span>
+          <p>ഓസ്‌ട്രേലിയക്കാർ <strong>കുറച്ചു പറയുന്നവരാണ് (understatement).</strong> "Not bad" എന്നാൽ "നല്ലത്" എന്നും, "Yeah not too bad" എന്നാൽ "വളരെ നല്ലത്" എന്നും ആകാം. അതുപോലെ "It's a bit warm" എന്ന് 40°C-യിലും പറയും. <strong>"Excellent!", "Very fine, thank you" പോലുള്ള അതിശയോക്തി ഒഴിവാക്കുക</strong> — അത് കൃത്രിമമായി തോന്നും.</p>
+        </div>
+
+        <h4>കടയിലും കഫേയിലും</h4>
+        <div class="tscroll say">
+          <table>
+            <thead><tr><th>അവർ പറയുന്നത്</th><th>യഥാർത്ഥ അർത്ഥം</th><th>നിങ്ങൾ പറയേണ്ടത്</th></tr></thead>
+            <tbody>
+              <tr><td>You right there?</td><td>സഹായം വേണോ?</td><td>Yeah I'm right thanks · Just looking, thanks</td></tr>
+              <tr><td>You all good?</td><td>സഹായം വേണോ?</td><td>All good thanks · Actually yes, I'm after…</td></tr>
+              <tr><td>After anything in particular?</td><td>എന്താണ് തിരയുന്നത്?</td><td>I'm after a… · Just browsing, thanks</td></tr>
+              <tr><td>How can I help?</td><td>ഓർഡർ പറയൂ</td><td>Can I get a large flat white, please?</td></tr>
+              <tr><td>That everything?</td><td>വേറെ വേണോ?</td><td>Yep, that's it thanks</td></tr>
+              <tr><td>Card or cash?</td><td>—</td><td>Card, thanks</td></tr>
+              <tr><td>Enjoy your meal</td><td>വെയിറ്റർ പറയുന്നത്</td><td>Thanks! <em>(ഒരിക്കലും "you too" അല്ല)</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>നന്ദിയും ക്ഷമാപണവും</h4>
+        <div class="tscroll say">
+          <table>
+            <thead><tr><th>അവർ പറയുന്നത്</th><th>യഥാർത്ഥ അർത്ഥം</th><th>നിങ്ങൾ പറയേണ്ടത്</th></tr></thead>
+            <tbody>
+              <tr><td>Thanks / Thank you</td><td>നന്ദി</td><td>No worries · All good · No problem</td></tr>
+              <tr><td>Cheers</td><td>നന്ദി</td><td>Cheers · No worries</td></tr>
+              <tr><td>Ta</td><td>നന്ദി (വളരെ അനൗപചാരികം)</td><td>No worries</td></tr>
+              <tr><td>Sorry</td><td>തട്ടി, വഴി മുടക്കി</td><td>You're right · No worries · All good</td></tr>
+              <tr><td>Excuse me</td><td>വഴി വേണം</td><td>Sorry! <em>(+ മാറി നിൽക്കുക)</em></td></tr>
+              <tr><td>Nice one / Good on ya</td><td>അഭിനന്ദനം</td><td>Thanks mate · Cheers</td></tr>
+              <tr><td>No worries</td><td>സാരമില്ല</td><td>മറുപടി വേണ്ട · Thanks</td></tr>
+              <tr><td>My bad</td><td>എന്റെ തെറ്റ്</td><td>All good · No worries</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call good">
+          <span class="tag">"No worries" പഠിക്കുക</span>
+          <p>ഇതാണ് ഓസ്‌ട്രേലിയയിലെ ഏറ്റവും ഉപകാരപ്രദമായ രണ്ടു വാക്ക്. "You're welcome", "സാരമില്ല", "പ്രശ്നമില്ല", "ശരി", "മനസ്സിലായി" — ഇവയെല്ലാം ഇത് ഒന്നുകൊണ്ട് പറയാം. <strong>"It's my pleasure", "Most welcome", "Mention not"</strong> എന്നിവ ഇവിടെ ഔപചാരികമായി തോന്നും.</p>
+        </div>
+
+        <h4>വിടപറയുമ്പോൾ</h4>
+        <div class="tscroll say">
+          <table>
+            <thead><tr><th>അവർ പറയുന്നത്</th><th>എപ്പോൾ</th><th>നിങ്ങൾ പറയേണ്ടത്</th></tr></thead>
+            <tbody>
+              <tr><td>Have a good day</td><td>പകൽ, ഏറ്റവും സാധാരണം</td><td>You too, thanks!</td></tr>
+              <tr><td>Have a good one</td><td>ഏത് സമയത്തും</td><td>You too! · Cheers, you too</td></tr>
+              <tr><td>Have a good night</td><td>രാത്രി</td><td>You too, thanks</td></tr>
+              <tr><td>Have a good weekend</td><td>വെള്ളിയാഴ്ച</td><td>Thanks, you too!</td></tr>
+              <tr><td>Enjoy your day</td><td>കടക്കാർ</td><td>Thanks, you too</td></tr>
+              <tr><td>Take care</td><td>അല്പം ഊഷ്മളം</td><td>You too, take care</td></tr>
+              <tr><td>See ya / See you later</td><td>സുഹൃത്തുക്കൾ</td><td>See ya · Yeah, see you</td></tr>
+              <tr><td>Catch ya later</td><td>അനൗപചാരികം</td><td>Catch ya · Yep, later</td></tr>
+              <tr><td>Catch up soon</td><td>വീണ്ടും കാണാം</td><td>Yeah, let's do that</td></tr>
+              <tr><td>All the best</td><td>യാത്രയാക്കൽ</td><td>Thanks, you too</td></tr>
+              <tr><td>Good luck</td><td>പരീക്ഷ, അഭിമുഖം</td><td>Thanks! · Cheers</td></tr>
+              <tr><td>Hooroo</td><td>പഴയ തലമുറ, വിട</td><td>Hooroo · See ya</td></tr>
+              <tr><td>Welcome aboard</td><td>പുതിയ ജോലിയുടെ ആദ്യ ദിവസം</td><td>Thanks, glad to be here</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="call stop">
+          <span class="tag">മൂന്ന് കെണികൾ</span>
+          <p><strong>1. മറുപടി പറയാതെ പോകൽ.</strong> "Have a good day" കേട്ടാൽ <strong>"You too, thanks!"</strong> എന്ന് പറയണം. മറുപടി പറയാതെ നടന്നുപോകുന്നതാണ് പുതിയ ആളുകൾ ഏറ്റവും കൂടുതൽ ചെയ്യുന്ന തെറ്റ്, അത് പരുഷമായി തോന്നും.</p>
+          <p><strong>2. "You too" എപ്പോഴും പറ്റില്ല.</strong> വെയിറ്റർ "Enjoy your meal" പറയുമ്പോൾ "you too" പറഞ്ഞാൽ വിചിത്രമാകും — "Thanks!" മതി. ജന്മദിന ആശംസയ്ക്കും "you too" അല്ല. <em>ഇത് സംഭവിച്ചാൽ ചിരിക്കുക; ഓസ്‌ട്രേലിയക്കാർക്കും സംഭവിക്കുന്ന ഒരു ദേശീയ തമാശയാണിത്.</em></p>
+          <p><strong>3. യഥാർത്ഥ ഉത്തരം കൊടുക്കൽ.</strong> "How are you?" എന്നതിന് "Actually I've had a terrible week, my back hurts and…" എന്ന് തുടങ്ങരുത്. അടുത്ത സുഹൃത്താണെങ്കിൽ മാത്രം കൂടുതൽ പറയുക.</p>
+        </div>
+
+        <div class="call good">
+          <span class="tag">ഏറ്റവും എളുപ്പമുള്ള ഒരു ശീലം</span>
+          <p>ബസ്സിൽ കയറുമ്പോൾ ഡ്രൈവറോട് <strong>"Morning"</strong>, ഇറങ്ങുമ്പോൾ <strong>"Thanks, driver"</strong> അല്ലെങ്കിൽ <strong>"Thanks, mate"</strong>. ഇത് ചെറിയ കാര്യമാണ്, പക്ഷേ നിങ്ങളെ പെട്ടെന്ന് "ഇവിടത്തുകാരൻ" ആക്കും.</p>
+          <p>നടക്കാൻ പോകുമ്പോൾ എതിരെ വരുന്നവരോട് ഒരു ചെറിയ തലയാട്ടലും "Morning"-ഉം പതിവാണ് (ഉപനഗരങ്ങളിൽ കൂടുതൽ, CBD-യിൽ കുറവ്). ഇത് സൗഹൃദമുണ്ടാക്കാനുള്ള ക്ഷണമല്ല, ലളിതമായ അംഗീകാരമാണ്. തിരികെ ചെയ്യുക.</p>
+        </div>
+
+        <h4>സംഭാഷണം തുടങ്ങാൻ സുരക്ഷിതമായ വിഷയങ്ങൾ</h4>
+        <ul class="plain">
+          <li><strong>കാലാവസ്ഥ.</strong> ഒന്നാം നമ്പർ വിഷയം, ഒരിക്കലും പരാജയപ്പെടില്ല. "Beautiful day, isn't it?" / "Bit chilly this morning."</li>
+          <li><strong>വാരാന്ത്യം.</strong> തിങ്കൾ: "How was your weekend?" വെള്ളി: "Got much on this weekend?"</li>
+          <li><strong>കായികവിനോദം.</strong> NSW/QLD-ൽ NRL, VIC/SA/WA-യിൽ AFL, വേനലിൽ ക്രിക്കറ്റ്. <strong>ക്രിക്കറ്റ് നമുക്ക് വലിയ ഒരു നേട്ടമാണ്</strong> — അത് ഉപയോഗിക്കുക.</li>
+          <li>കോഫി, ഭക്ഷണം, അവധിക്കാല യാത്ര, പ്രാദേശിക കാര്യങ്ങൾ, വളർത്തുമൃഗങ്ങൾ, തോട്ടം.</li>
+          <li><span class="en">"What do you do?"</span> സ്വീകാര്യമാണ്, പക്ഷേ ഒന്നാമത്തെ ചോദ്യമാക്കരുത്.</li>
+        </ul>
+
+        <h3>പൊതു ഇടങ്ങളിലെ ചലനം: "Keep Left"</h3>
+        <figure>
+          <div class="figtitle">എസ്കലേറ്റർ: Stand left, walk right</div>
+          <svg viewBox="0 0 700 250" role="img" aria-label="എസ്കലേറ്ററിൽ ഇടതുവശത്ത് നിൽക്കുന്നവരും വലതുവശത്ത് നടക്കുന്നവരും">
+            <!-- escalator body -->
+            <path d="M60 230 L300 60 L470 60 L230 230 Z" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="2"/>
+            <line x1="175" y1="230" x2="385" y2="60" stroke="var(--rule)" stroke-width="2" stroke-dasharray="7 5"/>
+            <!-- steps hint -->
+            <g stroke="var(--rule)" stroke-width="1">
+              <line x1="104" y1="199" x2="344" y2="29" opacity="0"/>
+            </g>
+            <!-- LEFT lane: standing -->
+            <g fill="var(--euc)">
+              <circle cx="128" cy="186" r="9"/><rect x="121" y="197" width="14" height="24" rx="5"/>
+              <circle cx="178" cy="151" r="9"/><rect x="171" y="162" width="14" height="24" rx="5"/>
+              <circle cx="228" cy="116" r="9"/><rect x="221" y="127" width="14" height="24" rx="5"/>
+            </g>
+            <text x="100" y="246" font-size="13" font-weight="600" fill="var(--euc)">STAND</text>
+            <text x="100" y="246" font-size="13" fill="none">.</text>
+            <!-- RIGHT lane: walking -->
+            <g fill="var(--signal)">
+              <circle cx="258" cy="196" r="9"/><rect x="251" y="207" width="14" height="22" rx="5"/>
+              <circle cx="330" cy="146" r="9"/><rect x="323" y="157" width="14" height="22" rx="5"/>
+            </g>
+            <!-- arrow up right lane -->
+            <path d="M372 150 L420 116" stroke="var(--signal)" stroke-width="2.5" fill="none"/>
+            <path d="M420 116 l-11 1 l4 9 Z" fill="var(--signal)"/>
+            <text x="432" y="112" font-size="13" font-weight="600" fill="var(--signal)">WALK</text>
+            <!-- labels -->
+            <text x="500" y="92" font-size="12.5" font-weight="600" fill="var(--euc)" class="ml">ഇടതുവശം = നിൽക്കാൻ</text>
+            <text x="500" y="112" font-size="11.5" fill="var(--ink-soft)" class="ml">ബാഗും ട്രോളിയും ഇവിടെ</text>
+            <text x="500" y="146" font-size="12.5" font-weight="600" fill="var(--signal)" class="ml">വലതുവശം = നടക്കാൻ</text>
+            <text x="500" y="166" font-size="11.5" fill="var(--ink-soft)" class="ml">ഒരിക്കലും തടയരുത്</text>
+            <text x="500" y="200" font-size="11.5" fill="var(--ink-faint)" class="ml">കുടുംബമായി പോകുമ്പോൾ</text>
+            <text x="500" y="217" font-size="11.5" fill="var(--ink-faint)" class="ml">വരിവരിയായി നിൽക്കുക</text>
+          </svg>
+          <figcaption><b>ലണ്ടനിൽ ഇത് നേരെ തിരിച്ചാണ്</b> (stand right) — UK വഴി വന്നവർ ശ്രദ്ധിക്കുക. ചില പുതിയ സ്റ്റേഷനുകളിൽ (Sydney Metro) സുരക്ഷാ കാരണങ്ങളാൽ എസ്കലേറ്ററിൽ നടക്കുന്നത് നിരുത്സാഹപ്പെടുത്തുന്നുണ്ട്; അവിടെ അടയാളങ്ങൾ അനുസരിക്കുക.</figcaption>
+        </figure>
+        <ul class="plain">
+          <li><strong>ഫുട്പാത്തിലും ഷോപ്പിംഗ് സെന്ററിലും ഇടതുവശം ചേർന്ന് നടക്കുക.</strong> എതിരെ വരുന്നവർക്ക് വലതുവശം.</li>
+          <li><strong>വഴി തടയരുത്.</strong> ഫുട്പാത്തിന്റെ നടുവിൽ നിന്ന് സംസാരിക്കുക, മൂന്നു പേർ വരിയായി നടന്ന് വഴി മുഴുവൻ അടയ്ക്കുക, ട്രോളി ഇടനാഴിക്ക് കുറുകെ ഇടുക — ഇവ അസ്വസ്ഥത ഉണ്ടാക്കും.</li>
+          <li><strong>ലിഫ്റ്റും ട്രെയിനും:</strong> ഉള്ളിലുള്ളവർ ഇറങ്ങിയ ശേഷം മാത്രം കയറുക. പിന്നിൽ വരുന്നയാൾക്ക് വാതിൽ പിടിച്ചു കൊടുക്കുക.</li>
+          <li><strong>മുൻഗണനാ സീറ്റുകൾ</strong> പ്രായമായവർക്കും ഗർഭിണികൾക്കും വൈകല്യമുള്ളവർക്കും. ബാഗ് സീറ്റിൽ വെക്കരുത്. ഹെഡ്ഫോൺ ഉപയോഗിക്കുക.</li>
+        </ul>
+
+        <h3>ചെറുതെങ്കിലും പ്രധാനം</h3>
+        <ul class="plain">
+          <li><strong>"Bring a plate"</strong> = ഒഴിഞ്ഞ പ്ലേറ്റല്ല, എല്ലാവർക്കും പങ്കിടാൻ ഭക്ഷണം കൊണ്ടുവരണം.</li>
+          <li><strong>"BYO"</strong> = Bring Your Own (സാധാരണ മദ്യം). ചെറിയ corkage fee ഉണ്ടാകും.</li>
+          <li><strong>ഷൂ:</strong> ഓസ്‌ട്രേലിയൻ വീടുകളിൽ ഷൂ ധരിച്ചു കയറുന്നത് സാധാരണം. അതിഥിയായി "Should I take my shoes off?" എന്ന് ചോദിക്കുക. സ്വന്തം വീട്ടിൽ അഴിക്കണമെന്നുണ്ടെങ്കിൽ സൗമ്യമായി പറയാം.</li>
+          <li><strong>വിലപേശൽ ഇല്ല.</strong> കടയിലെ വില അന്തിമം. കാർ, ഫർണിച്ചർ, Gumtree/Facebook Marketplace, ചില വലിയ ഇലക്ട്രോണിക്സ് സ്റ്റോറുകളിലെ price match — ഇവയിൽ മാത്രം.</li>
+          <li><strong>അയൽവാസികൾ:</strong> ഒരിക്കൽ പോയി പരിചയപ്പെടുക, പിന്നെ അകലം പാലിക്കുക. ശബ്ദം, ബാർബിക്യൂ പുക, പുല്ല് വെട്ടുന്ന സമയം (രാവിലെ 7–8-ന് മുൻപും രാത്രി 8-ന് ശേഷവും ഒഴിവാക്കുക), നായുടെ കുര — ഇവയാണ് പ്രധാന പരാതി വിഷയങ്ങൾ. കൗൺസിലിന് പരാതി പോകാം.</li>
+          <li><strong>ഫോൺ ചെയ്യുന്നതിന് മുൻപ് മെസ്സേജ് അയക്കുക.</strong> "Are you free for a quick call?"</li>
+        </ul>
+      </div>
+    </section>
+    <section id="s2">
+      <div class="wrap">
+        <div class="sechead"><span class="num">02</span><h2>വീട്, ബാത്ത്റൂം, മാലിന്യം</h2></div>
+        <p class="lede">ഈ വിഭാഗമാണ് ഏറ്റവും കൂടുതൽ പണം ലാഭിക്കുന്നത്. ഇവിടത്തെ പിഴവുകൾ ബോണ്ട് നഷ്ടപ്പെടുത്തും.</p>
+
+        <h3>ബാത്ത്റൂം സംസ്കാരം</h3>
+        <ul class="plain">
+          <li><strong>ഹെൽത്ത് ഫോസെറ്റ് സാധാരണ വീടുകളിലും വാടകവീടുകളിലും ഉണ്ടാകില്ല.</strong> പൊതു ടോയ്‌ലറ്റുകളിൽ ഒരിക്കലും ഉണ്ടാകില്ല. ടോയ്‌ലറ്റ് പേപ്പർ മാത്രമാണ് സ്റ്റാൻഡേർഡ്.</li>
+          <li><strong>താൽക്കാലിക പരിഹാരം:</strong> ഒരു ചെറിയ ജഗ്ഗ്/ലോട്ട (ഇന്ത്യൻ ഗ്രോസറികളിൽ കിട്ടും), അല്ലെങ്കിൽ ഒരു പോർട്ടബിൾ <span class="en">travel bidet</span> ബോട്ടിൽ. Bunnings, Amazon AU, ഇന്ത്യൻ ഗ്രോസറി എന്നിവിടങ്ങളിൽ ലഭ്യം.</li>
+          <li><strong>സ്ഥിരമായി ഘടിപ്പിക്കണമെങ്കിൽ ഇത് സ്വയം ചെയ്യാവുന്ന ജോലിയല്ല.</strong> പ്ലംബിംഗ് നിയമപ്രകാരം (AS/NZS 3500) <strong>ലൈസൻസുള്ള പ്ലംബർ</strong> ചെയ്യണം, കുടിവെള്ളത്തിലേക്ക് മലിനജലം തിരിച്ചു കയറാതിരിക്കാൻ <strong>backflow prevention (dual check valve)</strong> വേണം. നിയമവിരുദ്ധമായി ഘടിപ്പിച്ചാൽ ഇൻഷുറൻസ് ക്ലെയിം നിരസിക്കപ്പെടാം. വാടകവീടാണെങ്കിൽ <strong>ഏജന്റിന്റെ എഴുത്തുമൂലമുള്ള അനുമതി നിർബന്ധം.</strong></li>
+          <li>പൊതു ടോയ്‌ലറ്റുകൾ പൊതുവേ വൃത്തിയുള്ളതും സൗജന്യവുമാണ് — ഷോപ്പിംഗ് സെന്ററുകൾ, പെട്രോൾ പമ്പുകൾ, പാർക്കുകൾ, ലൈബ്രറികൾ.</li>
+        </ul>
+
+        <h3>"ഡ്രൈ ബാത്ത്റൂം" — ഏറ്റവും ചെലവേറിയ പാഠം</h3>
+        <figure>
+          <div class="figtitle">വെള്ളം എങ്ങോട്ട് പോകുന്നു</div>
+          <svg viewBox="0 0 700 300" role="img" aria-label="ബാത്ത്റൂം തറയുടെ പ്ലാൻ: ഷവർ ഏരിയയിൽ മാത്രം ഡ്രെയിൻ, ബാക്കി തറയിൽ നിന്ന് വെള്ളം ഭിത്തിയിലേക്കും കാർപെറ്റിലേക്കും പോകുന്നു">
+            <!-- room -->
+            <rect x="40" y="30" width="420" height="220" rx="4" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="2"/>
+            <!-- shower zone -->
+            <rect x="48" y="38" width="150" height="204" rx="3" fill="var(--ok-soft)" stroke="var(--ok)" stroke-width="2"/>
+            <!-- shower screen line -->
+            <line x1="198" y1="38" x2="198" y2="242" stroke="var(--ok)" stroke-width="4"/>
+            <!-- floor waste -->
+            <circle cx="123" cy="140" r="15" fill="none" stroke="var(--ok)" stroke-width="2.5"/>
+            <circle cx="123" cy="140" r="7" fill="var(--ok)"/>
+            <text x="123" y="182" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ok)">FLOOR WASTE</text>
+            <text x="123" y="200" text-anchor="middle" font-size="11" fill="var(--ok)" class="ml">ഡ്രെയിൻ ഇവിടെ മാത്രം</text>
+            <text x="123" y="62" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ok)" class="ml">ഷവർ ഏരിയ</text>
+            <!-- dry zone -->
+            <text x="330" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--danger)" class="ml">ഇവിടെ ഡ്രെയിൻ ഇല്ല</text>
+            <text x="330" y="102" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">വെള്ളം ഒഴിച്ചാൽ എവിടെയും</text>
+            <text x="330" y="120" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">പോകില്ല</text>
+            <!-- water spread arrows -->
+            <path d="M280 150 L240 150" stroke="var(--danger)" stroke-width="2" fill="none"/>
+            <path d="M330 150 L330 190" stroke="var(--danger)" stroke-width="2" fill="none"/>
+            <path d="M380 150 L440 150" stroke="var(--danger)" stroke-width="2" fill="none"/>
+            <path d="M440 150 l-9 -4 l0 8 Z" fill="var(--danger)"/>
+            <path d="M330 190 l-4 -9 l8 0 Z" fill="var(--danger)" transform="translate(0,18) rotate(180 330 190)"/>
+            <circle cx="330" cy="150" r="6" fill="var(--danger)"/>
+            <!-- door gap -->
+            <rect x="455" y="150" width="10" height="60" fill="var(--danger)" opacity=".35"/>
+            <text x="470" y="174" font-size="11" fill="var(--danger)" class="ml">വാതിലിന്</text>
+            <text x="470" y="190" font-size="11" fill="var(--danger)" class="ml">അടിയിലൂടെ</text>
+            <!-- consequences -->
+            <line x1="520" y1="48" x2="520" y2="248" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="536" y="56" font-size="11" font-weight="600" letter-spacing=".08em" fill="var(--danger)">പരിണതഫലം</text>
+            <text x="536" y="84" font-size="12" fill="var(--ink)" class="ml">• കാർപെറ്റ് നനയും</text>
+            <text x="536" y="108" font-size="12" fill="var(--ink)" class="ml">• ഭിത്തിയുടെ അടിഭാഗം</text>
+            <text x="546" y="126" font-size="12" fill="var(--ink)" class="ml">കേടാകും</text>
+            <text x="536" y="150" font-size="12" fill="var(--ink)" class="ml">• waterproofing</text>
+            <text x="546" y="168" font-size="12" fill="var(--ink)" class="ml">തകരും</text>
+            <text x="536" y="192" font-size="12" fill="var(--ink)" class="ml">• പൂപ്പൽ (mould)</text>
+            <text x="536" y="216" font-size="12" fill="var(--ink)" class="ml">• താഴത്തെ ഫ്ലാറ്റിലേക്ക്</text>
+            <text x="546" y="234" font-size="12" fill="var(--ink)" class="ml">ചോർച്ച</text>
+            <text x="40" y="278" font-size="11.5" font-weight="600" fill="var(--ink-soft)" class="ml">ചെയ്യേണ്ടത്: ഷവർ സ്ക്രീനിനുള്ളിൽ നിന്ന് കുളിക്കുക · കഴിഞ്ഞാൽ exhaust fan 15–20 മിനിറ്റ് ഓണാക്കിയിടുക</text>
+          </svg>
+          <figcaption><b>ബക്കറ്റും മഗ്ഗും ഉപയോഗിച്ച് തറയിൽ വെള്ളം ഒഴിച്ച് കുളിക്കരുത്.</b> ഇത് ആയിരക്കണക്കിന് ഡോളറിന്റെ നാശനഷ്ടമാണ് — മുഴുവൻ ബോണ്ടും നഷ്ടപ്പെടാം. അപ്പാർട്ട്മെന്റിലാണെങ്കിൽ താഴത്തെ ഫ്ലാറ്റിന്റെ നാശനഷ്ടം കൂടി നിങ്ങളുടെ ബാധ്യതയാകാം.</figcaption>
+        </figure>
+        <div class="call warn">
+          <span class="tag">പൂപ്പൽ (mould)</span>
+          <p>ഓസ്‌ട്രേലിയൻ വാടകവീടുകളിലെ ഒന്നാം നമ്പർ പ്രശ്നമാണിത്, പ്രത്യേകിച്ച് ശൈത്യകാലത്ത്. തുണി അകത്ത് ഉണക്കുന്നതും ഹീറ്റർ ഇട്ട് ജനലുകൾ അടച്ചിടുന്നതും ഇത് വർധിപ്പിക്കും. <strong>ദിവസവും കുറച്ചു നേരം ജനൽ തുറന്ന് വായുസഞ്ചാരം ഉണ്ടാക്കുക.</strong> നനഞ്ഞ ടവ്വൽ ബാത്ത്റൂമിൽ തൂക്കിയിടരുത്.</p>
+        </div>
+
+        <h3>പ്ലംബിംഗ്: ഫ്ലഷ് ചെയ്യാവുന്ന മൂന്ന് കാര്യങ്ങൾ</h3>
+        <div class="pair">
+          <div class="a" style="border-top-color:var(--ok)">
+            <span class="lbl" style="color:var(--ok)">ഫ്ലഷ് ചെയ്യാം</span>
+            <p>മൂത്രം · മലം · ടോയ്‌ലറ്റ് പേപ്പർ<br><span class="en">("The three P's")</span></p>
+          </div>
+          <div class="k" style="border-top-color:var(--danger)">
+            <span class="lbl" style="color:var(--danger)">ഒരിക്കലും അരുത്</span>
+            <p>wet wipes (<em>"flushable" എന്ന് ലേബലിലുണ്ടെങ്കിലും</em>) · sanitary pads · tampons · paper towel · tissues · മുടി · പഞ്ഞി · കോണ്ടം · മരുന്നുകൾ · പൂച്ചയുടെ litter</p>
+          </div>
+        </div>
+        <div class="call money">
+          <span class="tag">ഇതിന്റെ ചെലവ്</span>
+          <p>ഇത് <strong>"fatberg"</strong> എന്ന അടവുണ്ടാക്കും. വീടിനുള്ളിലെ പൈപ്പ് അടഞ്ഞാൽ അത് സാധാരണ <strong>വാടകക്കാരന്റെ ചെലവാണ്</strong> (bond-ൽ നിന്ന് പിടിക്കും). ഒരു എമർജൻസി പ്ലംബർ വിളിക്കുന്നതിന് മാത്രം $150 മുതൽ $300+ വരെ. ബാത്ത്റൂമിൽ ഒരു ചെറിയ ബിൻ വെക്കുക.</p>
+        </div>
+
+        <h3>പാചകവും വാടകവീടും</h3>
+        <ul class="plain">
+          <li><strong>റേഞ്ച് ഹുഡ് എപ്പോഴും ഓണാക്കി പാചകം ചെയ്യുക.</strong> മഞ്ഞൾ, കടുക് വറുക്കൽ, മീൻ വറുക്കൽ, ഉള്ളി വഴറ്റൽ — ഇവയുടെ എണ്ണപ്പുക ചുവരിലും സീലിംഗിലും കാർപെറ്റിലും പറ്റിപ്പിടിക്കും. <strong>എണ്ണപ്പുകയുടെ ചുവരും കറപിടിച്ച ഓവനും ബോണ്ട് നഷ്ടപ്പെടാനുള്ള ഏറ്റവും സാധാരണ കാരണങ്ങളാണ്.</strong></li>
+          <li><strong>മഞ്ഞളിന്റെ കറ</strong> ഇളംനിറമുള്ള ബെഞ്ച്ടോപ്പിൽ (laminate, engineered stone) പോകാത്ത കറയായി മാറും. ഉടനെ തുടയ്ക്കുക; bicarb soda + വെള്ളം പേസ്റ്റ് അല്ലെങ്കിൽ ഒരു "magic eraser" സഹായിക്കും.</li>
+          <li><strong>ഉപയോഗിച്ച എണ്ണ ഒരിക്കലും സിങ്കിൽ ഒഴിക്കരുത്.</strong> തണുപ്പിച്ച് ഒരു പഴയ ജാറിലോ പാൽ ബോട്ടിലിലോ ഒഴിച്ച് അടച്ച് <strong>ചുവന്ന ബിന്നിൽ</strong> ഇടുക. ചെറിയ അളവ് paper towel-ൽ ഒപ്പിയെടുക്കാം.</li>
+          <li><strong>ചോറിന്റെയോ ഭക്ഷണത്തിന്റെയോ അവശിഷ്ടം സിങ്കിൽ ഒഴിക്കരുത്.</strong> മിക്ക ഓസ്‌ട്രേലിയൻ വീടുകളിലും garbage disposal യൂണിറ്റ് ഇല്ല.</li>
+        </ul>
+        <div class="call stop">
+          <span class="tag">Smoke alarm — ബാറ്ററി ഊരരുത്</span>
+          <p>ദോശ ചുട്ടാലോ കടുക് പൊട്ടിച്ചാലോ ഇത് ശബ്ദിക്കും. <strong>ബാറ്ററി ഊരിവെക്കുന്നത് നിയമവിരുദ്ധവും അപകടകരവുമാണ്.</strong> അപ്പാർട്ട്മെന്റിൽ കെട്ടിടത്തിന്റെ മുഴുവൻ അലാറവും ഫയർ ബ്രിഗേഡും വരാം, false call-ന് വലിയ ഫീസ് ഈടാക്കാം. പകരം range hood ഓണാക്കുക, ജനൽ തുറക്കുക, അലാറത്തിന്റെ hush ബട്ടൺ ഉപയോഗിക്കുക.</p>
+        </div>
+        <div class="call law">
+          <span class="tag">Condition report — ഇത് ഗൗരവമായി എടുക്കുക</span>
+          <p>ബോണ്ട് സാധാരണ <strong>4 ആഴ്ചത്തെ വാടകയാണ്</strong>, സംസ്ഥാന അധികാരികളുടെ പക്കൽ സൂക്ഷിക്കും (NSW-ൽ NSW Fair Trading). താമസം തുടങ്ങുമ്പോൾ കിട്ടുന്ന condition report-ൽ <strong>ഓരോ പോറലും കറയും ഫോട്ടോ എടുത്ത് (തീയതി സഹിതം) രേഖപ്പെടുത്തുക.</strong> സാധാരണ 7 ദിവസത്തിനുള്ളിൽ തിരികെ നൽകണം. ഇത് ചെയ്യാത്തതിന്റെ പേരിൽ പലരും ബോണ്ട് നഷ്ടപ്പെടുത്തുന്നു.</p>
+        </div>
+
+        <h3>മാലിന്യ സംസ്കാരം: ബിന്നുകൾ</h3>
+        <div class="call law">
+          <span class="tag">ആദ്യം: FOGO എന്താണ്?</span>
+          <p><strong>FOGO = Food Organics and Garden Organics.</strong> ഭക്ഷണാവശിഷ്ടവും തോട്ടമാലിന്യവും <em>ഒരേ ബിന്നിൽ</em> ശേഖരിച്ച് കമ്പോസ്റ്റ് ആക്കുന്ന സംവിധാനം. ഇത് ഉള്ള കൗൺസിലുകളിൽ <strong>ഭക്ഷണാവശിഷ്ടം പച്ച ബിന്നിൽ ഇടണം, ചുവന്ന ബിന്നിൽ അല്ല.</strong></p>
+          <p>ഇതില്ലാത്ത കൗൺസിലുകളിൽ പച്ച ബിൻ <strong>GO</strong> മാത്രമാണ് (Garden Organics — ഇലയും പുല്ലും കമ്പും മാത്രം), ഭക്ഷണാവശിഷ്ടം ചുവന്ന ബിന്നിൽ പോകും. <strong>ഇത് കൗൺസിൽ അനുസരിച്ച് വ്യത്യാസപ്പെടും — നിങ്ങളുടെ കൗൺസിൽ വെബ്സൈറ്റിൽ "FOGO" എന്ന് തിരയുക.</strong></p>
+        </div>
+        <div class="pair">
+          <div class="a" style="border-top-color:var(--bin-green)">
+            <span class="lbl" style="color:var(--bin-green)">FOGO ബിന്നിൽ ഇടാം</span>
+            <p>പഴം–പച്ചക്കറി അവശിഷ്ടം · <strong>മാംസവും എല്ലും</strong> · മീൻ മുള്ള് · പാലുൽപ്പന്നം · ചോറ്, ചപ്പാത്തി, ബ്രെഡ് · ചായപ്പൊടിയും കാപ്പിക്കുരുവും · മുട്ടത്തൊലി · ഇല, പുല്ല്, ചെറിയ കമ്പുകൾ</p>
+          </div>
+          <div class="k" style="border-top-color:var(--danger)">
+            <span class="lbl" style="color:var(--danger)">ഇടരുത്</span>
+            <p>പ്ലാസ്റ്റിക് ബാഗ് · <strong>"compostable" / "biodegradable" ബാഗുകൾ</strong> (കൗൺസിൽ അനുവദിച്ചതല്ലാതെ) · nappies · വളർത്തുമൃഗത്തിന്റെ മാലിന്യം (കൗൺസിൽ അനുസരിച്ച്) · മണ്ണ്, കല്ല് · ചട്ടിയും കവറും</p>
+          </div>
+        </div>
+        <p>FOGO ഉള്ള കൗൺസിലുകൾ സാധാരണ ഒരു <strong>ചെറിയ അടുക്കള കാഡി (kitchen caddy)</strong> സൗജന്യമായി തരും, കൂടെ അനുവദിച്ച liner ബാഗുകളും. അവ തീർന്നാൽ കൗൺസിലിൽ നിന്നോ ലൈബ്രറിയിൽ നിന്നോ സൗജന്യമായി വാങ്ങാം — സൂപ്പർമാർക്കറ്റിലെ ഏത് "compostable" ബാഗും ഉപയോഗിക്കാമെന്ന് കരുതരുത്.</p>
+        <figure>
+          <div class="figtitle">ബിൻ നിറങ്ങൾ (ദേശീയ നിലവാരം AS 4123.7)</div>
+          <svg viewBox="0 0 700 330" role="img" aria-label="നാല് ബിന്നുകൾ: ചുവപ്പ്, മഞ്ഞ, പച്ച, പർപ്പിൾ ലിഡുകളും അവയിൽ ഇടേണ്ടതും ഇടരുതാത്തതും">
+            <g>
+              <!-- RED -->
+              <rect x="30" y="58" width="104" height="112" rx="7" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="1.5"/>
+              <rect x="22" y="42" width="120" height="20" rx="6" fill="var(--bin-red)"/>
+              <rect x="70" y="30" width="24" height="14" rx="4" fill="var(--bin-red)"/>
+              <text x="82" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--bin-red)">RED</text>
+              <text x="82" y="210" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">ജനറൽ വേസ്റ്റ്</text>
+              <text x="82" y="236" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ബാക്കിയെല്ലാം</text>
+              <text x="82" y="253" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">plastic bags</text>
+              <text x="82" y="270" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">nappies, എണ്ണ</text>
+              <text x="82" y="296" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× ബാറ്ററി, പെയിന്റ്</text>
+              <text x="82" y="312" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× ഇലക്ട്രോണിക്സ്</text>
+            </g>
+            <g>
+              <!-- YELLOW -->
+              <rect x="190" y="58" width="104" height="112" rx="7" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="1.5"/>
+              <rect x="182" y="42" width="120" height="20" rx="6" fill="var(--bin-yellow)"/>
+              <rect x="230" y="30" width="24" height="14" rx="4" fill="var(--bin-yellow)"/>
+              <text x="242" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--bin-yellow)">YELLOW</text>
+              <text x="242" y="210" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">റീസൈക്ലിംഗ്</text>
+              <text x="242" y="236" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ശുദ്ധമായ പേപ്പർ</text>
+              <text x="242" y="253" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ഹാർഡ് പ്ലാസ്റ്റിക്</text>
+              <text x="242" y="270" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ഗ്ലാസ്, ടിൻ</text>
+              <text x="242" y="296" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× plastic bags</text>
+              <text x="242" y="312" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× എണ്ണപ്പുരണ്ടത്</text>
+            </g>
+            <g>
+              <!-- GREEN -->
+              <rect x="350" y="58" width="104" height="112" rx="7" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="1.5"/>
+              <rect x="342" y="42" width="120" height="20" rx="6" fill="var(--bin-green)"/>
+              <rect x="390" y="30" width="24" height="14" rx="4" fill="var(--bin-green)"/>
+              <text x="402" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--bin-green)">GREEN</text>
+              <text x="402" y="210" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">ജൈവ മാലിന്യം</text>
+              <text x="402" y="236" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ഇല, പുല്ല്, കമ്പ്</text>
+              <text x="402" y="253" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">FOGO ആണെങ്കിൽ</text>
+              <text x="402" y="270" text-anchor="middle" font-size="11" fill="var(--ink)" class="ml">ഭക്ഷണാവശിഷ്ടവും</text>
+              <text x="402" y="296" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× പ്ലാസ്റ്റിക്</text>
+              <text x="402" y="312" text-anchor="middle" font-size="10.5" fill="var(--danger)" class="ml">× മണ്ണ്, കല്ല്</text>
+            </g>
+            <g>
+              <!-- PURPLE -->
+              <rect x="510" y="58" width="104" height="112" rx="7" fill="var(--surface-2)" stroke="var(--rule)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <rect x="502" y="42" width="120" height="20" rx="6" fill="var(--bin-purple)"/>
+              <rect x="550" y="30" width="24" height="14" rx="4" fill="var(--bin-purple)"/>
+              <text x="562" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--bin-purple)">PURPLE</text>
+              <text x="562" y="210" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" class="ml">ഗ്ലാസ് മാത്രം</text>
+              <text x="562" y="236" text-anchor="middle" font-size="11" fill="var(--ink-faint)" class="ml">ചില പ്രദേശങ്ങളിൽ</text>
+              <text x="562" y="253" text-anchor="middle" font-size="11" fill="var(--ink-faint)" class="ml">മാത്രം (VIC, SA)</text>
+              <text x="562" y="278" text-anchor="middle" font-size="11" fill="var(--ink-faint)" class="ml">നിങ്ങളുടെ കൗൺസിൽ</text>
+              <text x="562" y="295" text-anchor="middle" font-size="11" fill="var(--ink-faint)" class="ml">നോക്കുക</text>
+            </g>
+          </svg>
+          <figcaption><b>"3 ബിൻ സംവിധാനം" സാർവത്രികമല്ല.</b> നിറങ്ങൾ ദേശീയ നിലവാരത്തിലാണ്, പക്ഷേ എത്ര ബിൻ കിട്ടും എന്നത് കൗൺസിൽ തീരുമാനിക്കും — ചിലയിടത്ത് രണ്ട്, VIC/SA-യിൽ പലയിടത്തും നാല്. NSW ഘട്ടം ഘട്ടമായി FOGO-യിലേക്ക് മാറുന്നു.</figcaption>
+        </figure>
+        <ul class="plain">
+          <li><strong>"Wishcycling" ചെയ്യരുത്.</strong> സംശയമുള്ളത് മഞ്ഞ ബിന്നിൽ ഇടരുത്. ഒരു അഴുക്കുപുരണ്ട വസ്തു മുഴുവൻ ലോഡും നിരസിക്കപ്പെടാൻ കാരണമാകും. <strong>സംശയമുണ്ടെങ്കിൽ ചുവന്ന ബിന്നിൽ.</strong></li>
+          <li>റീസൈക്ലിംഗ് <strong>അയഞ്ഞതായി (loose)</strong> ഇടണം, പ്ലാസ്റ്റിക് ബാഗിൽ കെട്ടിയിടരുത്.</li>
+          <li><strong>Bin night:</strong> ആഴ്ചയിൽ ഒരു ദിവസം. തലേദിവസം രാത്രി ബിൻ റോഡരികിൽ (nature strip), ചക്രം വീടിന്റെ ഭാഗത്തേക്ക് തിരിച്ച്, ലിഡ് പൂർണമായി അടച്ച്. ചുവപ്പ് സാധാരണ എല്ലാ ആഴ്ചയും, മഞ്ഞയും പച്ചയും ഇടവിട്ട ആഴ്ചകളിലും. <em>ഏറ്റവും എളുപ്പ വഴി: അയൽവാസികളുടെ ബിൻ പുറത്തുവന്നോ എന്ന് നോക്കുക.</em></li>
+          <li><strong>വലിയ സാധനങ്ങൾ റോഡരികിൽ വെറുതെ ഇടരുത്.</strong> കൗൺസിലിന്റെ "bulky waste" / "kerbside clean-up" ബുക്ക് ചെയ്യണം (സാധാരണ വർഷത്തിൽ 2–4 തവണ സൗജന്യം). അല്ലാതെ ഇട്ടാൽ <strong>illegal dumping</strong> — കനത്ത പിഴ.</li>
+        </ul>
+        <div class="call good">
+          <span class="tag">ബോട്ടിൽ തിരികെ നൽകി പണം</span>
+          <p>എല്ലാ സംസ്ഥാനങ്ങളിലും ഉണ്ട്, പേര് മാത്രം വ്യത്യാസം: NSW-ൽ <strong>Return and Earn</strong>, QLD/WA-യിൽ <strong>Containers for Change</strong>, VIC-ൽ <strong>CDS Vic</strong>. ഒരു കണ്ടെയ്നറിന് <strong>10 സെന്റ്.</strong></p>
+          <p><strong>യോഗ്യമായവ:</strong> 150ml–3L പാനീയ കണ്ടെയ്നറുകൾ. <strong>യോഗ്യമല്ലാത്തവ:</strong> പ്ലെയിൻ പാൽ കണ്ടെയ്നർ, വൈൻ/സ്പിരിറ്റ് ബോട്ടിൽ, 1L-ന് മുകളിലുള്ള ചില ജ്യൂസ് കണ്ടെയ്നർ. കുട്ടികൾക്ക് പോക്കറ്റ് മണി ഉണ്ടാക്കാനും പുനഃചംക്രമണം ശീലിപ്പിക്കാനും നല്ല വഴി.</p>
+        </div>
+      </div>
+    </section>
+    <section id="s3">
+      <div class="wrap">
+        <div class="sechead"><span class="num">03</span><h2>ഭക്ഷണവും പലചരക്കും</h2></div>
+        <p class="lede">കടയിൽ പണം ലാഭിക്കുന്ന വഴികൾ, കോഫി ഓർഡർ ചെയ്യുന്ന ഭാഷ, കൈകൊണ്ട് കഴിക്കുന്നതിനെക്കുറിച്ചുള്ള നേരിട്ടുള്ള ഉത്തരം.</p>
+
+        <h3>സൂപ്പർമാർക്കറ്റുകൾ</h3>
+        <ul class="plain">
+          <li><strong>Woolworths ("Woolies") &amp; Coles</strong> — പ്രധാന രണ്ട് ശൃംഖലകൾ, വില ഏകദേശം സമാനം. <strong>Aldi</strong> — ഗണ്യമായി വില കുറവ്, ബ്രാൻഡ് തിരഞ്ഞെടുപ്പ് കുറവ്, സ്വന്തം ബാഗ് വേണം, ബില്ലിംഗ് വളരെ വേഗം (സാധനങ്ങൾ ട്രോളിയിലേക്ക് ഇട്ട ശേഷം മാറി നിന്ന് ബാഗിൽ ഇടുക). <strong>IGA</strong> — ചെറിയ ലോക്കൽ കടകൾ, വില കൂടുതൽ പക്ഷേ സൗകര്യം.</li>
+          <li><strong>സ്വന്തം ബാഗ് കൊണ്ടുപോകുക.</strong> ഒറ്റത്തവണ പ്ലാസ്റ്റിക് ബാഗുകൾ എല്ലാ സംസ്ഥാനങ്ങളിലും നിരോധിച്ചു. കട്ടിയുള്ള ബാഗിന് 15–99 സെന്റ്.</li>
+        </ul>
+
+        <div class="call stop">
+          <span class="tag">Self-checkout — ഇത് ഗൗരവമായി എടുക്കുക</span>
+          <p>പഴം/പച്ചക്കറി പോലെ തൂക്കി വിൽക്കുന്നവ സ്ക്രീനിൽ തിരഞ്ഞ് തിരഞ്ഞെടുക്കണം (<span class="en">Loose Tomatoes, Bananas Cavendish</span>). <strong>വിലകുറഞ്ഞ ഇനം തിരഞ്ഞെടുത്ത് വിലകൂടിയത് എടുക്കുന്നത് മോഷണമാണ്.</strong> ക്യാമറകളും തൂക്കം അളക്കുന്ന സെൻസറുകളും ഉണ്ട്; ചെറിയ തുകയ്ക്ക് പോലും പോലീസ് കേസ് ആകാം, <strong>അത് വിസയെ ബാധിക്കാം.</strong> സംശയമുണ്ടെങ്കിൽ അടുത്ത് നിൽക്കുന്ന ജീവനക്കാരനോട് ചോദിക്കുക — അവർ സഹായിക്കും.</p>
+        </div>
+
+        <h4>വില കുറയ്ക്കാനുള്ള അഞ്ച് വഴികൾ</h4>
+        <ol class="steps">
+          <li><strong>ബുധനാഴ്ച ഓഫർ പുതുക്കും.</strong> Woolworths/Coles ആപ്പിൽ ഈ ആഴ്ചത്തെ half-price കാറ്റലോഗ് നോക്കി പട്ടിക ഉണ്ടാക്കുക. ഇത് ഏറ്റവും വലിയ ലാഭം നൽകും.</li>
+          <li><strong>Markdowns:</strong> വൈകുന്നേരം (സാധാരണ 6 മണിക്ക് ശേഷം) മാംസം, ബേക്കറി എന്നിവയ്ക്ക് മഞ്ഞ സ്റ്റിക്കറിൽ 30–50% കുറവ്.</li>
+          <li><strong>Home brand</strong> (Woolworths Essentials, Coles brand) — ഗുണം സാധാരണ ഒന്നുതന്നെ, വില പകുതി.</li>
+          <li><strong>Unit price നോക്കുക.</strong> ഷെൽഫ് ലേബലിൽ ചെറിയ അക്ഷരത്തിൽ "$X per 100g" ഉണ്ടാകും. വലിയ പാക്കറ്റ് എപ്പോഴും വിലക്കുറവാണെന്ന് കരുതരുത്.</li>
+          <li><strong>ലൊയൽറ്റി കാർഡ് എടുക്കുക</strong> (സൗജന്യം): Flybuys (Coles), Everyday Rewards (Woolworths). പോയിന്റുകൾ ഡോളറായി മാറ്റാം.</li>
+        </ol>
+
+        <div class="call money">
+          <span class="tag">പെട്രോൾ ഡിസ്കൗണ്ട്</span>
+          <p>സൂപ്പർമാർക്കറ്റിൽ ഒരു നിശ്ചിത തുകയ്ക്ക് (സാധാരണ $30+) വാങ്ങിയാൽ ബില്ലിന്റെ അടിയിൽ <strong>"4c off per litre"</strong> വൗച്ചർ അച്ചടിച്ചു വരും (Coles → Shell/Coles Express, Woolworths → Ampol). 4–7 ദിവസത്തെ കാലാവധി.</p>
+          <p><strong>പെട്രോൾ വില ചക്രം:</strong> മിക്ക നഗരങ്ങളിലും വില ആഴ്ചതോറും ഉയരുകയും താഴുകയും ചെയ്യും. <strong>PetrolSpy, FuelCheck (NSW), 7-Eleven Fuel App</strong> ഉപയോഗിച്ച് കുറഞ്ഞ ദിവസം കണ്ടെത്തുക — ലിറ്ററിന് 30–40 സെന്റ് വരെ വ്യത്യാസം ഉണ്ടാകാം.</p>
+        </div>
+
+        <h4>ഇന്ത്യൻ പലചരക്ക്</h4>
+        <ul class="plain">
+          <li>മിക്ക നഗരങ്ങളിലും ഇന്ത്യൻ/ഏഷ്യൻ ഗ്രോസറികളുണ്ട്. കായം, കറിവേപ്പില, തേങ്ങ, പുട്ടുപൊടി, മത്തി, ചെമ്മീൻ, ഇഡ്ഡലി റവ എല്ലാം കിട്ടും. <strong>Sydney</strong> — Harris Park/Wentworthville, <strong>Melbourne</strong> — Dandenong/Clayton, <strong>Brisbane</strong> — Sunnybank. ചെറിയ പട്ടണങ്ങളിൽ ഓൺലൈൻ ഇന്ത്യൻ ഗ്രോസറികൾ പോസ്റ്റലായി അയക്കും.</li>
+          <li><strong>കറിവേപ്പില വീട്ടിൽ വളർത്താം</strong> (Bunnings-ൽ ചെടി കിട്ടും). തണുപ്പുള്ള മാസങ്ങളിൽ ഉള്ളിൽ വെക്കണം.</li>
+        </ul>
+
+        <div class="call stop">
+          <span class="tag">Biosecurity — നാട്ടിൽ നിന്ന് വരുമ്പോൾ</span>
+          <p>വിത്ത്, ചെടി, മണ്ണ്, പുതിയ പഴങ്ങൾ/പച്ചക്കറി, മാംസം, മുട്ട, തേൻ, ചില പാലുൽപ്പന്നങ്ങൾ — ഇവ കൊണ്ടുവരാൻ പാടില്ല. <strong>ഉണക്ക മീൻ, ഉണക്കിയ ഇറച്ചി, വീട്ടിലുണ്ടാക്കിയ അച്ചാർ</strong> എന്നിവയും കുഴപ്പത്തിലാക്കും.</p>
+          <p><strong>സംശയമുണ്ടെങ്കിൽ Incoming Passenger Card-ൽ "Yes" ടിക്ക് ചെയ്ത് പ്രഖ്യാപിക്കുക.</strong> പ്രഖ്യാപിച്ചാൽ ഏറ്റവും മോശം സാഹചര്യത്തിൽ അത് എടുത്തുകളയും, പിഴയില്ല. പ്രഖ്യാപിച്ചില്ലെങ്കിൽ ആയിരക്കണക്കിന് ഡോളർ പിഴയും വിസ റദ്ദാക്കലും വരെ സാധ്യം. ഈ കാര്യത്തിൽ ഓസ്‌ട്രേലിയ ലോകത്തിലെ ഏറ്റവും കർശനമായ രാജ്യമാണ്.</p>
+        </div>
+
+        <h3>കോഫി ഓർഡർ ചെയ്യുന്ന ഭാഷ</h3>
+        <p>ഓസ്‌ട്രേലിയയ്ക്ക് സ്വന്തമായ കോഫി പദാവലിയുണ്ട്. നാട്ടിലെ "കാപ്പി" പോലെയല്ല; ഇവിടെയുള്ളതെല്ലാം എസ്പ്രെസ്സോ അടിസ്ഥാനമാക്കിയുള്ളതാണ്.</p>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>പേര്</th><th>എന്താണ്</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Flat white</strong></td><td>എസ്പ്രെസ്സോ + steamed milk, നേർത്ത പത. <em>ഏറ്റവും ഓസ്‌ട്രേലിയൻ ഓർഡർ</em></td></tr>
+              <tr><td><strong>Latte</strong></td><td>Flat white-നേക്കാൾ കൂടുതൽ പാൽ, ഗ്ലാസിൽ വരാം</td></tr>
+              <tr><td><strong>Cappuccino</strong></td><td>കൂടുതൽ പത, മുകളിൽ ചോക്ലേറ്റ് പൊടി</td></tr>
+              <tr><td><strong>Long black</strong></td><td>ചൂടുവെള്ളത്തിന് മുകളിൽ എസ്പ്രെസ്സോ (അമേരിക്കാനോയോട് സമാനം)</td></tr>
+              <tr><td><strong>Short black</strong></td><td>സാധാരണ എസ്പ്രെസ്സോ</td></tr>
+              <tr><td><strong>Piccolo</strong></td><td>ചെറിയ ഗ്ലാസിൽ ശക്തമായ latte</td></tr>
+              <tr><td><strong>Chai latte</strong></td><td>മസാല ചായയല്ല — മധുരമുള്ള സിറപ്പ് + പാൽ</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="plain">
+          <li><strong>ഓർഡർ ചെയ്യുന്ന രീതി:</strong> "Can I get a large flat white, please?" വലുപ്പം: regular / large. പാൽ മാറ്റം: "with oat milk" / "soy" / "almond" (സാധാരണ 50–80 സെന്റ് അധികം). പഞ്ചസാര സ്വയം ചേർക്കുന്നതാണ് പതിവ്.</li>
+          <li><strong>യഥാർത്ഥ മസാല ചായ</strong> വേണമെങ്കിൽ ഇന്ത്യൻ റെസ്റ്റോറന്റിലോ വീട്ടിലോ മാത്രം പ്രതീക്ഷിക്കുക.</li>
+        </ul>
+
+        <h3>ടിപ്പ്, സർചാർജ്, ബിൽ വീതിക്കൽ</h3>
+        <div class="call good">
+          <span class="tag">ടിപ്പ് നിർബന്ധമല്ല</span>
+          <p>ഇത് അമേരിക്കയല്ല. ഓസ്‌ട്രേലിയയിൽ ജീവനക്കാർക്ക് നിയമപരമായ മിനിമം വേതനം ലഭിക്കുന്നു, ടിപ്പിനെ ആശ്രയിക്കുന്നില്ല. <strong>കഫേയിലോ സാധാരണ റെസ്റ്റോറന്റിലോ ടിപ്പ് ചെയ്യേണ്ട ആവശ്യമില്ല.</strong> വളരെ നല്ല സേവനം കിട്ടിയാൽ ഉയർന്ന റെസ്റ്റോറന്റിൽ 10% ചേർക്കാം, പക്ഷേ അത് പൂർണമായും ഐച്ഛികമാണ്. ടിപ്പ് ചെയ്യാത്തതിന് ആരും മോശമായി കരുതില്ല.</p>
+        </div>
+        <div class="call warn">
+          <span class="tag">പക്ഷേ ഇവ ടിപ്പല്ല</span>
+          <p><strong>Weekend / Public holiday surcharge:</strong> ശനി, ഞായർ, പൊതു അവധി ദിവസങ്ങളിൽ 10–15% അധികം. മെനുവിൽ ചെറിയ അക്ഷരത്തിൽ എഴുതിയിരിക്കും. ഇത് ജീവനക്കാരുടെ penalty rates നികത്താനാണ്, നിയമപരമാണ്.</p>
+          <p><strong>Card surcharge:</strong> 2026 ഒക്ടോബർ 1 മുതൽ Visa, Mastercard, eftpos കാർഡുകൾക്ക് ഇത് നിരോധിച്ചു. Amex പോലുള്ളവയ്ക്ക് ഇപ്പോഴും ഉണ്ടാകാം. <em>(വിശദാംശങ്ങൾ വിഭാഗം 4-ൽ.)</em></p>
+        </div>
+        <h4>"Split the bill"</h4>
+        <ul class="plain">
+          <li>സുഹൃത്തുക്കൾക്കൊപ്പം പോയാൽ ബിൽ വീതിക്കുന്നതാണ് സാധാരണം. <strong>നാട്ടിലെ പോലെ "ഞാൻ എടുക്കാം" എന്ന് നിർബന്ധിക്കുന്നത് ഇവിടെ അസ്വസ്ഥത ഉണ്ടാക്കും</strong> — അത് മറ്റെയാളെ കടക്കാരനാക്കുന്നു എന്ന തോന്നൽ ഉണ്ടാക്കും.</li>
+          <li>"Let's just split it evenly" അല്ലെങ്കിൽ ഓരോരുത്തരും അവരവരുടേത് അടയ്ക്കുക. <strong>PayID</strong> വഴി ഫോൺ നമ്പറിലേക്ക് നിമിഷങ്ങൾക്കുള്ളിൽ പണം അയക്കാം. "I'll transfer you my share" എന്നത് പതിവ് വാചകമാണ്.</li>
+          <li><strong>പബ്ബിലെ "shout":</strong> ഒരാൾ ഒരു റൗണ്ട് ഡ്രിങ്ക്സ് വാങ്ങും, അടുത്തയാൾ അടുത്ത റൗണ്ട്. <strong>നിങ്ങളുടെ ഊഴം വരുമ്പോൾ വാങ്ങേണ്ടത് നിർബന്ധമാണ്</strong> — മദ്യം കുടിക്കുന്നില്ലെങ്കിലും നിങ്ങളുടെ റൗണ്ട് വാങ്ങുക.</li>
+          <li>വെള്ളം സൗജന്യമായി ചോദിക്കാം (tap water); ഇവിടത്തെ ടാപ്പ് വെള്ളം കുടിക്കാൻ സുരക്ഷിതമാണ്.</li>
+        </ul>
+
+        <h3>കൈകൊണ്ട് ഭക്ഷണം കഴിക്കൽ</h3>
+        <p>പല മലയാളികളും ആശങ്കപ്പെടുന്ന കാര്യം. നേരിട്ടുള്ള ഉത്തരം: <strong>കൈകൊണ്ട് കഴിക്കുന്നത് തെറ്റല്ല, നിയമവിരുദ്ധവുമല്ല, ആരും നിങ്ങളെ തടയുകയുമില്ല. പക്ഷേ സന്ദർഭം അറിയണം.</strong></p>
+        <div class="pair">
+          <div class="a" style="border-top-color:var(--ok)">
+            <span class="lbl" style="color:var(--ok)">പൂർണമായും സ്വാഭാവികം</span>
+            <p>സ്വന്തം വീട്ടിൽ · ഇന്ത്യൻ, ശ്രീലങ്കൻ, എത്യോപ്യൻ, മലേഷ്യൻ റെസ്റ്റോറന്റുകളിൽ (കൈ കഴുകാനുള്ള സൗകര്യവും ഉണ്ടാകും) · മലയാളി കൂട്ടായ്മകളിൽ, ഓണസദ്യയിൽ</p>
+          </div>
+          <div class="k" style="border-top-color:var(--signal)">
+            <span class="lbl" style="color:var(--signal)">Cutlery ആണ് ബുദ്ധി</span>
+            <p>ഔപചാരിക റെസ്റ്റോറന്റ്, ബിസിനസ് ലഞ്ച്, അഭിമുഖത്തിന്റെ ഭക്ഷണം · ഓസ്‌ട്രേലിയൻ സഹപ്രവർത്തകരുടെ വീട്ടിൽ ആദ്യ ക്ഷണത്തിൽ · ഓഫീസ് lunchroom-ൽ (കൈ കഴുകാൻ സമയം വേണം, കീബോർഡും ഉണ്ട്)</p>
+          </div>
+        </div>
+        <p><strong>ഓസ്‌ട്രേലിയക്കാർ തന്നെ കൈകൊണ്ട് കഴിക്കുന്നവ ധാരാളമുണ്ട്:</strong> സാൻഡ്‌വിച്ച്, ബർഗർ, പിസ്സ, ചിപ്സ്, ചിക്കൻ വിംഗ്സ്, വ്രാപ്, സോസേജ് സിസിൽ, മീറ്റ് പൈ. അതിനാൽ "കൈ ഉപയോഗിക്കുന്നത്" എന്ന ആശയം ഇവിടെ അപരിചിതമല്ല.</p>
+        <div class="call law">
+          <span class="tag">ഓസ്‌ട്രേലിയൻ cutlery രീതി</span>
+          <p>മുള്ള് (fork) <strong>ഇടതുകൈയിൽ</strong>, കത്തി <strong>വലതുകൈയിൽ</strong>, മുള്ളിന്റെ മുനകൾ താഴേക്ക് — ബ്രിട്ടീഷ് ശൈലി. മുറിച്ച ശേഷം കത്തി താഴെ വെച്ച് മുള്ള് വലതുകൈയിലേക്ക് മാറ്റുന്നത് അമേരിക്കൻ രീതിയാണ്, ഇവിടെ അസാധാരണം. <strong>കഴിഞ്ഞാൽ കത്തിയും മുള്ളും പ്ലേറ്റിൽ അടുത്തടുത്തായി വെക്കുക</strong> — അത് "finished" എന്ന സൂചനയാണ്.</p>
+        </div>
+        <h4>യഥാർത്ഥത്തിൽ ശ്രദ്ധിക്കപ്പെടുന്നത് കൈയല്ല, ഇവയാണ്</h4>
+        <ul class="plain">
+          <li><strong>ശബ്ദമുണ്ടാക്കി കഴിക്കൽ.</strong> ചവയ്ക്കുമ്പോഴുള്ള ശബ്ദം, സൂപ്പ്/ചായ ഊതിക്കുടിക്കുന്ന ശബ്ദം, ഏമ്പക്കം. <em>ഇതാണ് ഇവിടത്തെ ഏറ്റവും വലിയ ടേബിൾ പിഴവ്.</em></li>
+          <li><strong>പങ്കിട്ട പാത്രത്തിൽ സ്വന്തം സ്പൂണോ കൈയോ ഇടൽ.</strong> എപ്പോഴും serving spoon ഉപയോഗിക്കുക. സ്വന്തം പ്ലേറ്റിൽ നിന്ന് മറ്റൊരാൾക്ക് വിളമ്പരുത്. "Double dipping" വളരെ മോശമായി കാണും.</li>
+          <li><strong>മുൻപും ശേഷവും കൈ കഴുകുക.</strong> ഇത് ചെയ്താൽ കൈകൊണ്ട് കഴിക്കുന്നതിന് ആരും ഒന്നും പറയില്ല. വിരൽ നക്കരുത് — നാപ്കിൻ ഉപയോഗിക്കുക.</li>
+          <li><strong>വായ അടച്ച് ചവയ്ക്കുക;</strong> വായ നിറച്ച് സംസാരിക്കരുത്. ഫോൺ ടേബിളിൽ വെച്ച് നോക്കിക്കൊണ്ടിരിക്കരുത്.</li>
+          <li><strong>എല്ലാവരും വിളമ്പിക്കഴിഞ്ഞ ശേഷം തുടങ്ങുക,</strong> അല്ലെങ്കിൽ ആതിഥേയൻ "please start" പറയുന്നത് വരെ കാത്തിരിക്കുക.</li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">വിളമ്പുന്ന രീതി മാറ്റേണ്ടി വരും</span>
+          <p>നാട്ടിൽ പ്ലേറ്റ് നിറയെ വിളമ്പുന്നത് ആതിഥ്യമാണ്. ഇവിടെ <strong>ഭക്ഷണം ബാക്കിവെക്കുന്നത് മോശമായി കാണും</strong> — അതിനാൽ കുറച്ച് എടുത്ത് വേണമെങ്കിൽ വീണ്ടും എടുക്കുന്നതാണ് രീതി. അതിഥികൾക്ക് <strong>നിർബന്ധിച്ച് വിളമ്പരുത്;</strong> ഒരിക്കൽ ചോദിക്കുക, "no thanks" പറഞ്ഞാൽ അവിടെ നിർത്തുക.</p>
+        </div>
+        <p><strong>ചുരുക്കം:</strong> കൈകൊണ്ട് കഴിക്കുന്നതിൽ ലജ്ജിക്കേണ്ടതില്ല — ഓസ്‌ട്രേലിയ ബഹുസാംസ്കാരിക രാജ്യമാണ്. പക്ഷേ ഔപചാരിക സന്ദർഭങ്ങളിൽ cutlery ഉപയോഗിക്കാൻ അറിയുന്നത് ഒരു ഉപകാരപ്രദമായ കഴിവാണ്. <strong>കുട്ടികളെ രണ്ടും പഠിപ്പിക്കുക.</strong></p>
+
+        <h3>അലർജികളും ഭക്ഷണ രീതികളും</h3>
+        <div class="call stop">
+          <span class="tag">ഇത് ജീവന്റെ പ്രശ്നമാണ്</span>
+          <p>ഓസ്‌ട്രേലിയയിൽ ഭക്ഷ്യ അലർജി വളരെ സാധാരണമാണ്, ചിലത് ജീവന് ഭീഷണിയാണ് (<span class="en">anaphylaxis</span>). ആരെങ്കിലും "I'm allergic to nuts" എന്ന് പറഞ്ഞാൽ <strong>അത് ഇഷ്ടക്കുറവല്ല, മെഡിക്കൽ അവസ്ഥയാണ്.</strong> "കുറച്ചു മാത്രമല്ലേ", "ഒരു കുഴപ്പവുമില്ല" എന്ന് നിർബന്ധിക്കരുത് — ഒരു തരി പോലും അപകടകരമാകാം.</p>
+          <p><strong>അതിഥികളെ ക്ഷണിക്കുമ്പോൾ എപ്പോഴും ചോദിക്കുക:</strong> "Any allergies or dietary requirements?" ഇത് അമിത ജാഗ്രതയല്ല, മര്യാദയാണ്.</p>
+        </div>
+        <h4>ഇന്ത്യൻ പാചകത്തിൽ ഒളിഞ്ഞിരിക്കുന്ന അലർജനുകൾ</h4>
+        <p>കശുവണ്ടി പേസ്റ്റ് (ഗ്രേവിയിൽ) · നിലക്കടല (ചട്നിയിൽ) · എള്ള് (sesame) · കടുക് · പാൽ/നെയ്യ് · <strong>ഗോതമ്പ് — കായത്തിൽ (ഹിംഗ്) പോലും ഗോതമ്പ് ഉണ്ടാകാം</strong> · ചെമ്മീൻ പൊടി. നിങ്ങളുടെ വിഭവത്തിൽ എന്തൊക്കെയുണ്ടെന്ന് കൃത്യമായി പറയാൻ കഴിയണം.</p>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>പദം</th><th>അർത്ഥം</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Vegetarian</strong></td><td>മാംസം, മീൻ, കോഴി ഇല്ല. മുട്ടയും പാലും സാധാരണ കഴിക്കും</td></tr>
+              <tr><td><strong>Vegan</strong></td><td>മൃഗങ്ങളിൽ നിന്നുള്ള ഒന്നുമില്ല. <strong>നെയ്യ്, തൈര്, പാൽ, തേൻ, മുട്ട ഇല്ല.</strong> <em>നെയ്യിൽ വറുത്തത് vegan അല്ല — പലരും ഇവിടെ പിഴവ് വരുത്തുന്നു</em></td></tr>
+              <tr><td><strong>Gluten-free</strong></td><td>ഗോതമ്പ്, ബാർലി, റൈ ഇല്ല. Coeliac disease ഉള്ളവർക്ക് ചെറിയ അളവ് പോലും ദോഷം. ചപ്പാത്തി, നാൻ, റവ, സൂജി, ചില ഹിംഗ് — ഇവ GF അല്ല</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call good">
+          <span class="tag">ഒരു നല്ല വാർത്ത</span>
+          <p><strong>ദോശ, ഇഡ്ഡലി, ചോറ്, മിക്ക കറികളും സ്വാഭാവികമായി gluten-free ആണ്</strong> (ഹിംഗ് മാത്രം ശ്രദ്ധിക്കുക). GF അതിഥികൾക്ക് വിളമ്പാൻ നമ്മുടെ ഭക്ഷണം വളരെ അനുയോജ്യമാണ്.</p>
+        </div>
+
+        <h3>ബീഫും പോർക്കും</h3>
+        <ul class="plain">
+          <li>ഓസ്‌ട്രേലിയയിൽ ഇവ പൂർണമായും സാധാരണമാണ്, എല്ലാ സൂപ്പർമാർക്കറ്റിലും കിട്ടും, ബാർബിക്യൂവിൽ വരും.</li>
+          <li><strong>നിങ്ങൾ കഴിക്കുന്നില്ലെങ്കിൽ ഒരു വരിയിൽ പറഞ്ഞാൽ മതി:</strong> "I don't eat beef" അല്ലെങ്കിൽ "I'm vegetarian." ആരും കാരണം ചോദിക്കില്ല; ചോദിച്ചാൽ "personal/religious reasons" എന്ന് പറഞ്ഞാൽ അവിടെ തീരും. ഓസ്‌ട്രേലിയക്കാർ ഇത്തരം കാര്യങ്ങളിൽ വളരെ സഹിഷ്ണുതയുള്ളവരാണ്.</li>
+          <li><strong>മറ്റുള്ളവരെ വിധിക്കരുത്.</strong> അവർ ബീഫ് കഴിക്കുന്നതിനെക്കുറിച്ച് അഭിപ്രായം പറയുന്നത് (നാട്ടിൽ സ്വാഭാവികമായി തോന്നാമെങ്കിലും) ഇവിടെ വളരെ മോശമായി കാണും.</li>
+          <li><strong>ബാർബിക്യൂവിൽ</strong> ഗ്രിൽ ഒന്നായതിനാൽ cross-contamination ഉണ്ടാകും. പ്രശ്നമാണെങ്കിൽ മുൻകൂട്ടി "Could you do mine on a clean part of the grill?" എന്ന് സൗമ്യമായി ചോദിക്കാം, അല്ലെങ്കിൽ സ്വന്തം ഭക്ഷണം കൊണ്ടുപോകാം. ഇത് പൂർണമായും സ്വീകാര്യമാണ്.</li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">എരിവ്</span>
+          <p>ഓസ്‌ട്രേലിയക്കാർക്ക് ഇന്ത്യൻ ഭക്ഷണം വളരെ ഇഷ്ടമാണ്, പക്ഷേ "curry" എന്നാൽ അവർക്ക് സാധാരണ ബട്ടർ ചിക്കൻ/ടിക്ക മസാലയാണ്. <strong>നമ്മുടെ എരിവ് അവരുടെ സഹനശേഷിക്ക് അപ്പുറമാകാം.</strong> അതിഥികൾക്ക് വിളമ്പുമ്പോൾ എരിവ് കുറയ്ക്കുക, മുളക് വേറെ വെക്കുക.</p>
+        </div>
+      </div>
+    </section>
+    <section id="s4">
+      <div class="wrap">
+        <div class="sechead"><span class="num">04</span><h2>സേവനങ്ങളും ആരോഗ്യവും</h2></div>
+        <p class="lede">ആരോഗ്യ സംവിധാനമാണ് ഏറ്റവും വലിയ വ്യവസ്ഥാപരമായ വ്യത്യാസം. ഇത് മുൻകൂട്ടി അറിയാത്തത് പലർക്കും ആയിരക്കണക്കിന് ഡോളർ ചെലവാക്കിയിട്ടുണ്ട്.</p>
+
+        <h3>ബാങ്കിംഗും പേയ്‌മെന്റും</h3>
+        <ul class="plain">
+          <li><strong>ഏതാണ്ട് പൂർണമായും കാർഡ്/ഫോൺ അധിഷ്ഠിതം.</strong> Tap-and-go ($100-ൽ താഴെ PIN വേണ്ട, ചിലയിടത്ത് $200 വരെ). Apple Pay, Google Pay വ്യാപകം.</li>
+          <li><strong>EFTPOS</strong> — ഓസ്‌ട്രേലിയയുടെ സ്വന്തം ഡെബിറ്റ് കാർഡ് ശൃംഖല. "Savings" അല്ലെങ്കിൽ "Cheque" അമർത്തി ഡെബിറ്റായി പണമടയ്ക്കാം; ഇത് പലപ്പോഴും കടക്കാരന് വിലക്കുറവാണ്.</li>
+          <li><strong>BSB</strong> (Bank-State-Branch) — ഇന്ത്യൻ IFSC-ക്ക് സമാനമായ 6 അക്ക കോഡ്. ശമ്പളം കിട്ടാൻ BSB + അക്കൗണ്ട് നമ്പർ തൊഴിലുടമയ്ക്ക് നൽകണം.</li>
+          <li><strong>BPAY</strong> — ബില്ലുകൾ അടയ്ക്കാനുള്ള സംവിധാനം. ബില്ലിൽ "Biller Code"-ഉം "Ref"-ഉം ഉണ്ടാകും; നെറ്റ് ബാങ്കിംഗിൽ ഇത് ചേർക്കുക.</li>
+          <li><strong>ബാങ്ക് അക്കൗണ്ട് ഓസ്‌ട്രേലിയയിൽ എത്തുന്നതിന് മുൻപ് ഓൺലൈനായി തുറക്കാം</strong> (CommBank, NAB, ANZ, Westpac). എത്തിയ ശേഷം പാസ്പോർട്ടുമായി ബ്രാഞ്ചിൽ ചെന്ന് ഐഡന്റിറ്റി സ്ഥിരീകരിക്കണം.</li>
+        </ul>
+        <div class="call good">
+          <span class="tag">PayID — ആദ്യ ആഴ്ചയിൽ സജ്ജമാക്കുക</span>
+          <p>നിങ്ങളുടെ <strong>മൊബൈൽ നമ്പറോ ഇമെയിലോ</strong> ബാങ്ക് അക്കൗണ്ടുമായി ബന്ധിപ്പിക്കുന്ന സംവിധാനം. BSB/അക്കൗണ്ട് നമ്പർ ഇല്ലാതെ, <strong>നിമിഷങ്ങൾക്കുള്ളിൽ</strong> പണം അയക്കാം (Osko വഴി). സുഹൃത്തുക്കൾക്കിടയിൽ ബിൽ വീതിക്കാൻ ഏറ്റവും ഉപയോഗിക്കുന്നത് ഇതാണ്.</p>
+        </div>
+        <div class="call law">
+          <span class="tag">TFN — Tax File Number</span>
+          <p>എത്തിയാൽ ഉടനെ ATO-യിൽ നിന്ന് <strong>സൗജന്യമായി</strong> അപേക്ഷിക്കുക (ഇതിന് ഫീസ് ചോദിക്കുന്ന ഏജന്റുമാർ തട്ടിപ്പാണ്).</p>
+          <p><strong>TFN നൽകിയില്ലെങ്കിൽ:</strong> ബാങ്കിന് നൽകിയില്ലെങ്കിൽ പലിശയിൽ നിന്ന് ഏറ്റവും ഉയർന്ന നിരക്കിൽ നികുതി പിടിക്കും; <strong>തൊഴിലുടമയ്ക്ക് നൽകിയില്ലെങ്കിൽ ശമ്പളത്തിൽ നിന്ന് ഏകദേശം 45% നികുതി പിടിക്കും.</strong></p>
+        </div>
+
+        <h4>പണവും കാർഡ് സർചാർജും — 2026-ലെ സ്ഥിതി</h4>
+        <ul class="plain">
+          <li><strong>"പണം സ്വീകരിക്കില്ല" എന്നത് പൂർണമായും ശരിയല്ല.</strong> 2026 ജനുവരി 1 മുതൽ cash acceptance codes പ്രാബല്യത്തിൽ വന്നു (ACCC നടപ്പാക്കുന്നു; <strong>പിഴ ഈടാക്കൽ 2026 ജൂലൈ 1 മുതൽ</strong>). പ്രകാരം <strong>വാർഷിക വിറ്റുവരവ് $10 മില്യണിന് മുകളിലുള്ള പലചരക്ക്-പെട്രോൾ വ്യാപാരികൾ</strong> (Coles, Woolworths, Ampol, BP) <strong>രാവിലെ 7 മുതൽ രാത്രി 9 വരെ $500-ൽ താഴെയുള്ള നേരിട്ടുള്ള ഇടപാടുകൾക്ക് പണം സ്വീകരിക്കണം.</strong>
+            <ul>
+              <li>ഇത് <strong>സൂപ്പർമാർക്കറ്റുകൾക്കും ഇന്ധന വിൽപ്പനശാലകൾക്കും മാത്രമാണ്</strong> — "അവശ്യ സാധനങ്ങൾ" വിൽക്കുന്ന എല്ലാ കടകൾക്കുമല്ല.</li>
+              <li>ഓൺലൈൻ-മാത്രം ബിസിനസുകൾക്കും ചെറുകിട കടകൾക്കും ബാധകമല്ല; അവർക്ക് "card only" ആകാം (പക്ഷേ മുൻകൂട്ടി അറിയിക്കണം).</li>
+              <li><strong>അത്യാവശ്യത്തിന് കുറച്ചു പണം കൈയിൽ കരുതുക</strong> — ഇന്റർനെറ്റ്/വൈദ്യുതി തകരാറുകൾ ഉണ്ടാകാറുണ്ട്.</li>
+            </ul>
+          </li>
+          <li><strong>കാർഡ് സർചാർജ് ഇപ്പോൾ ഇല്ല.</strong> 2026 ഒക്ടോബർ 1 മുതൽ RBA-യുടെ തീരുമാനപ്രകാരം <strong>eftpos, Mastercard, Visa</strong> കാർഡുകൾക്ക് (ഡെബിറ്റ്, ക്രെഡിറ്റ്, പ്രീപെയ്ഡ്) വ്യാപാരികൾക്ക് സർചാർജ് ചുമത്താൻ കഴിയില്ല. 20 വർഷത്തിനിടയിലെ ഏറ്റവും വലിയ പേയ്‌മെന്റ് പരിഷ്കാരമാണിത്.
+            <ul>
+              <li><strong>ഇനിയും ഉണ്ടാകാവുന്നത്:</strong> American Express പോലുള്ള മറ്റ് ശൃംഖലകൾക്ക് സർചാർജ് തുടരാം (യഥാർത്ഥ ചെലവിൽ കൂടരുത്).</li>
+              <li>"Card fee", "processing fee" എന്നിങ്ങനെ <strong>പേര് മാറ്റി ഈടാക്കുന്നതും നിരോധിതമാണ്</strong> — കണ്ടാൽ ACCC-യിൽ പരാതിപ്പെടാം.</li>
+              <li><strong>ഇത് വിലക്കുറവല്ല:</strong> പല കടകളും സർചാർജ് അടിസ്ഥാന വിലയിലേക്ക് ചേർത്തിട്ടുണ്ടാകും.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="call stop">
+          <span class="tag">തട്ടിപ്പുകൾ — പുതിയ കുടിയേറ്റക്കാരാണ് പ്രധാന ലക്ഷ്യം</span>
+          <p><strong>ATO, Services Australia, Immigration എന്നിവർ ഒരിക്കലും ഫോണിൽ വിളിച്ച് "അറസ്റ്റ് ചെയ്യും, ഇപ്പോൾ പണം അടയ്ക്കൂ" എന്ന് പറയില്ല. ഗിഫ്റ്റ് കാർഡിലോ ക്രിപ്റ്റോയിലോ ഒരിക്കലും പണം ചോദിക്കില്ല.</strong> അങ്ങനെ ഒരു കോൾ വന്നാൽ വെച്ചിട്ട് ഔദ്യോഗിക നമ്പറിൽ തിരികെ വിളിക്കുക. <span class="en">scamwatch.gov.au</span> നോക്കുക.</p>
+        </div>
+        <div class="call money">
+          <span class="tag">ക്രെഡിറ്റ് സ്കോർ</span>
+          <p>ഫോൺ പ്ലാൻ, വൈദ്യുതി അക്കൗണ്ട്, വാടക എന്നിവ കൃത്യമായി അടയ്ക്കുക. <strong>അടയ്ക്കാത്ത ബില്ലുകൾ ("default") 5 വർഷം രേഖയിൽ കിടക്കും,</strong> ഭാവിയിൽ ഭവനവായ്പയെ ബാധിക്കും. Buy Now Pay Later (Afterpay, Zip) കടമാണ് — അതിരു കടന്നാൽ late fee വരും.</p>
+        </div>
+
+        <h3>ആരോഗ്യരംഗം: GP ആണ് വാതിൽ</h3>
+        <figure>
+          <div class="figtitle">സ്പെഷ്യലിസ്റ്റിനെ കാണാനുള്ള വഴി</div>
+          <svg viewBox="0 0 700 290" role="img" aria-label="കേരളത്തിൽ നേരിട്ട് സ്പെഷ്യലിസ്റ്റിനെ കാണാം; ഓസ്‌ട്രേലിയയിൽ GP വഴി റഫറൽ വേണം">
+            <!-- Kerala path -->
+            <text x="20" y="30" font-size="11" font-weight="600" letter-spacing=".1em" fill="var(--lat)">നാട്ടിൽ</text>
+            <rect x="20" y="44" width="118" height="48" rx="9" fill="var(--lat-soft)" stroke="var(--lat)" stroke-width="1.5"/>
+            <text x="79" y="66" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--lat)" class="ml">അസുഖം</text>
+            <text x="79" y="83" text-anchor="middle" font-size="11" fill="var(--ink-soft)" class="ml">വന്നാൽ</text>
+            <path d="M144 68 L202 68" stroke="var(--lat)" stroke-width="2.5" fill="none"/>
+            <path d="M202 68 l-10 -4.5 l0 9 Z" fill="var(--lat)"/>
+            <rect x="208" y="44" width="150" height="48" rx="9" fill="var(--lat-soft)" stroke="var(--lat)" stroke-width="1.5"/>
+            <text x="283" y="66" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--lat)" class="ml">നേരിട്ട് സ്പെഷ്യലിസ്റ്റ്</text>
+            <text x="283" y="83" text-anchor="middle" font-size="11" fill="var(--ink-soft)" class="ml">അല്ലെങ്കിൽ ഫാർമസി</text>
+            <!-- divider -->
+            <line x1="20" y1="118" x2="680" y2="118" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 4"/>
+            <!-- Australia path -->
+            <text x="20" y="148" font-size="11" font-weight="600" letter-spacing=".1em" fill="var(--euc)">ഓസ്‌ട്രേലിയയിൽ</text>
+            <rect x="20" y="162" width="104" height="52" rx="9" fill="var(--euc-soft)" stroke="var(--euc)" stroke-width="1.5"/>
+            <text x="72" y="184" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)" class="ml">അസുഖം</text>
+            <text x="72" y="201" text-anchor="middle" font-size="11" fill="var(--ink-soft)" class="ml">വന്നാൽ</text>
+            <path d="M130 188 L176 188" stroke="var(--euc)" stroke-width="2.5" fill="none"/>
+            <path d="M176 188 l-10 -4.5 l0 9 Z" fill="var(--euc)"/>
+            <rect x="182" y="156" width="126" height="64" rx="9" fill="var(--euc)" stroke="var(--euc)" stroke-width="1.5"/>
+            <text x="245" y="181" text-anchor="middle" font-size="14" font-weight="700" fill="var(--paper)">GP</text>
+            <text x="245" y="200" text-anchor="middle" font-size="10.5" fill="var(--paper)">General</text>
+            <text x="245" y="213" text-anchor="middle" font-size="10.5" fill="var(--paper)">Practitioner</text>
+            <path d="M314 188 L372 188" stroke="var(--euc)" stroke-width="2.5" fill="none"/>
+            <path d="M372 188 l-10 -4.5 l0 9 Z" fill="var(--euc)"/>
+            <rect x="378" y="162" width="130" height="52" rx="9" fill="var(--signal-soft)" stroke="var(--signal)" stroke-width="1.5"/>
+            <text x="443" y="183" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--signal)" class="ml">റഫറൽ ലെറ്റർ</text>
+            <text x="443" y="201" text-anchor="middle" font-size="11" fill="var(--ink-soft)">12 മാസം സാധു</text>
+            <path d="M514 188 L562 188" stroke="var(--euc)" stroke-width="2.5" fill="none"/>
+            <path d="M562 188 l-10 -4.5 l0 9 Z" fill="var(--euc)"/>
+            <rect x="568" y="162" width="112" height="52" rx="9" fill="var(--euc-soft)" stroke="var(--euc)" stroke-width="1.5"/>
+            <text x="624" y="184" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)" class="ml">സ്പെഷ്യലിസ്റ്റ്</text>
+            <text x="624" y="201" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)" class="ml">ആഴ്ച/മാസം കാത്തിരിപ്പ്</text>
+            <!-- warning -->
+            <rect x="378" y="238" width="302" height="38" rx="7" fill="var(--danger-soft)" stroke="var(--danger)" stroke-width="1.2"/>
+            <text x="392" y="254" font-size="11.5" font-weight="600" fill="var(--danger)" class="ml">റഫറൽ ഇല്ലാതെ സ്പെഷ്യലിസ്റ്റിനെ കണ്ടാൽ</text>
+            <text x="392" y="269" font-size="11.5" fill="var(--danger)" class="ml">Medicare റീബേറ്റ് കിട്ടില്ല — പൂർണ ഫീസ് നൽകണം</text>
+          </svg>
+          <figcaption>GP = <b>General Practitioner</b>, നാട്ടിലെ "ഫാമിലി ഡോക്ടർ". ഇവിടെ അവർ ഗേറ്റ്‌കീപ്പർ കൂടിയാണ്. ഒരു സ്പെഷ്യലിസ്റ്റ് മറ്റൊരു സ്പെഷ്യലിസ്റ്റിലേക്ക് നൽകുന്ന റഫറൽ 3 മാസമേ സാധുവാകൂ.</figcaption>
+        </figure>
+        <ul class="plain">
+          <li><strong>എത്തിയാൽ ഉടനെ ഒരു GP-യിൽ രജിസ്റ്റർ ചെയ്യുക.</strong> അസുഖം വരുമ്പോൾ അന്വേഷിക്കരുത് — അപ്പോൾ അപ്പോയിന്റ്മെന്റ് കിട്ടാൻ ദിവസങ്ങൾ എടുക്കാം. <strong>HotDoc, HealthEngine</strong> ആപ്പുകളിൽ ബുക്ക് ചെയ്യാം.</li>
+          <li><strong>മരുന്നുകൾ:</strong> നാട്ടിലെ പോലെ ഫാർമസിയിൽ ചെന്ന് ആന്റിബയോട്ടിക് ചോദിച്ചു വാങ്ങാൻ കഴിയില്ല — <strong>നിർബന്ധമായും പ്രിസ്ക്രിപ്ഷൻ വേണം.</strong> പാരസെറ്റമോൾ (Panadol), ibuprofen (Nurofen), antihistamine എന്നിവ കൗണ്ടറിൽ കിട്ടും.</li>
+          <li><strong>PBS</strong> (Pharmaceutical Benefits Scheme) — സർക്കാർ സബ്സിഡിയുള്ള മരുന്നുകളുടെ പട്ടിക. ഇത് പ്രിസ്ക്രിപ്ഷൻ മരുന്നുകളുടെ വില ഗണ്യമായി കുറയ്ക്കുന്നു.</li>
+        </ul>
+
+        <h3>Medicare — എല്ലാവർക്കും കിട്ടില്ല</h3>
+        <div class="call stop">
+          <span class="tag">ഇത് മിക്കവരും അറിയാതെ പോകുന്നു</span>
+          <p>ഓസ്‌ട്രേലിയയ്ക്ക് <strong>ഇന്ത്യയുമായി പരസ്പര ആരോഗ്യ കരാർ (Reciprocal Health Care Agreement) ഇല്ല.</strong> അതിനാൽ <strong>ഇന്ത്യൻ പാസ്പോർട്ടിൽ താൽക്കാലിക വിസയിൽ (482, 500, 600, 485 തുടങ്ങിയവ) ഉള്ളവർക്ക് Medicare ലഭിക്കില്ല.</strong></p>
+          <p>അവർക്ക് വിസ വ്യവസ്ഥ പ്രകാരം ഇൻഷുറൻസ് നിർബന്ധമാണ്:<br>
+          <strong>OVHC</strong> = Overseas Visitor Health Cover (തൊഴിൽ വിസ)<br>
+          <strong>OSHC</strong> = Overseas Student Health Cover (വിദ്യാർത്ഥി വിസ)<br>
+          <em>ഇത് സാധുവായി നിലനിർത്തുന്നത് വിസ വ്യവസ്ഥയാണ്; ലംഘിച്ചാൽ വിസയെ ബാധിക്കും.</em></p>
+          <p><strong>PR (സ്ഥിരതാമസം) കിട്ടിയാൽ ഉടനെ Medicare-ന് അപേക്ഷിക്കുക</strong> (Services Australia). കാർഡ് വരുന്നത് വരെ താൽക്കാലിക നമ്പർ കിട്ടും.</p>
+        </div>
+
+        <h4>Bulk billing — രോഗിക്ക് ചെലവില്ലാത്ത സന്ദർശനം</h4>
+        <ul class="plain">
+          <li>GP മുഴുവൻ ഫീസും Medicare-ൽ നിന്ന് നേരിട്ട് വാങ്ങുന്ന രീതി.</li>
+          <li><strong>2025 നവംബർ 1 മുതൽ ഒരു പ്രധാന മാറ്റം:</strong> bulk billing incentive ഇപ്പോൾ <strong>Medicare-ന് അർഹതയുള്ള എല്ലാ രോഗികൾക്കും</strong> ബാധകമാണ് (മുൻപ് കുട്ടികൾക്കും concession card ഉള്ളവർക്കും മാത്രം). ഇതോടെ നിരക്ക് ഉയർന്നു — <strong>GP സേവനങ്ങളിൽ ഏകദേശം 81%</strong> ഇപ്പോൾ bulk bill ചെയ്യപ്പെടുന്നു (മുൻവർഷം 77%).</li>
+          <li><strong>എന്നാൽ ഇത് ഇപ്പോഴും നിർബന്ധമല്ല.</strong> ക്ലിനിക്കുകൾക്ക് "gap fee" ഈടാക്കാം (ഏകദേശം $40–$60 പോക്കറ്റിൽ നിന്ന്). നഗരങ്ങളിൽ gap fee കൂടുതൽ സാധാരണം; ഗ്രാമപ്രദേശങ്ങളിൽ incentive കൂടുതലായതിനാൽ bulk billing കൂടുതൽ.</li>
+          <li><strong>ബുക്ക് ചെയ്യുമ്പോൾ എപ്പോഴും ചോദിക്കുക: "Do you bulk bill?"</strong> ചില ക്ലിനിക്കുകൾ "Medicare Bulk Billing Practice" ബോർഡ് പ്രദർശിപ്പിക്കുന്നുണ്ട് — അവിടെ എല്ലാ രോഗികൾക്കും bulk billing ആണ്.</li>
+        </ul>
+
+        <h3>അടിയന്തര സാഹചര്യങ്ങൾ</h3>
+        <div class="call stop">
+          <span class="tag">000 — ഇത് കുടുംബത്തെ പഠിപ്പിക്കുക</span>
+          <p>പോലീസ്, ഫയർ, ആംബുലൻസ് — മൂന്നിനും <strong>000</strong>. ഇന്ത്യയിലെ 100/108 അല്ല. കുട്ടികൾക്കും പ്രായമായവർക്കും ഇത് ഇന്നുതന്നെ പറഞ്ഞുകൊടുക്കുക.</p>
+        </div>
+        <div class="call money">
+          <span class="tag">ആംബുലൻസ് സൗജന്യമല്ല</span>
+          <p>ക്വീൻസ്ലാൻഡ്, ടാസ്മാനിയ ഒഴികെ (അവിടെ താമസക്കാർക്ക് സൗജന്യം). NSW/VIC-ൽ ഒരു ആംബുലൻസ് യാത്രയ്ക്ക് <strong>നൂറുകണക്കിന് മുതൽ ആയിരക്കണക്കിന് ഡോളർ വരെ</strong> വരാം, <strong>Medicare ഇത് കവർ ചെയ്യില്ല.</strong></p>
+          <p>അതിനാൽ <strong>ambulance cover</strong> (വർഷത്തിൽ ഏകദേശം $50–$100) എടുക്കുന്നത് വളരെ ബുദ്ധിപരമാണ്; പല private health policy-കളിലും ഇത് ഉൾപ്പെടും.</p>
+        </div>
+        <p><strong>അടിയന്തരമല്ലാത്ത ആരോഗ്യ ഉപദേശത്തിന്:</strong> <span class="en">healthdirect</span> — <strong>1800 022 222</strong> (24 മണിക്കൂർ നഴ്സ് ലൈൻ). അനാവശ്യമായി emergency department-ൽ പോകുന്നത് ഒഴിവാക്കാൻ ഇത് സഹായിക്കും.</p>
+
+        <h3>Private Health Insurance</h3>
+        <ul class="plain">
+          <li>രണ്ട് ഭാഗം: <strong>Hospital cover</strong> (സ്വകാര്യ ആശുപത്രി) + <strong>Extras cover</strong> (ദന്തചികിത്സ, കണ്ണട, ഫിസിയോ). <strong>ദന്തചികിത്സയും കണ്ണടയും Medicare കവർ ചെയ്യില്ല</strong> — ഇത് പലരും അറിയാതെ പോകുന്നു.</li>
+          <li><strong>Medicare Levy Surcharge:</strong> ഉയർന്ന വരുമാനമുള്ളവർക്ക് hospital cover ഇല്ലെങ്കിൽ അധിക നികുതി (1–1.5%). അതിനാൽ പലർക്കും ഇൻഷുറൻസ് എടുക്കുന്നതാണ് ലാഭം. <em>കൃത്യമായ വരുമാന പരിധി എല്ലാ വർഷവും മാറും — ATO വെബ്സൈറ്റിൽ നോക്കുക.</em></li>
+          <li><strong>Waiting periods:</strong> പുതിയ പോളിസിക്ക് കാത്തിരിപ്പ് കാലാവധി ഉണ്ട് — പ്രസവത്തിന് 12 മാസം, മുൻകൂട്ടിയുള്ള അസുഖങ്ങൾക്ക് 12 മാസം, ചിലതിന് 2 മാസം. <strong>കുടുംബം ആസൂത്രണം ചെയ്യുന്നുണ്ടെങ്കിൽ ഇത് വളരെ നേരത്തെ ചിന്തിക്കണം.</strong></li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">LHC loading — 31 വയസ്സിന്റെ നിയമം</span>
+          <p><strong>Lifetime Health Cover loading:</strong> 31 വയസ്സിന് ശേഷം ആദ്യമായി hospital cover എടുത്താൽ ഓരോ വർഷത്തിനും 2% വീതം അധിക പ്രീമിയം (പരമാവധി 70%), 10 വർഷത്തേക്ക്.</p>
+          <p><strong>പക്ഷേ കുടിയേറ്റക്കാർക്ക് ഒരു ഇളവുണ്ട്:</strong> Medicare-ന് അർഹത നേടിയ തീയതി മുതൽ <strong>ഒരു വർഷത്തിനുള്ളിൽ</strong> എടുത്താൽ loading വരില്ല. <strong>PR കിട്ടിയ ഉടനെ ഇത് പരിശോധിക്കുക</strong> — ഒരു വർഷം കഴിഞ്ഞാൽ ഈ ഇളവ് നഷ്ടപ്പെടും. വിശദാംശങ്ങൾ: <span class="en">privatehealth.gov.au</span></p>
+        </div>
+
+        <h3>ട്രേഡ് ജോലികളും DIY സംസ്കാരവും</h3>
+        <p><strong>Tradies</strong> = പ്ലംബർ, ഇലക്ട്രീഷ്യൻ, കാർപെന്റർ, ടൈലർ തുടങ്ങിയ വിദഗ്ധ തൊഴിലാളികൾ. അവരുടെ കൂലി ഉയർന്നതാണ് — നാട്ടിലെ നിരക്കുമായി താരതമ്യം ചെയ്ത് ഞെട്ടരുത്. ഇവിടെ തൊഴിലാളിയുടെ സമയത്തിനാണ് വില.</p>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>എന്തിന്</th><th>ഏകദേശ നിരക്ക്</th></tr></thead>
+            <tbody>
+              <tr><td>Call-out fee (വീട്ടിൽ വരുന്നതിന് മാത്രം)</td><td>$80 – $180</td></tr>
+              <tr><td>മണിക്കൂർ നിരക്ക്</td><td>$90 – $180</td></tr>
+              <tr><td>അടിയന്തര / രാത്രി / വാരാന്ത്യം</td><td>ഇരട്ടിയോ അതിലധികമോ</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call stop">
+          <span class="tag">സ്വയം ചെയ്യാൻ പാടില്ലാത്തത്</span>
+          <p><strong>ഏതൊരു വൈദ്യുതി ജോലിയും.</strong> ഒരു ലൈറ്റ് ഫിറ്റിംഗ് മാറ്റിവെക്കുന്നത് പോലും ലൈസൻസുള്ള ഇലക്ട്രീഷ്യൻ ചെയ്യണം ("plug-in" ഉപകരണങ്ങൾ ഒഴികെ). നാട്ടിൽ ഇത് സാധാരണമാണ്; <strong>ഇവിടെ പിഴയും ഇൻഷുറൻസ് നഷ്ടവും വരും.</strong></p>
+          <p><strong>ഗ്യാസ് ജോലികൾ · മിക്ക പ്ലംബിംഗ് ജോലികളും</strong> (ഒരു ടാപ്പ് വാഷർ അല്ലെങ്കിൽ ഷവർ ഹെഡ് മാറ്റുന്നത് പോലുള്ള ചെറിയവ ചില സംസ്ഥാനങ്ങളിൽ അനുവദനീയം).</p>
+          <p><strong>ആസ്ബെസ്റ്റോസ്:</strong> 1990-ന് മുൻപ് പണിത വീടുകളിൽ ഉണ്ടാകാം (eaves, bathroom sheeting, fences). <strong>ഒരിക്കലും ഇത് സ്വയം തുരക്കുകയോ മുറിക്കുകയോ ചെയ്യരുത്.</strong></p>
+        </div>
+        <ul class="plain">
+          <li><strong>വലിയ ജോലികൾക്ക് മൂന്ന് quote വാങ്ങുക.</strong> ലൈസൻസ് നമ്പർ ചോദിക്കുക, സംസ്ഥാന വെബ്സൈറ്റിൽ പരിശോധിക്കാം (NSW: Service NSW).</li>
+          <li><strong>Bunnings</strong> — ഓസ്‌ട്രേലിയൻ DIY സംസ്കാരത്തിന്റെ ക്ഷേത്രം. <strong>ജീവനക്കാർ വളരെ സഹായകരമാണ്; എന്ത് ചോദ്യവും ചോദിക്കാം</strong> ("I need to hang a picture on a plasterboard wall, what do I need?"). അവർ ക്ഷമയോടെ പഠിപ്പിക്കും. ശനിയാഴ്ചത്തെ <em>sausage sizzle</em> ഒരു ആചാരമാണ്.</li>
+          <li><strong>അനുവദനീയമായ DIY:</strong> പെയിന്റിംഗ്, ഫർണിച്ചർ കൂട്ടിയോജിപ്പിക്കൽ, ചിത്രം തൂക്കൽ, തോട്ടപ്പണി, ചെറിയ അറ്റകുറ്റപ്പണി. <strong>വാടകവീട്ടിൽ ചുവരിൽ ദ്വാരമിടുന്നതിന് പോലും ഏജന്റിന്റെ അനുമതി വേണം</strong> — ദ്വാരമില്ലാത്ത ഹുക്കുകൾ (Command strips) ഉപയോഗിക്കുക.</li>
+        </ul>
+
+        <h3>മറ്റ് ദൈനംദിന സേവനങ്ങൾ</h3>
+        <ul class="plain">
+          <li><strong>myGov</strong> — Medicare, Centrelink, ATO എന്നിവയുടെ ഒറ്റ പോർട്ടൽ. ആദ്യ ആഴ്ചയിൽ അക്കൗണ്ട് ഉണ്ടാക്കുക.</li>
+          <li><strong>ഡ്രൈവിംഗ് ലൈസൻസ്:</strong> ഇന്ത്യൻ ലൈസൻസിൽ പരിമിതമായ കാലം ഓടിക്കാം. <strong>ഇംഗ്ലീഷല്ലാത്ത ലൈസൻസ് ആണെങ്കിൽ അംഗീകൃത വിവർത്തനമോ അന്താരാഷ്ട്ര പെർമിറ്റോ കൂടെ വേണം.</strong> PR ആയാൽ ഒരു നിശ്ചിത കാലയളവിനുള്ളിൽ (NSW-ൽ 3 മാസം) പ്രാദേശിക ലൈസൻസിലേക്ക് മാറണം; ഇന്ത്യൻ ലൈസൻസ് നേരിട്ട് മാറ്റിക്കിട്ടില്ല, knowledge test-ഉം ചിലപ്പോൾ driving test-ഉം വേണം.</li>
+          <li><strong>മൊബൈൽ:</strong> Telstra (ഏറ്റവും വിശാലമായ കവറേജ്, വില കൂടുതൽ), Optus, Vodafone. അവയുടെ നെറ്റ്‌വർക്ക് ഉപയോഗിക്കുന്ന വിലകുറഞ്ഞ ദാതാക്കളും ഉണ്ട് (Amaysim, Boost, Belong, Aldi Mobile). <strong>ഗ്രാമപ്രദേശത്തേക്ക് യാത്ര ചെയ്യുന്നുണ്ടെങ്കിൽ Telstra നെറ്റ്‌വർക്ക് നല്ലതാണ്.</strong></li>
+          <li><strong>ഇന്റർനെറ്റ്:</strong> NBN ആണ് പ്രധാന സംവിധാനം; കണക്ഷന്റെ തരം (FTTP, FTTN) വീടനുസരിച്ച് വ്യത്യാസപ്പെടും. 50Mbps മിക്ക കുടുംബങ്ങൾക്കും മതി.</li>
+          <li><strong>വൈദ്യുതി/ഗ്യാസ്:</strong> ദാതാവിനെ സ്വതന്ത്രമായി തിരഞ്ഞെടുക്കാം. <span class="en">energymadeeasy.gov.au</span> (VIC-ൽ Victorian Energy Compare) എന്ന സർക്കാർ സൈറ്റിൽ താരതമ്യം ചെയ്യുക. <strong>ഓരോ 12–18 മാസത്തിലും പ്ലാൻ പുനഃപരിശോധിക്കുക</strong> — പഴയ ഉപഭോക്താക്കൾക്ക് ദാതാക്കൾ കൂടിയ വില ഈടാക്കുന്ന പ്രവണതയുണ്ട്.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="s5">
+      <div class="wrap">
+        <div class="sechead"><span class="num">05</span><h2>തൊഴിലിട സംസ്കാരം</h2></div>
+        <p class="lede">ഇന്ത്യൻ ഓഫീസുകളിലെ കുത്തനെയുള്ള ശ്രേണിയിൽ നിന്ന് വരുന്നവർക്ക് ഇതാണ് ഏറ്റവും വലിയ മാറ്റം.</p>
+
+        <h3>അധികാരവും തുറന്ന ചർച്ചയും</h3>
+        <div class="pair">
+          <div class="k">
+            <span class="lbl">നാട്ടിലെ ശീലം</span>
+            <p>നിശ്ശബ്ദമായി അനുസരിക്കുക · "Yes sir" · അറിയില്ലെങ്കിലും അറിയാമെന്ന് പറയുക · മീറ്റിംഗിൽ മിണ്ടാതിരിക്കുന്നത് വിനയം</p>
+          </div>
+          <div class="a">
+            <span class="lbl">ഇവിടത്തെ പ്രതീക്ഷ</span>
+            <p>തുറന്ന് വിയോജിക്കുക · ആദ്യ പേര് വിളിക്കുക · "I don't know" എന്ന് പറയുക · <strong>മീറ്റിംഗിൽ മിണ്ടാതിരിക്കുന്നത് "സഹകരിക്കാത്തയാൾ" എന്ന സൂചനയാണ്</strong></p>
+          </div>
+        </div>
+        <ul class="plain">
+          <li><strong>വിയോജിക്കുന്നത് ബഹുമാനക്കുറവല്ല.</strong> പറയേണ്ട രീതി: "I see it a bit differently, and here's why…" അല്ലെങ്കിൽ "Have we considered…?" വിയോജിപ്പ് ആശയത്തോട്, വ്യക്തിയോടല്ല.</li>
+          <li><strong>"I don't know" എന്ന് പറയുന്നത് ശക്തിയാണ്.</strong> "I don't know, but I'll find out and get back to you by tomorrow" — ഇത് പൂർണമായും പ്രൊഫഷണൽ മറുപടിയാണ്. അറിയാത്തത് അറിയാമെന്ന് നടിച്ച് പിന്നീട് പിഴവ് വരുത്തുന്നതാണ് ഗുരുതരമായ പ്രശ്നം.</li>
+          <li><strong>"Yes" എന്നത് "Yes" ആയിരിക്കണം.</strong> മുഖം രക്ഷിക്കാൻ "yes, no problem" പറഞ്ഞ് പിന്നീട് സമയപരിധി തെറ്റിക്കുന്നത് ഇവിടെ വിശ്വാസ്യത നശിപ്പിക്കും. <strong>പാലിക്കാൻ കഴിയില്ലെങ്കിൽ നേരത്തെ പറയുക:</strong> "I won't make Friday, but I can have it by Tuesday" — പൂർണമായും സ്വീകാര്യം.</li>
+          <li><strong>ഇമെയിൽ ശൈലി ചെറുതും നേരിട്ടുള്ളതുമാണ്.</strong> "Dear Respected Sir, I hope this email finds you in good health…" ഒഴിവാക്കുക. "Hi Sarah, Quick question about the budget…" മതി. "Cheers" അല്ലെങ്കിൽ "Thanks" എന്ന് അവസാനിപ്പിക്കാം.</li>
+          <li><strong>അമിതമായ ക്ഷമാപണം ഒഴിവാക്കുക.</strong> ചെറിയ പിഴവിന് "I'm extremely sorry, it was my fault, I take full responsibility" ആവർത്തിക്കുന്നത് അസ്വസ്ഥത ഉണ്ടാക്കും. "Sorry about that, I'll fix it now" മതി.</li>
+          <li><strong>സ്വന്തം ജോലി പ്രകടിപ്പിക്കേണ്ടത് നിങ്ങളുടെ ഉത്തരവാദിത്തമാണ്.</strong> നിശ്ശബ്ദമായി കഠിനാധ്വാനം ചെയ്താൽ മാത്രം സ്വയമേവ പ്രമോഷൻ കിട്ടില്ല. ടീം മീറ്റിംഗിൽ പുരോഗതി പറയുക, 1-on-1-ൽ കരിയർ ലക്ഷ്യങ്ങൾ ഉന്നയിക്കുക. <em>(പക്ഷേ "tall poppy" ഓർക്കുക: വസ്തുതാപരമായി പറയുക, പൊങ്ങച്ചമായല്ല.)</em></li>
+        </ul>
+
+        <h3>വർക്ക്-ലൈഫ് ബാലൻസ്</h3>
+        <ul class="plain">
+          <li><strong>ജോലി സമയം കഴിഞ്ഞാൽ ജോലി തീരും.</strong> 5:30-ന് ആളുകൾ ഇറങ്ങിപ്പോകും, കുറ്റബോധമില്ലാതെ. <strong>വൈകി ഇരിക്കുന്നത് അർപ്പണബോധമായി കാണില്ല</strong> — പലപ്പോഴും "സമയം കൈകാര്യം ചെയ്യാൻ അറിയില്ല" എന്ന സൂചനയായി വായിക്കപ്പെടും.</li>
+          <li><strong>"Right to disconnect":</strong> ഓസ്‌ട്രേലിയൻ നിയമപ്രകാരം (2024 ഓഗസ്റ്റ് മുതൽ വലിയ സ്ഥാപനങ്ങൾക്ക്, 2025 ഓഗസ്റ്റ് മുതൽ ചെറുകിട സ്ഥാപനങ്ങൾക്ക്) <strong>ജോലി സമയത്തിന് പുറത്ത് തൊഴിലുടമയുടെ ബന്ധപ്പെടലുകൾക്ക് മറുപടി നൽകാതിരിക്കാൻ ജീവനക്കാരന് ന്യായമായ അവകാശമുണ്ട്.</strong></li>
+          <li><strong>അവധി:</strong> പൂർണസമയ ജീവനക്കാർക്ക് വർഷത്തിൽ <strong>4 ആഴ്ച</strong> ശമ്പളത്തോടെയുള്ള annual leave — ഇത് ഉപയോഗിക്കാൻ പ്രതീക്ഷിക്കുന്നു. കൂടാതെ വർഷത്തിൽ <strong>10 ദിവസം</strong> personal/carer's leave (sick leave).</li>
+          <li><strong>അസുഖം വന്നാൽ വീട്ടിൽ ഇരിക്കുക.</strong> അസുഖവുമായി ഓഫീസിൽ വരുന്നത് വീരത്വമല്ല, മറ്റുള്ളവരെ ബാധിക്കുന്ന കാര്യമാണ്. 2 ദിവസത്തിലധികമായാൽ സാധാരണ medical certificate ചോദിക്കും.</li>
+          <li><strong>വാരാന്ത്യം പവിത്രമാണ്.</strong> ശനി-ഞായർ കുടുംബത്തിനും കായികവിനോദത്തിനുമുള്ളതാണ്. <strong>വാരാന്ത്യത്തിൽ സഹപ്രവർത്തകർക്ക് ജോലി സന്ദേശം അയക്കുന്നത് ഒഴിവാക്കുക.</strong></li>
+        </ul>
+
+        <h3>Superannuation ("super")</h3>
+        <ul class="plain">
+          <li>തൊഴിലുടമ നിങ്ങളുടെ ശമ്പളത്തിന് <strong>പുറമേ 12%</strong> റിട്ടയർമെന്റ് ഫണ്ടിൽ നിക്ഷേപിക്കണം. ഇത് നിർബന്ധമാണ്.</li>
+          <li><strong>2026 ജൂലൈ 1 മുതൽ "Payday Super":</strong> തൊഴിലുടമ super <strong>ശമ്പളം നൽകുന്ന അതേ സമയത്ത്</strong> അടയ്ക്കണം (മുൻപ് മൂന്ന് മാസത്തിലൊരിക്കൽ മതിയായിരുന്നു). അതിനാൽ ഓരോ payslip-ലും super ശരിക്കും അടച്ചിട്ടുണ്ടോ എന്ന് myGov-ൽ പരിശോധിക്കാൻ എളുപ്പമാണ്. <strong>ഇത് പരിശോധിക്കുക — super മോഷണം പുതിയ കുടിയേറ്റക്കാർക്കെതിരെ നടക്കുന്ന സാധാരണ ചൂഷണമാണ്.</strong></li>
+          <li><strong>ഒന്നിലധികം ഫണ്ട് ഉണ്ടെങ്കിൽ ഏകീകരിക്കുക</strong> — ഇല്ലെങ്കിൽ ഒന്നിലധികം ഫീസും ഒന്നിലധികം ഇൻഷുറൻസ് പ്രീമിയവും പോകും.</li>
+        </ul>
+
+        <h3>മിനിമം വേതനവും ചൂഷണവും</h3>
+        <div class="call law">
+          <span class="tag">2026 ജൂലൈ 1 മുതലുള്ള നിരക്ക്</span>
+          <p><strong>National Minimum Wage: മണിക്കൂറിന് $26.44,</strong> ആഴ്ചയിൽ $1,004.90 (38 മണിക്കൂർ ആഴ്ച, നികുതിക്ക് മുൻപ്). ഇത് ഒരു award-ഉം enterprise agreement-ഉം ബാധകമല്ലാത്തവർക്കാണ്.</p>
+          <p><strong>Award നിരക്കുകൾ 4.75% വർധിച്ചു.</strong> മിക്ക ജോലികളും ഒരു award-ന് കീഴിലാണ് (വ്യവസായം/തൊഴിൽ അനുസരിച്ചുള്ള നിയമപരമായ വേതന രേഖ), ആ നിരക്ക് സാധാരണ minimum wage-നേക്കാൾ ഉയർന്നതാണ്.</p>
+          <p><strong>Casual ജീവനക്കാർക്ക് 25% casual loading</strong> അധികം കിട്ടണം (അവധിയും sick leave-ഉം ഇല്ലാത്തതിന് പകരമായി). ശനി, ഞായർ, രാത്രി, പൊതു അവധി എന്നിവയ്ക്ക് <strong>penalty rates</strong> ഉണ്ട്.</p>
+        </div>
+        <div class="call stop">
+          <span class="tag">വേതന ചൂഷണം — ഇത് നിയമവിരുദ്ധമാണ്</span>
+          <p>ചില തൊഴിലുടമകൾ പുതിയ കുടിയേറ്റക്കാർക്ക് കുറഞ്ഞ വേതനം നൽകി ചൂഷണം ചെയ്യുന്നുണ്ട് ("cash in hand" ജോലികളിൽ പ്രത്യേകിച്ചും). <strong>Fair Work Ombudsman-ൽ (13 13 94) പരാതിപ്പെടാം; വിസയുള്ളവർക്ക് പരാതിപ്പെടാനുള്ള സംരക്ഷണങ്ങൾ ഉണ്ട്.</strong></p>
+          <p><strong>നിങ്ങളുടെ award ഏതാണെന്ന് <span class="en">fairwork.gov.au</span>-ലെ "Find my award" ഉപകരണത്തിൽ നോക്കുക,</strong> Pay Calculator-ൽ കൃത്യമായ നിരക്ക് കണക്കാക്കുക. നിരക്ക് എല്ലാ ജൂലൈ 1-നും മാറും.</p>
+          <p><strong>Payslip നിർബന്ധമാണ്.</strong> അതിൽ മണിക്കൂർ, നിരക്ക്, നികുതി, super എല്ലാം കാണണം. ഇല്ലെങ്കിൽ അത് ഒരു അപായ സൂചനയാണ്.</p>
+        </div>
+
+        <h3>'സ്മോക്കോ', ബ്രേക്കുകൾ, സാമൂഹിക ജീവിതം</h3>
+        <ul class="plain">
+          <li><strong>"Smoko"</strong> — പരമ്പരാഗതമായി പുകവലിക്കാനുള്ള ഇടവേള; ഇപ്പോൾ നിർമാണ/ട്രേഡ് മേഖലയിൽ ഏതൊരു ചെറിയ ചായ-ഇടവേളയെയും ഇത് സൂചിപ്പിക്കുന്നു. ഓഫീസുകളിൽ "coffee break" എന്ന് പറയും.</li>
+          <li><strong>ചായ/കോഫി ഇടവേളകൾ സാമൂഹികമായി പ്രധാനമാണ്.</strong> ഡെസ്കിൽ നിന്ന് എഴുന്നേറ്റ് സഹപ്രവർത്തകർക്കൊപ്പം പോകുന്നത് ബന്ധം ഉണ്ടാക്കും. നിരന്തരം ഒഴിവാക്കിയാൽ ഒറ്റപ്പെടും.</li>
+          <li><strong>ഉച്ചഭക്ഷണം:</strong> lunchroom-ൽ പോകുന്നത് നല്ലതാണ്. <strong>ശക്തമായ മണമുള്ള ഭക്ഷണം (മീൻ കറി, ചില മസാലകൾ) മൈക്രോവേവിൽ ചൂടാക്കുന്നത് പരിഗണനയോടെ ചെയ്യുക.</strong> കണ്ടെയ്നർ അടച്ചുവെക്കുക, കഴിഞ്ഞാൽ ഉടനെ വൃത്തിയാക്കുക. <em>ഇത് നിങ്ങളുടെ ഭക്ഷണത്തിൽ ലജ്ജിക്കാനുള്ള കാരണമല്ല; പങ്കിട്ട ഇടത്തിലെ പരിഗണന മാത്രം.</em></li>
+        </ul>
+        <div class="call good">
+          <span class="tag">Friday drinks — മദ്യം കഴിക്കാതെ തന്നെ പങ്കെടുക്കാം</span>
+          <p>പല ഓഫീസുകളിലും വെള്ളിയാഴ്ച വൈകുന്നേരം ടീം ഒരുമിച്ച് പബ്ബിൽ പോകും. <strong>ഇത് വളരെ പ്രധാനപ്പെട്ട സാമൂഹിക അവസരമാണ്</strong> — അനൗപചാരിക ബന്ധങ്ങൾ, വിവരങ്ങൾ, മെന്ററിംഗ് എല്ലാം അവിടെ നടക്കും.</p>
+          <p><strong>എന്ത് ഓർഡർ ചെയ്യാം:</strong> lemon, lime &amp; bitters ("LLB"), സോഡാ വാട്ടർ, soft drink, അല്ലെങ്കിൽ non-alcoholic ബിയർ. <strong>ആരും കാരണം ചോദിക്കില്ല;</strong> ചോദിച്ചാൽ "I don't drink" എന്ന് പറഞ്ഞാൽ മതി. ഓസ്‌ട്രേലിയയിൽ ഇപ്പോൾ മദ്യം കഴിക്കാത്തവരുടെ എണ്ണം കൂടിവരുന്നു — ഇത് പൂർണമായും സാധാരണമാണ്. <em>ഒരു മണിക്കൂർ പങ്കെടുത്ത് പോകുന്നത് പോലും വലിയ വ്യത്യാസം ഉണ്ടാക്കും.</em></p>
+        </div>
+        <p><strong>വേഷം:</strong> പല ഓഫീസുകളും smart casual ആണ്. ആദ്യ ദിവസം ഒന്ന് ഉയർന്ന നിലവാരത്തിൽ വസ്ത്രം ധരിക്കുക, പിന്നീട് ടീമിനെ നിരീക്ഷിച്ച് ക്രമീകരിക്കുക.</p>
+      </div>
+    </section>
+
+    <section id="s6">
+      <div class="wrap">
+        <div class="sechead"><span class="num">06</span><h2>നിയമം, റോഡ്, സുരക്ഷ</h2></div>
+        <p class="lede">ഇവിടെ ഗതാഗത നിയമങ്ങൾ "ഒരു നിർദ്ദേശം" അല്ല. അവ യന്ത്രവൽകൃതമായി നടപ്പാക്കപ്പെടുന്നു, പിഴ കനത്തതാണ്.</p>
+
+        <h3>ട്രാഫിക് നിയമങ്ങൾ</h3>
+        <ul class="plain">
+          <li><strong>സ്പീഡ് ക്യാമറകൾ എല്ലായിടത്തും ഉണ്ട്:</strong> സ്ഥിരം ക്യാമറ, മൊബൈൽ ക്യാമറ (അടയാളപ്പെടുത്താത്ത വാഹനങ്ങളിൽ), average speed camera (രണ്ട് പോയിന്റുകൾക്കിടയിലെ ശരാശരി വേഗം), red light camera. <strong>10 km/h അധികം പോയാൽ പോലും പിഴ വരും</strong> — "കുറച്ചല്ലേ" എന്ന ഇളവില്ല.</li>
+          <li><strong>മൊബൈൽ ഫോൺ ഡിറ്റക്ഷൻ ക്യാമറ:</strong> AI ഉപയോഗിച്ച് ഡ്രൈവർ ഫോൺ പിടിച്ചിട്ടുണ്ടോ എന്ന് കണ്ടെത്തുന്ന ക്യാമറകൾ. <strong>ചുവന്ന ലൈറ്റിൽ നിർത്തിയിരിക്കുമ്പോൾ പോലും ഫോൺ കൈയിൽ പിടിക്കാൻ പാടില്ല.</strong> പിഴ $400-ന് മുകളിലും 5 ഡീമെറിറ്റ് പോയിന്റും (സ്കൂൾ സോണിൽ ഇരട്ടി) വരാം. ഫോൺ ഒരു ക്രാഡിലിൽ വെക്കുക, GPS-ന് മാത്രം.</li>
+          <li><strong>സീറ്റ് ബെൽറ്റ്:</strong> എല്ലാ യാത്രക്കാർക്കും നിർബന്ധം, പിൻസീറ്റിൽ ഉൾപ്പെടെ. 16 വയസ്സിന് താഴെയുള്ളവരുടെ ബെൽറ്റിന്റെ ഉത്തരവാദിത്തം ഡ്രൈവർക്കാണ്. ഓരോ ആൾക്കും പ്രത്യേകം പിഴ.</li>
+          <li><strong>സ്കൂൾ സോൺ:</strong> സ്കൂൾ ദിവസങ്ങളിൽ നിശ്ചിത സമയങ്ങളിൽ (NSW-ൽ 8:00–9:30, 2:30–4:00) <strong>40 km/h.</strong> ഓറഞ്ച് അടയാളങ്ങളും മിന്നുന്ന ലൈറ്റുകളും ഉണ്ടാകും. ഇവിടെ പിഴയും പോയിന്റും ഇരട്ടിയാണ്.</li>
+          <li><strong>ഡീമെറിറ്റ് പോയിന്റ്:</strong> പൂർണ ലൈസൻസിന് 3 വർഷത്തിൽ സാധാരണ 13 പോയിന്റ്; P-plate ഡ്രൈവർമാർക്ക് വളരെ കുറവ്. പോയിന്റ് തീർന്നാൽ ലൈസൻസ് സസ്പെൻഡ്. <strong>ദീർഘ വാരാന്ത്യങ്ങളിലും പൊതു അവധി ദിവസങ്ങളിലും NSW/ACT/WA-യിൽ "double demerits".</strong></li>
+        </ul>
+        <div class="call stop">
+          <span class="tag">മദ്യപിച്ച് വാഹനമോടിക്കൽ</span>
+          <p>പൂർണ ലൈസൻസിന് <strong>0.05</strong> BAC പരിധി. <strong>Learner (L), Provisional (P1, P2) ഡ്രൈവർമാർക്ക് 0.00</strong> — ഒരു തുള്ളി പോലും പാടില്ല.</p>
+          <p><strong>Random Breath Testing (RBT)</strong> വളരെ സാധാരണമാണ്; കാരണമില്ലാതെ വഴിയിൽ നിർത്തി പരിശോധിക്കാം. മയക്കുമരുന്ന് പരിശോധനയും (saliva test) ഉണ്ട്. ശിക്ഷ: വലിയ പിഴ, ലൈസൻസ് നഷ്ടം, ചിലപ്പോൾ ജയിൽ, <strong>വിസയെ ബാധിക്കൽ.</strong></p>
+        </div>
+
+        <h4>കുട്ടികളുടെ കാർ സീറ്റ് — നിയമപരമായി നിർബന്ധം</h4>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>പ്രായം</th><th>വേണ്ടത്</th></tr></thead>
+            <tbody>
+              <tr><td>0 – 6 മാസം</td><td>പിന്നിലേക്ക് തിരിഞ്ഞ ബേബി കാപ്സ്യൂൾ</td></tr>
+              <tr><td>6 മാസം – 4 വയസ്സ്</td><td>ഹാർനെസ്സുള്ള കാർ സീറ്റ്</td></tr>
+              <tr><td>4 – 7 വയസ്സ്</td><td>ഫോർവേഡ്-ഫേസിംഗ് സീറ്റ് അല്ലെങ്കിൽ ബൂസ്റ്റർ</td></tr>
+              <tr><td>7 വയസ്സിന് താഴെ</td><td><strong>മുൻസീറ്റിൽ ഇരിക്കാൻ പാടില്ല</strong> (പിൻസീറ്റ് ഉള്ള വാഹനത്തിൽ)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call warn">
+          <span class="tag">വിദേശത്ത് നിന്ന് കൊണ്ടുവന്ന കാർ സീറ്റ്</span>
+          <p>സീറ്റ് <strong>ഓസ്‌ട്രേലിയൻ സ്റ്റാൻഡേർഡ് (AS/NZS 1754)</strong> ഉള്ളതായിരിക്കണം. <strong>ഇന്ത്യയിൽ നിന്നോ മറ്റെവിടെ നിന്നോ കൊണ്ടുവന്ന കാർ സീറ്റ് ഇവിടെ നിയമവിരുദ്ധമാണ്</strong> — അപകടത്തിൽ ഇൻഷുറൻസും നിഷേധിക്കപ്പെടാം. കൗൺസിലുകൾ സൗജന്യ/കുറഞ്ഞ ചെലവിൽ ഫിറ്റിംഗ് പരിശോധന നൽകാറുണ്ട്.</p>
+        </div>
+
+        <h3>കാൽനടയാത്രക്കാരുടെ നിയമങ്ങൾ</h3>
+        <p>നാട്ടിൽ റോഡിന്റെ വക്കിലൂടെ നടക്കുന്നത് സാധാരണമാണ്. <strong>ഓസ്‌ട്രേലിയയിൽ ഇത് പിഴയുള്ള കുറ്റമാണ്</strong> — മര്യാദ മാത്രമല്ല.</p>
+        <ul class="plain">
+          <li><strong>ഫുട്പാത്ത് ഉണ്ടെങ്കിൽ ഫുട്പാത്തിലൂടെ മാത്രം നടക്കുക.</strong> ഓസ്‌ട്രേലിയൻ റോഡ് നിയമങ്ങൾ (Rule 238) പ്രകാരം, റോഡിനോട് ചേർന്ന് ഫുട്പാത്തോ nature strip-ഓ ഉണ്ടെങ്കിൽ റോഡിലൂടെ നടക്കാൻ പാടില്ല.</li>
+          <li><strong>ഫുട്പാത്ത് ഇല്ലാത്ത റോഡിൽ:</strong> വരുന്ന വാഹനങ്ങൾക്ക് <strong>അഭിമുഖമായി</strong> നടക്കുക, കഴിയുന്നത്ര വശം ചേർന്ന്. രാത്രിയിൽ ഇളം നിറമുള്ള വസ്ത്രമോ reflective vest-ഓ ധരിക്കുക.</li>
+          <li><strong>Jaywalking:</strong> <strong>20 മീറ്ററിനുള്ളിൽ ഒരു pedestrian crossing ഉണ്ടെങ്കിൽ അത് ഉപയോഗിക്കണം.</strong> അല്ലാതെ കടക്കുന്നത് പിഴയുള്ള കുറ്റമാണ് (സാധാരണ $80–$120). <strong>ചുവന്ന "Don't Walk" ചിഹ്നത്തിൽ കടക്കരുത്,</strong> വാഹനങ്ങൾ ഇല്ലെങ്കിലും — പോലീസ് ഇത് നടപ്പാക്കാറുണ്ട്, കൂടാതെ കുട്ടികൾ നിങ്ങളെ നോക്കിയാണ് പഠിക്കുന്നത്.</li>
+          <li><strong>ശബ്ദം കേട്ടല്ല, കണ്ണുകൊണ്ട് നോക്കിയാണ് സുരക്ഷ ഉറപ്പാക്കേണ്ടത്.</strong> ഇവിടെ വാഹനങ്ങൾ ഹോൺ അടിക്കില്ല, ഇലക്ട്രിക് കാറുകൾ ഒട്ടും ശബ്ദമുണ്ടാക്കില്ല. ഹെഡ്ഫോൺ/ഫോൺ നോക്കി റോഡ് മുറിച്ചുകടക്കരുത്.</li>
+          <li><strong>Shared paths</strong> (നടക്കാനും സൈക്കിളിനും ഒരുമിച്ച്): ഇടതുവശം ചേർന്ന് നടക്കുക. പിന്നിൽ നിന്ന് <strong>സൈക്കിൾ ബെൽ</strong> കേട്ടാൽ ഇടത്തേക്ക് മാറുക. നായയുടെ ചങ്ങല പാതയ്ക്ക് കുറുകെ വരാതെ ചെറുതാക്കി പിടിക്കുക.</li>
+        </ul>
+
+        <h3>റോഡ് മര്യാദകൾ</h3>
+        <p>ഓസ്‌ട്രേലിയൻ ഡ്രൈവിംഗ് കൂടുതൽ "നിയമാധിഷ്ഠിതവും" കുറച്ചു "ചർച്ചാധിഷ്ഠിതവുമാണ്". <strong>നാട്ടിലെ പോലെ കണ്ണുകൊണ്ടും ഹോൺ കൊണ്ടും വഴി ഉണ്ടാക്കുന്ന രീതി ഇവിടെ പ്രവർത്തിക്കില്ല, അപകടകരവുമാണ്.</strong></p>
+        <ul class="plain">
+          <li><strong>ഹോൺ ഏതാണ്ട് ഒരിക്കലും ഉപയോഗിക്കരുത്.</strong> അപകടം ഒഴിവാക്കാൻ മുന്നറിയിപ്പ് നൽകാൻ മാത്രം. അക്ഷമ കാണിക്കാൻ ഹോൺ അടിക്കുന്നത് ആക്രമണമായി കാണും, road rage-ന് കാരണമാകാം (നിയമപ്രകാരവും ആവശ്യമില്ലാതെ ഹോൺ ഉപയോഗിക്കുന്നത് കുറ്റമാണ്).</li>
+          <li><strong>എപ്പോഴും ഇൻഡിക്കേറ്റർ ഉപയോഗിക്കുക</strong> — ലെയ്ൻ മാറുമ്പോൾ, തിരിയുമ്പോൾ, റൗണ്ട്എബൗട്ടിൽ കയറുമ്പോഴും ഇറങ്ങുമ്പോഴും, പാർക്കിംഗിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോഴും. നേരത്തെ ഇടുക.</li>
+          <li><strong>"Keep left unless overtaking":</strong> 80 km/h-ന് മുകളിലുള്ള മൾട്ടി-ലെയ്ൻ റോഡുകളിൽ വലതു ലെയ്നിൽ വെറുതെ ഓടിക്കുന്നത് മിക്ക സംസ്ഥാനങ്ങളിലും നിയമവിരുദ്ധമാണ്.</li>
+          <li><strong>Tailgating ഗുരുതരമായ കുറ്റമാണ്.</strong> "3 സെക്കൻഡ് നിയമം": മുന്നിലുള്ള കാർ ഒരു അടയാളം കടന്നാൽ, നിങ്ങൾ അതേ അടയാളത്തിൽ എത്താൻ കുറഞ്ഞത് 3 സെക്കൻഡ് വേണം. മഴയത്ത് ഇരട്ടിയാക്കുക.</li>
+          <li><strong>Zip merge:</strong> ലെയ്ൻ അവസാനിക്കുമ്പോൾ ഒന്നിടവിട്ട് ചേരുക. അവസാന നിമിഷം വരെ ഓടിച്ചു ചെന്ന് തള്ളിക്കയറുന്നത് വളരെ മോശമായി കാണും. <strong>ആരെങ്കിലും ചേരാൻ ഇൻഡിക്കേറ്റർ ഇട്ടാൽ വഴി കൊടുക്കുക</strong> — ഇത് നിർബന്ധിത മര്യാദയാണ്.</li>
+          <li><strong>വഴി കിട്ടിയാൽ നന്ദി പറയുക:</strong> കൈ ഒന്ന് ഉയർത്തുക (<strong>"thank-you wave"</strong>). ചിലർ hazard ലൈറ്റ് ഒന്ന് മിന്നിക്കും. <strong>ഇത് ചെയ്യാതിരിക്കുന്നത് പരുഷമായി കാണും.</strong></li>
+        </ul>
+        <h4>വഴി നൽകേണ്ട സാഹചര്യങ്ങൾ</h4>
+        <ul class="plain">
+          <li><strong>കാൽനടയാത്രക്കാർക്ക് എപ്പോഴും മുൻഗണന,</strong> പ്രത്യേകിച്ച് നിങ്ങൾ തിരിയുന്ന റോഡിൽ അവർ കടക്കുകയാണെങ്കിൽ.</li>
+          <li><strong>സ്കൂൾ crossing supervisor</strong> (ഓറഞ്ച് വസ്ത്രവും "STOP" അടയാളവുമായി നിൽക്കുന്ന ആൾ) അടയാളം ഉയർത്തിയാൽ <strong>പൂർണമായി നിർത്തണം.</strong> അവർ അടയാളം താഴ്ത്തിയ ശേഷം മാത്രം നീങ്ങുക.</li>
+          <li><strong>ബസ്സിന് വഴി കൊടുക്കുക:</strong> 70 km/h-ഓ അതിൽ കുറവോ ഉള്ള മേഖലയിൽ, "Give Way to Buses" അടയാളമുള്ള സ്റ്റോപ്പിൽ നിന്ന് ഇൻഡിക്കേറ്റർ ഇട്ട് പുറത്തിറങ്ങുന്ന ബസ്സിന് വഴി കൊടുക്കണം.</li>
+          <li><strong>എമർജൻസി വാഹനങ്ങൾ:</strong> സൈറൺ/ലൈറ്റുമായി വരുന്നത് കണ്ടാൽ സുരക്ഷിതമായി ഇടത്തേക്ക് മാറുക. <strong>റോഡരികിൽ ലൈറ്റുമായി നിർത്തിയിട്ടിരിക്കുന്ന എമർജൻസി/ടോ വാഹനങ്ങൾ കടക്കുമ്പോൾ 40 km/h-ലേക്ക് വേഗം കുറയ്ക്കണം.</strong></li>
+          <li><strong>സൈക്കിൾ യാത്രികരെ ഓവർടേക്ക് ചെയ്യുമ്പോൾ:</strong> 60 km/h-ഓ അതിൽ കുറവോ ആണെങ്കിൽ <strong>കുറഞ്ഞത് 1 മീറ്റർ,</strong> അതിന് മുകളിലാണെങ്കിൽ <strong>1.5 മീറ്റർ</strong> അകലം. സൈക്കിൾ യാത്രികന് ലെയ്ൻ പൂർണമായി ഉപയോഗിക്കാൻ അവകാശമുണ്ട്.</li>
+          <li><strong>"Dooring":</strong> പാർക്ക് ചെയ്ത കാറിൽ നിന്ന് ഇറങ്ങുമ്പോൾ പിന്നിൽ നിന്ന് സൈക്കിൾ വരുന്നുണ്ടോ എന്ന് നോക്കുക. വാതിൽ തുറന്ന് സൈക്കിൾ യാത്രികനെ ഇടിക്കുന്നത് പിഴയുള്ള കുറ്റമാണ്.</li>
+        </ul>
+        <h3>പാർക്കിംഗ്</h3>
+        <p>ഇതാണ് പുതിയ കുടിയേറ്റക്കാർ ഏറ്റവും കൂടുതൽ പിഴ അടയ്ക്കുന്ന കാര്യം. കാരണം സൈനുകൾ വായിക്കാൻ അറിയാത്തതാണ് — അവ ഒറ്റനോട്ടത്തിൽ വിചിത്രമാണ്, പക്ഷേ ഘടന എല്ലായിടത്തും ഒന്നുതന്നെയാണ്.</p>
+
+        <figure>
+          <div class="figtitle">ഒരു പാർക്കിംഗ് സൈൻ എങ്ങനെ വായിക്കാം</div>
+          <svg viewBox="0 0 700 340" role="img" aria-label="ഒരു 2P പാർക്കിംഗ് സൈനിന്റെ ഭാഗങ്ങൾ: ദിശാ അടയാളം, മണിക്കൂർ പരിധി, സമയം, ദിവസങ്ങൾ, രണ്ടാമത്തെ പ്ലേറ്റ്">
+            <!-- plate 1 -->
+            <rect x="46" y="30" width="134" height="104" rx="5" fill="var(--surface)" stroke="var(--euc)" stroke-width="3"/>
+            <!-- direction arrow -->
+            <path d="M74 48 L152 48" stroke="var(--euc)" stroke-width="2.5" fill="none"/>
+            <path d="M74 48 l10 -5 l0 10 Z" fill="var(--euc)"/>
+            <path d="M152 48 l-10 -5 l0 10 Z" fill="var(--euc)"/>
+            <text x="113" y="86" text-anchor="middle" font-size="34" font-weight="700" fill="var(--euc)">2P</text>
+            <text x="113" y="108" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)">8:30am - 6pm</text>
+            <text x="113" y="126" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)">MON - FRI</text>
+            <!-- plate 2 -->
+            <rect x="46" y="138" width="134" height="56" rx="5" fill="var(--surface)" stroke="var(--euc)" stroke-width="3"/>
+            <text x="113" y="162" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)">8:30am - 12:30pm</text>
+            <text x="113" y="182" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--euc)">SAT</text>
+            <!-- post -->
+            <rect x="107" y="194" width="12" height="104" rx="3" fill="var(--ink-faint)"/>
+            <!-- leader lines + callouts -->
+            <line x1="184" y1="48" x2="248" y2="48" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="256" y="44" font-size="12.5" font-weight="600" fill="var(--ink)" class="ml">ഏത് ദിശയിൽ ബാധകം</text>
+            <text x="256" y="61" font-size="11.5" fill="var(--ink-soft)" class="ml">ഇരുവശത്തേക്കും അടയാളമുണ്ടെങ്കിൽ രണ്ടു വശവും</text>
+
+            <line x1="184" y1="84" x2="248" y2="84" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="256" y="80" font-size="12.5" font-weight="600" fill="var(--lat)" class="ml">പരമാവധി 2 മണിക്കൂർ</text>
+            <text x="256" y="97" font-size="11.5" fill="var(--ink-soft)" class="ml">1P = 1 മണിക്കൂർ · 1/4P = 15 മിനിറ്റ്</text>
+
+            <line x1="184" y1="112" x2="248" y2="112" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="256" y="108" font-size="12.5" font-weight="600" fill="var(--ink)" class="ml">നിയന്ത്രണമുള്ള സമയം</text>
+            <text x="256" y="125" font-size="11.5" fill="var(--ink-soft)" class="ml">ഈ സമയത്ത് മാത്രമാണ് 2 മണിക്കൂർ പരിധി</text>
+
+            <line x1="184" y1="166" x2="248" y2="166" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="256" y="162" font-size="12.5" font-weight="600" fill="var(--ink)" class="ml">ശനിയാഴ്ചയ്ക്ക് വേറെ നിയമം</text>
+            <text x="256" y="179" font-size="11.5" fill="var(--ink-soft)" class="ml">ഓരോ പ്ലേറ്റും വേറെ സമയബന്ധമാണ്</text>
+
+            <!-- the key insight box -->
+            <rect x="46" y="238" width="614" height="80" rx="8" fill="var(--ok-soft)" stroke="var(--ok)" stroke-width="1.5"/>
+            <text x="64" y="262" font-size="12.5" font-weight="700" fill="var(--ok)" class="ml">ഏറ്റവും പ്രധാനം: സമയങ്ങൾക്ക് പുറത്ത് നിയന്ത്രണമില്ല</text>
+            <text x="64" y="283" font-size="12" fill="var(--ok)" class="ml">ഈ സൈൻ പ്രകാരം — ഞായറാഴ്ച മുഴുവൻ ദിവസവും, ശനി ഉച്ചയ്ക്ക് 12:30-ന് ശേഷവും,</text>
+            <text x="64" y="302" font-size="12" fill="var(--ok)" class="ml">തിങ്കൾ–വെള്ളി വൈകുന്നേരം 6-ന് ശേഷവും എത്ര നേരവും സൗജന്യമായി പാർക്ക് ചെയ്യാം.</text>
+          </svg>
+          <figcaption><b>സൈനിലെ സമയങ്ങൾ നിയന്ത്രണം <em>എപ്പോൾ</em> ബാധകമാണെന്ന് പറയുന്നു, <em>എപ്പോൾ പാർക്ക് ചെയ്യാമെന്നല്ല.</em></b> ഇത് തിരിച്ചു മനസ്സിലാക്കുന്നതാണ് ഏറ്റവും സാധാരണമായ തെറ്റ് — ഒന്നുകിൽ അനാവശ്യമായി ടിക്കറ്റ് വാങ്ങും, അല്ലെങ്കിൽ നിയന്ത്രണ സമയത്ത് അധികം നിർത്തി പിഴ വാങ്ങും.</figcaption>
+        </figure>
+
+        <h4>സൈൻ തരങ്ങൾ</h4>
+        <p><strong>നിറം ആദ്യം നോക്കുക:</strong> <span style="color:var(--danger);font-weight:700">ചുവപ്പ് = നിർത്തരുത്</span> · <span style="color:var(--euc);font-weight:700">പച്ച = വ്യവസ്ഥകളോടെ പാർക്ക് ചെയ്യാം</span></p>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>അടയാളം</th><th>അർത്ഥം</th></tr></thead>
+            <tbody>
+              <tr><td><strong style="color:var(--danger)">No Stopping</strong></td><td><strong>ഒരു നിമിഷം പോലും നിർത്താൻ പാടില്ല.</strong> കാറിൽ ഇരുന്നാലും, എൻജിൻ ഓടുന്നുണ്ടെങ്കിലും ഇത് കുറ്റമാണ്</td></tr>
+              <tr><td><strong style="color:var(--danger)">No Parking</strong></td><td>ആളെ ഇറക്കാനോ സാധനം ഇറക്കാനോ <strong>പരമാവധി 2 മിനിറ്റ്</strong> നിർത്താം. <strong>വാഹനം വിട്ടുപോകരുത്</strong> (3 മീറ്ററിനുള്ളിൽ നിൽക്കണം)</td></tr>
+              <tr><td><strong style="color:var(--danger)">Clearway</strong></td><td>സൈനിലെ സമയത്ത് നിർത്തരുത്. <strong>കാർ ടോ ചെയ്തുകൊണ്ടുപോകും</strong> — പിഴയ്ക്ക് പുറമേ ടോയിംഗ് ചാർജും</td></tr>
+              <tr><td><strong style="color:var(--euc)">P</strong></td><td>സമയപരിധിയില്ലാതെ പാർക്ക് ചെയ്യാം (സൈനിലെ സമയങ്ങൾ നോക്കുക)</td></tr>
+              <tr><td><strong style="color:var(--euc)">1/4P · 1P · 2P · 4P</strong></td><td>പരമാവധി 15 മിനിറ്റ് · 1 · 2 · 4 മണിക്കൂർ</td></tr>
+              <tr><td><strong style="color:var(--euc)">Ticket</strong></td><td>ടിക്കറ്റ് വാങ്ങി ഡാഷ്ബോർഡിൽ വെക്കണം, അല്ലെങ്കിൽ ആപ്പിൽ അടയ്ക്കണം</td></tr>
+              <tr><td><strong style="color:var(--euc)">Permit Zone</strong></td><td>കൗൺസിൽ പെർമിറ്റ് ഉള്ളവർക്ക് മാത്രം. "Permit Holders Excepted" എന്നുണ്ടെങ്കിൽ പെർമിറ്റുള്ളവർക്ക് നിയന്ത്രണമില്ല</td></tr>
+              <tr><td><strong style="color:var(--euc)">Loading Zone</strong></td><td>വാണിജ്യ വാഹനങ്ങൾക്ക്. സൈൻ പ്രത്യേകം അനുവദിച്ചാൽ മാത്രം സാധാരണ കാറുകൾക്ക് (സാധാരണ 30 മിനിറ്റ്)</td></tr>
+              <tr><td><strong style="color:var(--euc)">Bus Zone · Taxi Zone · Works Zone</strong></td><td>ആ വാഹനങ്ങൾക്ക് മാത്രം. ഇവിടെ നിർത്തിയാൽ ഏറ്റവും ഉയർന്ന പിഴ</td></tr>
+              <tr><td><strong>Disabled parking</strong></td><td>പെർമിറ്റ് നിർബന്ധം. പെർമിറ്റില്ലാതെ നിർത്തിയാൽ <strong>$600-ന് മുകളിൽ</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call warn">
+          <span class="tag">"No Parking" എന്നാൽ "പാർക്ക് ചെയ്യരുത്" എന്ന് മാത്രമല്ല</span>
+          <p>ഇത് ഇംഗ്ലീഷ് വായിച്ചാൽ തെറ്റിദ്ധരിക്കും. <strong>No Parking</strong> = ആളെയോ സാധനത്തെയോ ഇറക്കാൻ 2 മിനിറ്റ് നിർത്താം, പക്ഷേ കാറിൽ നിന്ന് മാറിപ്പോകരുത്. <strong>No Stopping</strong> = ഒന്നിനും നിർത്താൻ പാടില്ല. <em>രണ്ടാമത്തേതാണ് കർശനം.</em></p>
+        </div>
+
+        <h4>സൈൻ ഇല്ലെങ്കിലും നിർത്താൻ പാടില്ലാത്ത സ്ഥലങ്ങൾ</h4>
+        <p>ഇവ ഓസ്‌ട്രേലിയൻ റോഡ് നിയമങ്ങളിൽ ഉള്ളതാണ് — <strong>അവിടെ ഒരു അടയാളവും ഉണ്ടാകില്ല, പക്ഷേ പിഴ വരും.</strong></p>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>എവിടെ</th><th>എത്ര ദൂരം</th></tr></thead>
+            <tbody>
+              <tr><td>ട്രാഫിക് ലൈറ്റുള്ള ജംഗ്ഷൻ</td><td><strong>20 മീറ്ററിനുള്ളിൽ</strong> അരുത്</td></tr>
+              <tr><td>ട്രാഫിക് ലൈറ്റില്ലാത്ത ജംഗ്ഷൻ</td><td><strong>10 മീറ്ററിനുള്ളിൽ</strong> അരുത്</td></tr>
+              <tr><td>കാൽനട / കുട്ടികളുടെ crossing</td><td>മുൻപ് <strong>20 മീ.</strong>, ശേഷം <strong>10 മീ.</strong></td></tr>
+              <tr><td>ബസ് സ്റ്റോപ്പ്</td><td>മുൻപ് <strong>20 മീ.</strong>, ശേഷം <strong>10 മീ.</strong> (അടയാളപ്പെടുത്തിയ Bus Zone-ൽ ഒരിക്കലും)</td></tr>
+              <tr><td>ഫയർ ഹൈഡ്രന്റ് (അല്ലെങ്കിൽ അതിന്റെ അടയാളം)</td><td><strong>1 മീറ്ററിനുള്ളിൽ</strong> അരുത്</td></tr>
+              <tr><td>റോഡിന്റെ നടുവിലെ തുടർച്ചയായ വര</td><td>നിങ്ങളുടെ കാറും വരയും തമ്മിൽ <strong>3 മീ.</strong> ഉണ്ടായിരിക്കണം</td></tr>
+              <tr><td>ഡ്രൈവ്‌വേ</td><td>കുറുകെ അരുത്; കയറാനും ഇറങ്ങാനും പറ്റാത്തവിധം അടുത്തും അരുത്</td></tr>
+              <tr><td>kerb-ൽ തുടർച്ചയായ മഞ്ഞ വര</td><td>എപ്പോഴും നിരോധിതം</td></tr>
+              <tr><td>ഫുട്പാത്ത്, nature strip, പുൽത്തകിടി</td><td>പാർക്ക് ചെയ്യരുത് (സ്വന്തം വീടിന് മുന്നിലാണെങ്കിലും)</td></tr>
+              <tr><td>"KEEP CLEAR" എന്ന് മഞ്ഞ വരകളിട്ട ഭാഗം</td><td>നിർത്തരുത്; മറുവശത്ത് സ്ഥലമില്ലെങ്കിൽ ജംഗ്ഷനിലേക്ക് കയറരുത്</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="call stop">
+          <span class="tag">നാട്ടിൽ നിന്നുള്ള മൂന്ന് ശീലങ്ങൾ ഇവിടെ പിഴയാണ്</span>
+          <p><strong>1. nature strip-ൽ (റോഡിനും ഫുട്പാത്തിനും ഇടയിലെ പുൽത്തകിടി) പാർക്ക് ചെയ്യൽ.</strong> നാട്ടിൽ ഇത് സാധാരണമാണ്. ഇവിടെ ഇത് നിയമവിരുദ്ധമാണ്, <strong>നിങ്ങളുടെ സ്വന്തം വീടിന് മുന്നിലാണെങ്കിലും</strong> — അത് കൗൺസിലിന്റെ ഭൂമിയാണ്.</p>
+          <p><strong>2. എതിർദിശയിൽ തിരിഞ്ഞ് പാർക്ക് ചെയ്യൽ.</strong> ഗതാഗതത്തിന്റെ ദിശയിൽ, kerb-ന് കഴിയുന്നത്ര അടുത്ത്, സമാന്തരമായി മാത്രം. (ഒരു അപവാദം: ഏകദിശ റോഡുകളിൽ ചില സംസ്ഥാനങ്ങളിൽ രണ്ടു വശവും അനുവദനീയം.)</p>
+          <p><strong>3. ഡബിൾ പാർക്കിംഗ്</strong> — മറ്റൊരു കാറിന്റെ വശത്ത് നിർത്തുന്നത്. "ഒരു മിനിറ്റല്ലേ" എന്നത് ഒഴികഴിവല്ല.</p>
+        </div>
+
+        <h4>സമയം എങ്ങനെ അളക്കുന്നു</h4>
+        <ul class="plain">
+          <li><strong>"വണ്ടി മാറ്റിയിട്ടാൽ സമയം വീണ്ടും തുടങ്ങും" എന്നത് മിക്കയിടത്തും ശരിയല്ല.</strong> പല കൗൺസിലുകളുടെയും നിയമം <strong>ആ തെരുവ് / ആ ബ്ലോക്ക് വിട്ടുപോകണം</strong> എന്നാണ് — അതേ തെരുവിൽ വേറൊരു സ്ലോട്ടിലേക്ക് മാറ്റിയാലും പിഴ വരാം.</li>
+          <li><strong>പരിശോധന എങ്ങനെ:</strong> പഴയ രീതി ടയറിൽ ചോക്ക് ഇടുന്നതാണ്. ഇപ്പോൾ മിക്ക കൗൺസിലുകളും <strong>ലൈസൻസ് പ്ലേറ്റ് ക്യാമറ (ANPR)</strong> ഉള്ള വാഹനങ്ങൾ ഉപയോഗിക്കുന്നു — അവ തെരുവിലൂടെ ഓടി നമ്പറും സമയവും രേഖപ്പെടുത്തും.</li>
+          <li><strong>പണമടയ്ക്കൽ ആപ്പുകൾ:</strong> PayStay, EasyPark, CellOPark, Park'nPay (കൗൺസിൽ അനുസരിച്ച്). <strong>ഇവയുടെ നേട്ടം:</strong> ഫോണിൽ നിന്ന് സമയം നീട്ടാം, കാറിലേക്ക് തിരികെ ഓടേണ്ട. മീറ്ററിൽ ഏത് ആപ്പ് എന്ന് എഴുതിയിരിക്കും.</li>
+        </ul>
+
+        <div class="call money">
+          <span class="tag">പിഴ എങ്ങനെ വരും — ഇത് മാറിയിട്ടുണ്ട്</span>
+          <p>പരമ്പരാഗതമായി പിഴ ചീട്ട് വിൻഡ്സ്ക്രീനിൽ വെച്ചിരുന്നു. <strong>ഇപ്പോൾ പല സ്ഥലങ്ങളിലും (NSW ഉൾപ്പെടെ) "ticketless" പിഴയാണ് — വിൻഡ്സ്ക്രീനിൽ ഒന്നും ഉണ്ടാകില്ല, പിഴ ആഴ്ചകൾ കഴിഞ്ഞ് തപാലിൽ വരും.</strong></p>
+          <p>അതിനാൽ: <strong>രജിസ്ട്രേഷനിലെ വിലാസം എപ്പോഴും കൃത്യമായി വെക്കുക.</strong> വിലാസം പഴയതാണെങ്കിൽ പിഴ അറിയാതെ പോകും, പിന്നീട് അത് കൂടുതൽ ഫീസോടെയും ലൈസൻസ് സസ്പെൻഷനോടെയും വരും.</p>
+          <p><strong>ഏകദേശ പിഴ:</strong> സാധാരണ ലംഘനങ്ങൾക്ക് $100–$400; No Stopping, Bus Zone, Clearway എന്നിവയ്ക്ക് കൂടുതൽ; disabled parking-ന് $600+. Clearway-യിൽ ടോയിംഗ് ചാർജ് വേറെ.</p>
+        </div>
+        <div class="call good">
+          <span class="tag">പിഴ അന്യായമെന്ന് തോന്നിയാൽ</span>
+          <p>എല്ലാ സംസ്ഥാനങ്ങളിലും ഒരു <strong>review/appeal</strong> സംവിധാനമുണ്ട് (NSW-ൽ Revenue NSW, "request a review"). ഇത് സൗജന്യമാണ്, ഓൺലൈനിൽ ചെയ്യാം.</p>
+          <p><strong>ഫലപ്രദമാകുന്ന കാരണങ്ങൾ:</strong> സൈൻ മറഞ്ഞിരുന്നു / വ്യക്തമല്ലായിരുന്നു (ഫോട്ടോ എടുക്കുക) · മീറ്റർ/ആപ്പ് പ്രവർത്തിച്ചില്ല (രസീത് സൂക്ഷിക്കുക) · മെഡിക്കൽ അടിയന്തരാവസ്ഥ · ആദ്യ തവണയാണ്, നല്ല റെക്കോർഡ് ഉണ്ട്.</p>
+          <p><strong>ഫലപ്രദമാകാത്തത്:</strong> "ഞാൻ ഇവിടെ പുതിയതാണ്", "ഇംഗ്ലീഷ് വായിക്കാൻ പറ്റിയില്ല", "ഒരു മിനിറ്റല്ലേ". <em>പിഴ കിട്ടിയ ഉടനെ ഫോട്ടോ എടുക്കുക</em> — സൈൻ, നിങ്ങളുടെ കാർ, പരിസരം. പിന്നീട് appeal ചെയ്യാൻ ഇത് വേണം.</p>
+        </div>
+
+        <h4>ഷോപ്പിംഗ് സെന്റർ പാർക്കിംഗ്</h4>
+        <ul class="plain">
+          <li>മിക്ക ഷോപ്പിംഗ് സെന്ററുകളിലും <strong>ആദ്യ 2–3 മണിക്കൂർ സൗജന്യമാണ്,</strong> പിന്നീട് നിരക്ക്. ചിലയിടത്ത് കടയിൽ നിന്ന് validate ചെയ്യിച്ചാൽ കൂടുതൽ സമയം സൗജന്യം.</li>
+          <li><strong>ഇവ കൗൺസിലിന്റേതല്ല, സ്വകാര്യ ഓപ്പറേറ്റർമാരുടേതാണ്</strong> (Wilson, Secure, Care Park). അവർ ANPR ക്യാമറ ഉപയോഗിച്ച് നിങ്ങൾ എപ്പോൾ കയറി എപ്പോൾ ഇറങ്ങി എന്ന് രേഖപ്പെടുത്തും. സമയം കഴിഞ്ഞാൽ <strong>"breach notice" തപാലിൽ വരും</strong> — സാധാരണ $70–$100.</li>
+          <li><strong>ഇത് ഒരു സർക്കാർ പിഴയല്ല,</strong> ഒരു കരാർ ലംഘനത്തിന്റെ ക്ലെയിമാണ് — അതിനാൽ ഇതിന്റെ നിയമപരമായ നില വ്യത്യസ്തമാണ്. പക്ഷേ അടയ്ക്കാതിരുന്നാൽ അവർ debt collector-ലേക്ക് കൈമാറും, അത് ക്രെഡിറ്റ് റെക്കോർഡിനെ ബാധിക്കാം. <strong>തർക്കമുണ്ടെങ്കിൽ ഓപ്പറേറ്ററോട് നേരിട്ട് എഴുതുക, അവഗണിക്കരുത്.</strong></li>
+          <li><strong>ട്രോളി ട്രോളി ബേയിൽ തിരികെ വെക്കുക.</strong> ഉപേക്ഷിച്ച ട്രോളികൾ കാറുകൾക്ക് കേടുണ്ടാക്കും, ചില കൗൺസിലുകൾ ഇതിന് പിഴയും ഈടാക്കുന്നു.</li>
+          <li><strong>"Parents with prams" പാർക്കിംഗ്</strong> സാധാരണ നിയമപരമായി നടപ്പാക്കുന്നതല്ല, പക്ഷേ അർഹതയില്ലാതെ ഉപയോഗിക്കുന്നത് വളരെ മോശമായി കാണും.</li>
+        </ul>
+
+        <h4>വീട്ടിലും അയൽപക്കത്തും</h4>
+        <ul class="plain">
+          <li><strong>മറ്റൊരാളുടെ ഡ്രൈവ്‌വേയ്ക്ക് കുറുകെ പാർക്ക് ചെയ്യരുത്</strong> — ഒരു നിമിഷം പോലും. ഇത് ഏറ്റവും സാധാരണമായ അയൽക്കാർ തമ്മിലുള്ള തർക്ക കാരണമാണ്, കൂടാതെ പിഴയുമുണ്ട്. <em>ഒരു കുറിപ്പ്:</em> നിങ്ങളുടെ <strong>സ്വന്തം</strong> ഡ്രൈവ്‌വേയ്ക്ക് കുറുകെ പാർക്ക് ചെയ്യുന്നതും പല സംസ്ഥാനങ്ങളിൽ നിയമവിരുദ്ധമാണ്, കാരണം അത് ഫുട്പാത്ത് തടയുന്നു.</li>
+          <li><strong>സ്വന്തം വീടിന് മുന്നിലെ റോഡ് നിങ്ങളുടെതല്ല.</strong> ആർക്കും അവിടെ പാർക്ക് ചെയ്യാം (നിയന്ത്രണങ്ങൾ പാലിച്ചാൽ). ഒരു കോൺ വെച്ചോ ബിൻ വെച്ചോ സ്ഥലം "റിസർവ്" ചെയ്യുന്നത് ഇവിടെ അസ്വീകാര്യമാണ്.</li>
+          <li><strong>Resident parking permit:</strong> നിയന്ത്രിത മേഖലയിൽ താമസിക്കുന്നവർക്ക് കൗൺസിലിൽ നിന്ന് പെർമിറ്റ് കിട്ടും (സാധാരണ ഒരു ചെറിയ വാർഷിക ഫീസ്). അതിഥികൾക്കുള്ള താൽക്കാലിക പെർമിറ്റും ചിലയിടത്ത് ഉണ്ട്. <strong>അപ്പാർട്ട്മെന്റിലാണെങ്കിൽ ഇത് കിട്ടില്ലായിരിക്കാം</strong> — വാടകയ്ക്ക് എടുക്കുന്നതിന് മുൻപ് പാർക്കിംഗ് എന്താണെന്ന് ഉറപ്പിക്കുക.</li>
+          <li><strong>അപ്പാർട്ട്മെന്റിലെ visitor parking</strong> അതിഥികൾക്ക് മാത്രമാണ്. സ്വന്തം രണ്ടാമത്തെ കാർ അവിടെ സ്ഥിരമായി വെക്കുന്നത് strata-യുമായി തർക്കമാകും, ടോ ചെയ്യാനും സാധ്യതയുണ്ട്.</li>
+        </ul>
+        <div class="call law">
+          <span class="tag">ചുരുക്കം — മൂന്ന് ശീലം</span>
+          <p><strong>1.</strong> കാറിൽ നിന്ന് ഇറങ്ങുന്നതിന് മുൻപ് സൈൻ നോക്കുക. ഒരു സൈൻ കണ്ടാൽ അടുത്തതും നോക്കുക — നിയന്ത്രണം സൈനുകൾക്കിടയിലാണ്.</p>
+          <p><strong>2.</strong> ഫോണിൽ ഒരു അലാറം വെക്കുക. "2P" എന്നാൽ 2 മണിക്കൂർ 1 മിനിറ്റ് ആയാലും പിഴയാണ്.</p>
+          <p><strong>3.</strong> സംശയമുണ്ടെങ്കിൽ സൈനിന്റെ ഫോട്ടോ എടുക്കുക. ഒരു മിനിറ്റ് ചെലവ്, $400 ലാഭം.</p>
+        </div>
+        <div class="call stop">
+          <span class="tag">Road rage ഒഴിവാക്കുക</span>
+          <p>ആരെങ്കിലും ആക്രമണോത്സുകമായി പെരുമാറിയാൽ <strong>പ്രതികരിക്കരുത്, ആംഗ്യം കാണിക്കരുത്, പിന്തുടരരുത്.</strong> അകലം പാലിക്കുക. ഗുരുതരമാണെങ്കിൽ സുരക്ഷിതമായ സ്ഥലത്ത് നിർത്തി 000 വിളിക്കുക. <strong>റോഡിലെ വാക്കുതർക്കങ്ങൾ ഇവിടെ ക്രിമിനൽ കേസുകളായി മാറാറുണ്ട്, അത് വിസയെ ബാധിക്കാം.</strong></p>
+          <p><strong>ഒരു അപകടമുണ്ടായാൽ:</strong> നിർത്തുക (നിർത്താതെ പോകുന്നത് ഗുരുതരമായ കുറ്റമാണ്), പേര്, വിലാസം, രജിസ്ട്രേഷൻ, ഇൻഷുറൻസ് വിവരങ്ങൾ കൈമാറുക, ഫോട്ടോ എടുക്കുക. <strong>"എന്റെ തെറ്റാണ്" എന്ന് സംഭവസ്ഥലത്ത് പറയരുത്</strong> — ഇത് ഇൻഷുറൻസിനെ ബാധിക്കാം. പരിക്കുണ്ടെങ്കിലോ വാഹനം ഓടിക്കാൻ പറ്റാത്ത നിലയിലാണെങ്കിലോ 000 വിളിക്കുക.</p>
+        </div>
+        <p><strong>P-plates:</strong> "L" (Learner) അല്ലെങ്കിൽ ചുവന്ന/പച്ച "P" പ്ലേറ്റ് ഉള്ള വാഹനങ്ങൾ പുതിയ ഡ്രൈവർമാരുടേതാണ് — അവർക്ക് കൂടുതൽ ക്ഷമ കാണിക്കുക. <strong>Dashcam</strong> പലരും ഉപയോഗിക്കുന്നു; ഒരു അപകടത്തിൽ ഇൻഷുറൻസ് ക്ലെയിമിൽ ഇത് വളരെ സഹായകമാണ്.</p>
+
+        <h3>ബീച്ച് സുരക്ഷ</h3>
+        <figure>
+          <div class="figtitle">റിപ്പ് കറന്റ് — "ശാന്തമായത് സുരക്ഷിതം" എന്നത് മാരകമായ തെറ്റ്</div>
+          <svg viewBox="0 0 700 340" role="img" aria-label="ബീച്ചിന്റെ ചിത്രം: ചുവപ്പും മഞ്ഞയും കൊടികൾക്കിടയിലെ സുരക്ഷിത മേഖലയും, തിരമാലകൾ പൊട്ടാത്ത ഇരുണ്ട റിപ്പ് ചാനലും">
+            <!-- ocean -->
+            <rect x="0" y="0" width="700" height="210" fill="var(--euc-soft)"/>
+            <!-- breaking waves (white lines) left and right -->
+            <g stroke="var(--euc)" stroke-width="2.5" fill="none" opacity=".55">
+              <path d="M10 60 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0"/>
+              <path d="M10 100 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0"/>
+              <path d="M10 140 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0"/>
+              <path d="M10 178 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0"/>
+            </g>
+            <g stroke="var(--euc)" stroke-width="2.5" fill="none" opacity=".55">
+              <path d="M430 60 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0"/>
+              <path d="M430 100 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0"/>
+              <path d="M430 140 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0"/>
+              <path d="M430 178 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0 q22 -12 44 0 q22 12 44 0"/>
+            </g>
+            <!-- RIP channel: dark, smooth, no breaking waves -->
+            <path d="M300 210 L286 0 L414 0 L400 210 Z" fill="var(--ink)" opacity=".30"/>
+            <!-- rip arrows pointing out to sea -->
+            <g stroke="var(--danger)" stroke-width="3" fill="none">
+              <path d="M350 196 L350 40"/>
+            </g>
+            <path d="M350 40 l-7 14 l14 0 Z" fill="var(--danger)"/>
+            <text x="350" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="var(--danger)">RIP</text>
+            <text x="470" y="100" font-size="12" font-weight="600" fill="var(--ink)" class="ml">തിരമാലകൾ പൊട്ടുന്നു</text>
+            <text x="470" y="118" font-size="11.5" fill="var(--ink-soft)" class="ml">= സാധാരണ, സുരക്ഷിതം</text>
+            <text x="120" y="226" font-size="11.5" fill="var(--ink-soft)" class="ml" text-anchor="middle">നുരയും വെളുത്ത വെള്ളവും</text>
+            <!-- rip label -->
+            <rect x="248" y="232" width="204" height="52" rx="7" fill="var(--danger-soft)" stroke="var(--danger)" stroke-width="1.5"/>
+            <text x="350" y="251" text-anchor="middle" font-size="12" font-weight="700" fill="var(--danger)" class="ml">ഇരുണ്ടത്, ശാന്തം, തിരയില്ല</text>
+            <text x="350" y="268" text-anchor="middle" font-size="11.5" fill="var(--danger)" class="ml">= ഇതാണ് റിപ്പ്. ഇറങ്ങരുത്.</text>
+            <!-- beach -->
+            <rect x="0" y="210" width="700" height="18" fill="var(--signal-soft)"/>
+            <!-- flags: red/yellow pair marking safe zone -->
+            <g>
+              <line x1="150" y1="212" x2="150" y2="168" stroke="var(--ink-soft)" stroke-width="2"/>
+              <path d="M150 168 L180 176 L150 184 Z" fill="var(--bin-red)"/>
+              <path d="M150 184 L180 192 L150 200 Z" fill="var(--bin-yellow)"/>
+              <line x1="236" y1="212" x2="236" y2="168" stroke="var(--ink-soft)" stroke-width="2"/>
+              <path d="M236 168 L266 176 L236 184 Z" fill="var(--bin-red)"/>
+              <path d="M236 184 L266 192 L236 200 Z" fill="var(--bin-yellow)"/>
+            </g>
+            <rect x="140" y="130" width="106" height="34" rx="6" fill="var(--ok-soft)" stroke="var(--ok)" stroke-width="1.5"/>
+            <text x="193" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ok)" class="ml">ഇവിടെ മാത്രം</text>
+            <!-- escape instruction -->
+            <rect x="20" y="294" width="320" height="38" rx="7" fill="var(--ok-soft)" stroke="var(--ok)" stroke-width="1.2"/>
+            <text x="34" y="310" font-size="11.5" font-weight="600" fill="var(--ok)" class="ml">റിപ്പിൽ പെട്ടാൽ: കരയിലേക്ക് നീന്തരുത്.</text>
+            <text x="34" y="325" font-size="11.5" fill="var(--ok)" class="ml">പൊങ്ങിക്കിടക്കുക · കൈ ഉയർത്തുക · സഹായം ചോദിക്കുക</text>
+            <rect x="356" y="294" width="324" height="38" rx="7" fill="var(--danger-soft)" stroke="var(--danger)" stroke-width="1.2"/>
+            <text x="370" y="310" font-size="11.5" font-weight="600" fill="var(--danger)" class="ml">മറ്റൊരാളെ രക്ഷിക്കാൻ ചാടരുത്.</text>
+            <text x="370" y="325" font-size="11.5" fill="var(--danger)" class="ml">000 വിളിക്കുക · പൊങ്ങാൻ എന്തെങ്കിലും എറിഞ്ഞു കൊടുക്കുക</text>
+          </svg>
+          <figcaption><b>ഇന്ത്യൻ ഉപഭൂഖണ്ഡത്തിൽ നിന്നുള്ളവർ ഓസ്‌ട്രേലിയൻ ബീച്ചുകളിലെ മുങ്ങിമരണങ്ങളിൽ അമിതമായി പ്രതിനിധീകരിക്കപ്പെടുന്നുണ്ട്.</b> കാരണം: തിരയില്ലാത്ത ശാന്തമായ ഭാഗം സുരക്ഷിതമാണെന്ന് തോന്നും, പക്ഷേ അതാണ് റിപ്പ് — കരയിൽ നിന്ന് കടലിലേക്ക് വേഗത്തിൽ ഒഴുകുന്ന ജലധാര.</figcaption>
+        </figure>
+        <ul class="plain">
+          <li><strong>ചുവപ്പും മഞ്ഞയും കൊടികൾക്കിടയിൽ മാത്രം നീന്തുക.</strong> ഇത് ചർച്ചാവിഷയമല്ല. ആ ഭാഗം മാത്രമാണ് <strong>lifesaver-മാർ നിരീക്ഷിക്കുന്നത്,</strong> അവർ ഏറ്റവും സുരക്ഷിതമായ ഭാഗം നോക്കിയാണ് കൊടി വെക്കുന്നത്.</li>
+          <li><strong>റിപ്പ് എങ്ങനെ തിരിച്ചറിയാം:</strong> തിരമാലകൾ പൊട്ടാത്ത, ശാന്തമായി തോന്നുന്ന, ഇരുണ്ട നിറമുള്ള, നുരയോ ചെളിവെള്ളമോ കടലിലേക്ക് ഒഴുകുന്ന ഭാഗം.</li>
+          <li><strong>നീന്തൽ അറിയില്ലെങ്കിൽ പഠിക്കുക.</strong> മുതിർന്നവർക്കുള്ള നീന്തൽ ക്ലാസുകൾ എല്ലാ കൗൺസിൽ പൂളുകളിലും ഉണ്ട്. <strong>കുട്ടികളെ നീന്തൽ പഠിപ്പിക്കുന്നത് ഓസ്‌ട്രേലിയയിൽ ആഡംബരമല്ല, അടിസ്ഥാന സുരക്ഷയാണ്.</strong></li>
+          <li><strong>ഒറ്റയ്ക്ക് നീന്തരുത്. മദ്യപിച്ച ശേഷം നീന്തരുത്.</strong></li>
+          <li><strong>പാറകളിൽ നിന്നുള്ള മീൻപിടിത്തം (rock fishing)</strong> ഓസ്‌ട്രേലിയയിലെ ഏറ്റവും അപകടകരമായ വിനോദമാണ്. ലൈഫ് ജാക്കറ്റ് ചില സ്ഥലങ്ങളിൽ നിയമപരമായി നിർബന്ധമാണ്.</li>
+        </ul>
+
+        <h3>സൂര്യൻ (UV)</h3>
+        <div class="call stop">
+          <span class="tag">ചൂട് ഒരു സൂചകമല്ല</span>
+          <p>ഓസ്‌ട്രേലിയയിലെ UV തീവ്രത ഇന്ത്യയേക്കാൾ വളരെ കൂടുതലാണ്. <strong>ചൂട് കുറവാണെങ്കിലും, മേഘാവൃതമാണെങ്കിലും, ശൈത്യകാലത്താണെങ്കിലും UV ഉയർന്നതാകാം.</strong> "വെയിലിന് ചൂടില്ലല്ലോ" എന്നത് തെറ്റായ സൂചകമാണ്.</p>
+          <p><strong>ഇരുണ്ട നിറമുള്ള ചർമം സംരക്ഷണം നൽകുന്നു എന്നത് ഭാഗികമായി മാത്രം ശരിയാണ്.</strong> അത് ചെറിയ സ്വാഭാവിക പ്രതിരോധം നൽകുമെങ്കിലും, <strong>ചർമ കാൻസറും UV നാശവും ഇപ്പോഴും സാധ്യമാണ്.</strong> ഓസ്‌ട്രേലിയയിലാണ് ലോകത്തിലെ ഏറ്റവും ഉയർന്ന ചർമ കാൻസർ നിരക്ക്.</p>
+        </div>
+        <h4>"Slip, Slop, Slap, Seek, Slide"</h4>
+        <ol class="steps">
+          <li><strong>Slip</strong> on a shirt — ഷർട്ട് ഇടുക</li>
+          <li><strong>Slop</strong> on SPF 50+ sunscreen — പുറത്തിറങ്ങുന്നതിന് 20 മിനിറ്റ് മുൻപ്, ഓരോ 2 മണിക്കൂറിലും വീണ്ടും</li>
+          <li><strong>Slap</strong> on a hat — വീതിയുള്ള തൊപ്പി</li>
+          <li><strong>Seek</strong> shade — തണൽ</li>
+          <li><strong>Slide</strong> on sunglasses — UV സംരക്ഷണമുള്ള കണ്ണട</li>
+        </ol>
+        <ul class="plain">
+          <li><strong>UV index 3-ന് മുകളിലാണെങ്കിൽ സംരക്ഷണം വേണം.</strong> കാലാവസ്ഥാ ആപ്പുകളിലും <strong>SunSmart Global UV app</strong>-ലും ഇത് കാണാം.</li>
+          <li><strong>ചർമത്തിലെ മറുകുകൾ വർഷത്തിൽ ഒരിക്കൽ പരിശോധിക്കുക.</strong> GP-യോട് skin check ചോദിക്കാം. ഒരു മറുകിന്റെ വലുപ്പം, ആകൃതി, നിറം മാറിയാൽ ഉടനെ കാണിക്കുക.</li>
+          <li><strong>വിറ്റാമിൻ D:</strong> അതേസമയം, ഇരുണ്ട ചർമമുള്ളവരിലും ദക്ഷിണ സംസ്ഥാനങ്ങളിൽ ശൈത്യകാലത്തും വിറ്റാമിൻ D കുറവ് സാധാരണമാണ്. GP-യോട് പരിശോധന ചോദിക്കാം.</li>
+        </ul>
+
+        <h3>മറ്റ് ഔട്ട്ഡോർ അപകടങ്ങൾ</h3>
+        <ul class="plain">
+          <li><strong>ചൂട് (Heatwave):</strong> 40°C+ ദിവസങ്ങളിൽ വെള്ളം കുടിക്കുക, ഉച്ചയ്ക്ക് പുറത്തിറങ്ങാതിരിക്കുക. <strong>ഒരിക്കലും കുട്ടികളെയോ വളർത്തുമൃഗങ്ങളെയോ കാറിൽ വിടരുത്</strong> — ഇത് ക്രിമിനൽ കുറ്റമാണ്, മിനിറ്റുകൾക്കുള്ളിൽ മാരകമാകാം.</li>
+          <li><strong>കാട്ടുതീ (Bushfire):</strong> ഗ്രാമപ്രദേശത്തോ കാടിനടുത്തോ താമസമെങ്കിൽ ഒരു <strong>bushfire survival plan</strong> ഉണ്ടാക്കുക. <strong>Fires Near Me</strong> (NSW) പോലുള്ള ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യുക. Total Fire Ban ദിവസങ്ങളിൽ ബാർബിക്യൂവിനും നിയന്ത്രണമുണ്ട്.</li>
+          <li><strong>വെള്ളപ്പൊക്കം: "If it's flooded, forget it."</strong> വെള്ളം കയറിയ റോഡിലൂടെ ഒരിക്കലും വാഹനമോടിക്കരുത് — 15 സെ.മീ. ഒഴുകുന്ന വെള്ളത്തിന് ഒരു കാർ ഒഴുക്കിക്കൊണ്ടുപോകാൻ കഴിയും.</li>
+          <li><strong>പാമ്പുകളും ചിലന്തികളും:</strong> വിഷമുള്ളവ ഉണ്ട്, പക്ഷേ മരണങ്ങൾ വളരെ അപൂർവമാണ്. പാമ്പിനെ കണ്ടാൽ <strong>മാറി നിൽക്കുക, കൊല്ലാൻ ശ്രമിക്കരുത്</strong> (അത് നിയമവിരുദ്ധമാണ്, മിക്ക കടികളും അപ്പോഴാണ് സംഭവിക്കുന്നത്). പുൽത്തകിടിയിലും കാട്ടുവഴിയിലും അടച്ച ഷൂ ധരിക്കുക.
+            <ul>
+              <li><strong>കടിയേറ്റാൽ:</strong> അനങ്ങാതിരിക്കുക · <strong>pressure immobilisation bandage</strong> · 000 വിളിക്കുക. <strong>മുറിവ് കഴുകരുത്, ചൂഷണം ചെയ്യരുത്, tourniquet കെട്ടരുത്.</strong></li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>പൊതു നിയമങ്ങൾ</h3>
+        <ul class="plain">
+          <li><strong>മദ്യം:</strong> പൊതുസ്ഥലത്ത് (പാർക്ക്, ബീച്ച്, തെരുവ്) മദ്യപാനം പല പ്രദേശങ്ങളിലും നിരോധിതമാണ് ("alcohol-free zone"). മദ്യം <strong>ബോട്ടിൽ ഷോപ്പിൽ ("bottle-o") മാത്രമേ വിൽക്കൂ,</strong> സൂപ്പർമാർക്കറ്റിൽ ഇല്ല. 18 വയസ്സാണ് നിയമപരമായ പ്രായം; ഐഡി ചോദിക്കും.</li>
+          <li><strong>പുകവലി:</strong> റെസ്റ്റോറന്റുകൾ, ഓഫീസുകൾ, പൊതു ഗതാഗതം, മിക്ക ഔട്ട്ഡോർ ഡൈനിംഗ് ഏരിയകൾ, കുട്ടികളുടെ കളിസ്ഥലങ്ങൾ — നിരോധിതം. <strong>വേപ്പിംഗ് നിയമങ്ങൾ അടുത്തകാലത്ത് കർശനമാക്കി;</strong> നിക്കോട്ടിൻ വേപ്പുകൾ ഇപ്പോൾ പ്രധാനമായും ഫാർമസി വഴിയാണ്.</li>
+          <li><strong>മുറുക്കാൻ/പാൻ തുപ്പുന്നത്</strong> പൊതുസ്ഥലത്ത് പല സംസ്ഥാനങ്ങളിലും പിഴയുള്ള കുറ്റമാണ്, കൂടാതെ വളരെ മോശമായി കാണും. കാറിൽ നിന്ന് സിഗരറ്റ് കുറ്റി എറിയുന്നതും (littering) വലിയ പിഴയാണ്.</li>
+        </ul>
+        <div class="call stop">
+          <span class="tag">ഗാർഹിക പീഡനം</span>
+          <p>പങ്കാളിക്കോ കുട്ടികൾക്കോ എതിരായ ശാരീരിക അക്രമം ഗുരുതരമായ ക്രിമിനൽ കുറ്റമാണ്; <strong>മാനസിക/സാമ്പത്തിക നിയന്ത്രണവും (coercive control) ചില സംസ്ഥാനങ്ങളിൽ ഇപ്പോൾ ക്രിമിനൽ കുറ്റമാണ്.</strong> ഇത് വിസ റദ്ദാക്കലിലേക്ക് നയിക്കാം.</p>
+          <p>സഹായം വേണ്ടവർക്ക്: <strong>1800RESPECT — 1800 737 732</strong>, 24 മണിക്കൂറും, സൗജന്യ ദ്വിഭാഷി സേവനത്തോടെ.</p>
+        </div>
+        <div class="call law">
+          <span class="tag">വിവേചനം രണ്ടു വഴിക്കും ബാധകമാണ്</span>
+          <p>വംശം, ലിംഗം, പ്രായം, മതം, ലൈംഗിക ആഭിമുഖ്യം, വൈകല്യം എന്നിവയുടെ അടിസ്ഥാനത്തിലുള്ള വിവേചനം നിയമവിരുദ്ധമാണ്. <strong>നിങ്ങൾക്കെതിരെ വിവേചനം നേരിട്ടാൽ പരാതിപ്പെടാൻ അവകാശമുണ്ട്</strong> (Australian Human Rights Commission).</p>
+          <p>അതുപോലെ, മറ്റുള്ളവരോട് ജാതി/മത/വർണ അടിസ്ഥാനത്തിലുള്ള പെരുമാറ്റം — <strong>നമ്മുടെ സമൂഹത്തിനുള്ളിൽ പോലും</strong> — ഇവിടെ നിയമപ്രശ്നമാകാം.</p>
+        </div>
+      </div>
+    </section>
+    <section id="s7">
+      <div class="wrap">
+        <div class="sechead"><span class="num">07</span><h2>കുട്ടികളും കുടുംബവും</h2></div>
+        <p class="lede">സ്കൂൾ, ലഞ്ച് ബോക്സ്, സൗഹൃദങ്ങൾ, രണ്ട് സംസ്കാരങ്ങൾക്കിടയിലെ ബാലൻസ്.</p>
+
+        <h3>സ്കൂൾ അന്തരീക്ഷം</h3>
+        <div class="pair">
+          <div class="k">
+            <span class="lbl">നാട്ടിലെ ഊന്നൽ</span>
+            <p>കാണാപ്പാഠം · പരീക്ഷാ മാർക്ക് · അധ്യാപകൻ പറയുന്നത് കേൾക്കുക · റാങ്ക്</p>
+          </div>
+          <div class="a">
+            <span class="lbl">ഇവിടത്തെ ഊന്നൽ</span>
+            <p>ചോദ്യം ചോദിക്കൽ · ഗ്രൂപ്പ് പ്രോജക്ട് · അവതരണം (presentation) · വിമർശനാത്മക ചിന്ത · "എന്തുകൊണ്ട്" എന്ന് അന്വേഷിക്കൽ</p>
+          </div>
+        </div>
+        <ul class="plain">
+          <li>ഇന്ത്യൻ സ്കൂളിൽ നിന്ന് വരുന്ന കുട്ടികൾ പലപ്പോഴും <strong>കണക്കിൽ ഒരു വർഷമോ രണ്ടോ മുന്നിലായിരിക്കും,</strong> പക്ഷേ <strong>എഴുത്തിലും അവതരണത്തിലും സ്വതന്ത്ര ഗവേഷണത്തിലും പിന്നിലായിരിക്കാം.</strong> ഇത് സ്വാഭാവികമാണ്. കണക്കിലെ മുൻതൂക്കം ഒരു വർഷം കൊണ്ട് ഇല്ലാതാകും — അതിൽ അമിത ആശ്വാസം വേണ്ട.</li>
+          <li><strong>സ്കൂൾ തരങ്ങൾ:</strong> Public (government, സൗജന്യം അല്ലെങ്കിൽ ചെറിയ voluntary contribution, catchment area അനുസരിച്ച്), Catholic (മിതമായ ഫീസ്), Independent/Private (ഉയർന്ന ഫീസ്). <strong>താൽക്കാലിക വിസയിലാണെങ്കിൽ പബ്ലിക് സ്കൂളിൽ പോലും അന്താരാഷ്ട്ര വിദ്യാർത്ഥി ഫീസ് ബാധകമാകാം</strong> (സംസ്ഥാനവും വിസയും അനുസരിച്ച്) — ഇത് മുൻകൂട്ടി പരിശോധിക്കുക.</li>
+          <li><strong>Homework കുറവാണ്</strong> (പല സ്കൂളുകളിലും പ്രൈമറിയിൽ ഇല്ല). ഇത് "പഠിപ്പിക്കുന്നില്ല" എന്നല്ല അർത്ഥം. പകരം <strong>ദിവസവും 10–20 മിനിറ്റ് ഉറക്കെ വായിക്കൽ</strong> പ്രോത്സാഹിപ്പിക്കും — ഇത് ഗൗരവമായി എടുക്കുക.</li>
+          <li><strong>അധ്യാപകരുമായുള്ള ബന്ധം:</strong> വർഷത്തിൽ 1–2 തവണ <strong>parent-teacher interview</strong> (10–15 മിനിറ്റ്). ചോദ്യങ്ങൾ മുൻകൂട്ടി തയ്യാറാക്കുക. ഇടയ്ക്ക് ആശങ്കയുണ്ടെങ്കിൽ ഇമെയിൽ അയച്ച് സമയം ചോദിക്കാം. <strong>അധ്യാപകനെ വിളിച്ചു വരുത്തുകയോ അപ്രതീക്ഷിതമായി ക്ലാസിൽ കയറിച്ചെല്ലുകയോ ചെയ്യരുത്.</strong></li>
+          <li><strong>ട്യൂഷൻ:</strong> Kumon, NAPLAN coaching, selective school coaching എന്നിവ ഇന്ത്യൻ/ചൈനീസ് സമൂഹങ്ങളിൽ വളരെ സാധാരണമാണ്. <strong>പക്ഷേ അമിതമായ ട്യൂഷൻ ഇവിടെ ഗുണത്തേക്കാളേറെ ദോഷം ചെയ്തേക്കാം</strong> — കുട്ടിക്ക് കളിക്കാനും കായികവിനോദത്തിനും സൗഹൃദങ്ങൾക്കും സമയം വേണം; അതാണ് ഇവിടെ സാമൂഹിക സംയോജനത്തിന്റെ വഴി.</li>
+        </ul>
+
+        <div class="call stop">
+          <span class="tag">ശാരീരിക ശിക്ഷ — ഇത് വീട്ടിലും ബാധകമാണ്</span>
+          <p>സ്കൂളിൽ ശാരീരിക ശിക്ഷ പൂർണമായും നിരോധിതമാണ്; ഒരു അധ്യാപകനും ഒരു കുട്ടിയെയും ഒരു കാരണവശാലും അടിക്കില്ല.</p>
+          <p><strong>പക്ഷേ ഇത് വീട്ടിലും ബാധകമാണെന്ന് മനസ്സിലാക്കുക.</strong> നാട്ടിൽ "ഒരു അടി കൊടുത്താൽ ശരിയാകും" എന്നത് സാധാരണമായിരിക്കാം. <strong>ഓസ്‌ട്രേലിയയിൽ കുട്ടിയെ അടിക്കുന്നത് child protection അന്വേഷണത്തിലേക്ക് നയിക്കാം.</strong> നിയമങ്ങൾ സംസ്ഥാനം അനുസരിച്ച് വ്യത്യാസപ്പെടുന്നുണ്ടെങ്കിലും പരിധികൾ വളരെ ഇടുങ്ങിയതാണ്.</p>
+          <p><strong>അധ്യാപകർ, ഡോക്ടർമാർ, നഴ്സുമാർ, childcare ജീവനക്കാർ എല്ലാം "mandatory reporters" ആണ്.</strong> ഒരു കുട്ടി "അച്ഛൻ ഇന്നലെ അടിച്ചു" എന്ന് സ്കൂളിൽ പറഞ്ഞാൽ, അധ്യാപകന് അത് റിപ്പോർട്ട് ചെയ്യേണ്ട <strong>നിയമപരമായ ബാധ്യതയുണ്ട്</strong> — അവർക്ക് വിവേചനാധികാരമില്ല.</p>
+        </div>
+        <div class="call good">
+          <span class="tag">ബദലുകൾ — ഇത് ദൗർബല്യമല്ല</span>
+          <p>അനന്തരഫലങ്ങൾ (consequences), സ്ക്രീൻ സമയം കുറയ്ക്കൽ, "time out", വ്യക്തമായ അതിരുകൾ, സംഭാഷണം. <strong>കൗൺസിലുകളും കമ്മ്യൂണിറ്റി ഹെൽത്ത് സെന്ററുകളും സൗജന്യ parenting programs നടത്തുന്നുണ്ട്</strong> (Triple P പോലുള്ളവ). ഓസ്‌ട്രേലിയൻ രക്ഷിതാക്കൾ ഇവ വ്യാപകമായി ഉപയോഗിക്കുന്നു.</p>
+        </div>
+
+        <h3>ലഞ്ച് ബോക്സും സ്കൂൾ ദിനചര്യയും</h3>
+        <div class="call warn">
+          <span class="tag">അലർജി നയം — ഇത് ഒരു ദേശീയ നിയമമല്ല</span>
+          <p>പല സ്കൂളുകളും "nut-free" അല്ലെങ്കിൽ "nut-aware" ആണ്, <strong>പക്ഷേ ഇത് ഓരോ സ്കൂളിന്റെയും നയമാണ്.</strong> ചില സ്കൂളുകൾ നിലക്കടല/മരക്കായകൾ പൂർണമായി വിലക്കുന്നു; മറ്റുള്ളവ "പങ്കിടരുത്, കൈ കഴുകുക" എന്ന സമീപനം സ്വീകരിക്കുന്നു.</p>
+          <p><em>അലർജി വിദഗ്ധ സംഘടനയായ ASCIA യഥാർത്ഥത്തിൽ പൂർണ നിരോധനം ശുപാർശ ചെയ്യുന്നില്ല — അത് തെറ്റായ സുരക്ഷാബോധം നൽകുന്നു എന്ന കാരണത്താൽ; പകരം അലർജി-ബോധമുള്ള സമീപനമാണ് നിർദ്ദേശിക്കുന്നത്.</em></p>
+          <p><strong>അതിനാൽ: നിങ്ങളുടെ കുട്ടിയുടെ സ്കൂളിന്റെ നയം എൻറോൾമെന്റ് പാക്കിൽ വായിക്കുക.</strong> ചിലയിടത്ത് മുട്ടയ്ക്കും എള്ളിനും കൂടി നിയന്ത്രണമുണ്ടാകാം. <strong>ഭക്ഷണം പങ്കിടാൻ പാടില്ല എന്നത് ഏതാണ്ട് സാർവത്രിക നിയമമാണ്</strong> — ഇത് കുട്ടിയോട് പറഞ്ഞു മനസ്സിലാക്കുക (നാട്ടിലെ പങ്കുവെക്കൽ ശീലത്തിന് വിരുദ്ധമാണിത്).</p>
+        </div>
+        <h4>കോൾഡ് ലഞ്ച് — ചൂടാക്കാനുള്ള സൗകര്യം ഉണ്ടാകില്ല</h4>
+        <ul class="plain">
+          <li>മിക്ക സ്കൂളുകളിലും മൈക്രോവേവ് ഇല്ല. ചൂടുള്ള ചോറും കറിയും പ്രായോഗികമല്ല (ചോർച്ച, മണം, തണുത്തുപോകൽ).</li>
+          <li><strong>പ്രായോഗിക ബദലുകൾ:</strong> സാൻഡ്‌വിച്ച്, റാപ്പ്, <strong>റോട്ടി റോൾ</strong> (ഉണങ്ങിയ പൂരണത്തോടെ), പാസ്ത സാലഡ്, ഇഡ്ഡലി/ദോശ (ചട്ണി വേറെ ഒരു ചെറിയ പാത്രത്തിൽ), മുട്ട, പഴങ്ങൾ, കാരറ്റ്/കുക്കുമ്പർ കഷണങ്ങൾ, ചീസ്, യോഗർട്ട്, ഹമ്മസ്.</li>
+          <li>ചൂടുള്ള ഭക്ഷണം വേണമെങ്കിൽ <strong>നല്ല ഒരു thermos food jar</strong> ഉപയോഗിക്കാം (രാവിലെ ചൂടുവെള്ളം ഒഴിച്ച് ചൂടാക്കി, പിന്നെ ഭക്ഷണം നിറയ്ക്കുക).</li>
+          <li><strong>ഐസ് ബ്രിക്ക് (freezer pack)</strong> ലഞ്ച് ബോക്സിൽ വെക്കുക — ഓസ്‌ട്രേലിയൻ ചൂടിൽ ഭക്ഷണം വേഗം കേടാകും.</li>
+          <li><strong>"Nude food":</strong> പല സ്കൂളുകളും പൊതിയില്ലാത്ത ഭക്ഷണം പ്രോത്സാഹിപ്പിക്കുന്നു (പുനരുപയോഗിക്കാവുന്ന പാത്രങ്ങളിൽ). ചില സ്കൂളുകളിൽ കുട്ടികൾ അവരുടെ എല്ലാ മാലിന്യവും വീട്ടിലേക്ക് തിരികെ കൊണ്ടുവരണം.</li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">മണമുള്ള ഭക്ഷണവും കുട്ടിയുടെ ആത്മാഭിമാനവും</span>
+          <p>കുട്ടികൾ ചിലപ്പോൾ മറ്റു കുട്ടികളുടെ ഭക്ഷണത്തെക്കുറിച്ച് അഭിപ്രായം പറയും. <strong>നിങ്ങളുടെ കുട്ടിക്ക് ഇത് നാണക്കേടായി തോന്നിയാൽ, ഭക്ഷണം മാറ്റുന്നതിന് മുൻപ് സംസാരിക്കുക.</strong> പല കുട്ടികളും ഇത് കാരണം സ്വന്തം സംസ്കാരത്തിൽ ലജ്ജിക്കാൻ തുടങ്ങും.</p>
+          <p><strong>ഒരു ഒത്തുതീർപ്പ്:</strong> ചില ദിവസങ്ങളിൽ "സ്കൂൾ-സൗഹൃദ" ഭക്ഷണം, മറ്റു ദിവസങ്ങളിൽ വീട്ടുഭക്ഷണം.</p>
+        </div>
+        <ul class="plain">
+          <li><strong>'No Hat, No Play':</strong> മിക്ക പ്രൈമറി സ്കൂളുകളിലും (പ്രത്യേകിച്ച് Term 1, Term 4-ൽ) <strong>വീതിയുള്ള തൊപ്പി ഇല്ലാത്ത കുട്ടിക്ക് പുറത്ത് കളിക്കാൻ അനുവാദമില്ല</strong> — അവർ തണലിൽ ഇരിക്കേണ്ടിവരും. ബേസ്ബോൾ ക്യാപ് സാധാരണ അനുവദനീയമല്ല (ചെവിയും കഴുത്തും മൂടില്ല). <strong>രണ്ട് തൊപ്പി വാങ്ങുക</strong> — ഒന്ന് നഷ്ടപ്പെടും.</li>
+          <li><strong>യൂണിഫോം:</strong> മിക്ക സ്കൂളുകളിലും ഉണ്ട്. <strong>Second-hand uniform shop</strong> പല സ്കൂളുകളിലും ഉണ്ട്, വളരെ വിലക്കുറവ് — ഇത് ഉപയോഗിക്കുന്നതിൽ ഒരു നാണക്കേടുമില്ല.</li>
+          <li><strong>സൺസ്ക്രീൻ</strong> രാവിലെ വീട്ടിൽ നിന്ന് പുരട്ടി വിടുക. <strong>വാട്ടർ ബോട്ടിൽ</strong> ദിവസവും കൊടുക്കുക.</li>
+          <li><strong>സ്കൂൾ ആശയവിനിമയം ആപ്പ്/ഇമെയിൽ വഴിയാണ്</strong> (Compass, Seesaw, SchoolBytes, Skoolbag). <strong>ഇത് ദിവസവും പരിശോധിക്കുക</strong> — അനുമതി ഫോമുകൾ, excursion, casual clothes day, canteen ദിവസം എല്ലാം അവിടെയാണ്. ഇത് നഷ്ടപ്പെടുത്തുന്നത് കുട്ടിക്ക് വിഷമമുണ്ടാക്കും.</li>
+          <li><strong>ഹാജർ കൃത്യമായി രേഖപ്പെടുത്തും.</strong> കുട്ടി വരാത്ത ദിവസം സ്കൂളിൽ അറിയിക്കണം. <strong>നാട്ടിലേക്ക് ദീർഘകാല അവധിക്ക് പോകാൻ മുൻകൂർ അനുമതി (exemption) വേണം.</strong></li>
+        </ul>
+
+        <h3>സൗഹൃദങ്ങളും 'Playdates'-ഉം</h3>
+        <p><strong>Playdate</strong> = ഒരു കുട്ടി മറ്റൊരു കുട്ടിയുടെ വീട്ടിലോ പാർക്കിലോ കുറച്ചു മണിക്കൂർ കളിക്കാൻ പോകുന്ന ക്രമീകരണം. <strong>ഇതാണ് കുട്ടികൾ സൗഹൃദമുണ്ടാക്കുന്ന പ്രധാന വഴി.</strong></p>
+        <ol class="steps">
+          <li><strong>മുൻകൈ എടുക്കുക.</strong> സ്കൂൾ ഗേറ്റിൽ വെച്ച് മറ്റൊരു രക്ഷിതാവിനോട്: "Our kids seem to get on well. Would Emma like to come over one afternoon?" ഇത് ഇവിടെ പൂർണമായും സാധാരണവും സ്വാഗതാർഹവുമാണ്.</li>
+          <li><strong>ആദ്യ playdate-ൽ:</strong> സമയം വ്യക്തമായി പറയുക (ഉദാ: 3:30 മുതൽ 5:30 വരെ), <strong>അലർജികൾ ചോദിക്കുക,</strong> നിങ്ങളുടെ ഫോൺ നമ്പർ നൽകുക. ആദ്യമായി വരുന്ന ചെറിയ കുട്ടിയുടെ രക്ഷിതാവ് കൂടെ നിന്നേക്കാം; അത് സാധാരണമാണ്.</li>
+          <li><strong>ഭക്ഷണം കൊടുക്കുമെങ്കിൽ മുൻകൂട്ടി ചോദിക്കുക.</strong> നമ്മുടെ ഭക്ഷണം കൊടുക്കുന്നത് നല്ലതാണ്, പക്ഷേ എരിവ് കുറയ്ക്കുക, ഒരു പരിചിതമായ ഓപ്ഷനും (fruit, crackers) കൂടി വെക്കുക.</li>
+        </ol>
+        <div class="call good">
+          <span class="tag">സ്പോർട്സ് — ഏറ്റവും വേഗമേറിയ വഴി</span>
+          <p>ശനിയാഴ്ച രാവിലത്തെ junior sport ഒരു ഓസ്‌ട്രേലിയൻ സ്ഥാപനമാണ്: netball, soccer, footy (AFL/rugby), cricket, nippers (surf lifesaving), swimming, basketball.</p>
+          <p><strong>കുട്ടിക്ക് സൗഹൃദം കിട്ടുന്നതിനൊപ്പം, രക്ഷിതാവായ നിങ്ങൾക്കും ഇവിടെയാണ് സൗഹൃദം കിട്ടുക.</strong> സൈഡ്‌ലൈനിൽ നിന്ന് മറ്റു രക്ഷിതാക്കളുമായി സംസാരിക്കുക. ക്ലബ്ബിൽ സന്നദ്ധസേവനം ചെയ്യുക (BBQ, scoring, team manager). <strong>ഓസ്‌ട്രേലിയൻ സമൂഹത്തിൽ കയറാനുള്ള ഏറ്റവും വേഗമേറിയ വഴി ഇതാണ്.</strong></p>
+          <p><strong>ചെലവ്:</strong> രജിസ്ട്രേഷൻ ഫീസ് ഉണ്ട്, പക്ഷേ മിക്ക സംസ്ഥാനങ്ങളിലും <strong>സർക്കാർ വൗച്ചറുകൾ ഉണ്ട്</strong> — NSW: Active Kids; VIC: Get Active Kids; QLD: FairPlay. ഇവ ഉപയോഗിക്കുക.</p>
+        </div>
+        <p><strong>ജന്മദിന പാർട്ടികൾ:</strong> ക്ഷണം കിട്ടിയാൽ <strong>RSVP ചെയ്യുക</strong> — ഇത് നിർബന്ധമായ മര്യാദയാണ്; മറുപടി പറയാതിരിക്കുന്നത് മോശമാണ്. ചെറിയ സമ്മാനം ($20–$30) മതി. "No presents please" എന്നുണ്ടെങ്കിൽ അത് അക്ഷരാർത്ഥത്തിൽ എടുക്കുക. നിങ്ങളുടെ കുട്ടിക്ക് പാർട്ടി നടത്തുമ്പോൾ ക്ഷണത്തിൽ അലർജി വിവരവും കൃത്യമായ സമയവും (ഉദാ: 2:00–4:00 pm) ചേർക്കുക.</p>
+
+        <h3>രണ്ട് സംസ്കാരങ്ങൾക്കിടയിലെ ബാലൻസ്</h3>
+        <p>മിക്ക മലയാളി കുടുംബങ്ങളിലും ഏറ്റവും വേദനിപ്പിക്കുന്ന ഭാഗമാണിത്. ചില പ്രായോഗിക സമീപനങ്ങൾ:</p>
+        <ul class="plain">
+          <li><strong>മലയാളം വീട്ടിൽ നിലനിർത്തുക.</strong> "വീട്ടിൽ മലയാളം മാത്രം" എന്നൊരു ലളിതമായ നിയമം ദീർഘകാലാടിസ്ഥാനത്തിൽ ഫലിക്കും. <strong>കുട്ടികൾ ഇംഗ്ലീഷ് സ്വയമേവ പഠിക്കും</strong> — അതിൽ വിഷമിക്കേണ്ട. നഷ്ടപ്പെടാൻ പോകുന്നത് മലയാളമാണ്. ഗവേഷണങ്ങൾ കാണിക്കുന്നത് ദ്വിഭാഷിത്വം കുട്ടിയുടെ ഇംഗ്ലീഷിനെ ദുർബലപ്പെടുത്തുന്നില്ല എന്നാണ്.</li>
+          <li><strong>മുത്തശ്ശിമാരുമായി വീഡിയോ കോൾ.</strong> ഭാഷയ്ക്കും വൈകാരിക ബന്ധത്തിനും ഇതാണ് ഏറ്റവും ശക്തമായ ഉപകരണം.</li>
+          <li><strong>"നമ്മൾ" vs "അവർ" എന്ന ഭാഷ ഒഴിവാക്കുക.</strong> "ഇവിടത്തുകാർ ഇങ്ങനെയാണ്" എന്ന് നിരന്തരം പറഞ്ഞാൽ കുട്ടിക്ക് താൻ എവിടെയാണ് എന്ന ആശയക്കുഴപ്പം വരും. <strong>കുട്ടി രണ്ടും ആണ്</strong> — മലയാളിയും ഓസ്‌ട്രേലിയക്കാരനും. അത് ഒരു നഷ്ടമല്ല, ഒരു അധിക സമ്പത്താണ്.</li>
+          <li><strong>യാഥാർത്ഥ്യബോധമുള്ള പ്രതീക്ഷകൾ:</strong> നിങ്ങളുടെ കൗമാരക്കാരൻ കൂട്ടുകാരുമായി പുറത്തുപോകാൻ, സ്ലീപ്പോവറിന് പോകാൻ, സ്വന്തം വസ്ത്രം തിരഞ്ഞെടുക്കാൻ ആഗ്രഹിക്കും. <strong>എല്ലാം നിഷേധിക്കുന്ന സമീപനം സാധാരണയായി ഒളിച്ചുകളിയിലേക്കാണ് നയിക്കുന്നത്,</strong> അനുസരണത്തിലേക്കല്ല. ഏതൊക്കെ കാര്യങ്ങളാണ് ശരിക്കും വിട്ടുവീഴ്ചയില്ലാത്തത് എന്ന് തീരുമാനിക്കുക, ബാക്കിയിൽ വഴങ്ങുക.</li>
+          <li><strong>മകൻ/മകൾ എന്ന വ്യത്യാസം:</strong> ഓസ്‌ട്രേലിയൻ സ്കൂളിൽ ആൺകുട്ടികൾക്കും പെൺകുട്ടികൾക്കും ഒരേ സ്വാതന്ത്ര്യമാണ്. <strong>വീട്ടിൽ വ്യത്യസ്ത നിയമങ്ങളുണ്ടെങ്കിൽ കുട്ടികൾ അത് വേഗം തിരിച്ചറിയും,</strong> അത് വലിയ അകൽച്ചയുണ്ടാക്കും.</li>
+        </ul>
+        <div class="call law">
+          <span class="tag">മാനസികാരോഗ്യം</span>
+          <p>ഓസ്‌ട്രേലിയൻ സ്കൂളുകൾ ഇത് തുറന്ന് ചർച്ച ചെയ്യുന്നു. കുട്ടി "I'm feeling anxious" എന്ന് പറഞ്ഞാൽ <strong>അത് നാടകമല്ല.</strong> സ്കൂൾ counsellor സൗജന്യമാണ്, ഉപയോഗിക്കുക.</p>
+          <p><strong>Kids Helpline: 1800 55 1800</strong> (5–25 വയസ്സ്, 24 മണിക്കൂർ).</p>
+          <p><strong>വംശീയ പരാമർശങ്ങൾ/ബുള്ളിയിംഗ്</strong> സംഭവിക്കാം. കുട്ടിയോട് <strong>എപ്പോഴും പറയാൻ പറയുക.</strong> സ്കൂളിന് ആന്റി-ബുള്ളിയിംഗ് നയമുണ്ട്; എഴുതി പരാതി നൽകുക, തുടർനടപടി ചോദിക്കുക.</p>
+        </div>
+
+        <h3>സോഷ്യൽ മീഡിയ പ്രായപരിധി — ഇപ്പോൾ പ്രാബല്യത്തിലുണ്ട്</h3>
+        <div class="call law">
+          <span class="tag">2025 ഡിസംബർ 10 മുതൽ</span>
+          <p><strong>16 വയസ്സിന് താഴെയുള്ളവർക്ക് നിശ്ചിത സോഷ്യൽ മീഡിയ പ്ലാറ്റ്ഫോമുകളിൽ അക്കൗണ്ട് പാടില്ല.</strong> ലോകത്ത് ആദ്യമായാണ് ഇത്തരമൊരു നിയമം.</p>
+          <p><strong>നിലവിൽ ഉൾപ്പെട്ട 10 പ്ലാറ്റ്ഫോമുകൾ:</strong> Facebook, Instagram, Threads, TikTok, Snapchat, YouTube, X, Reddit, Twitch, Kick. <em>ഈ പട്ടിക വികസിപ്പിക്കാൻ നിയമം അനുവദിക്കുന്നു.</em></p>
+          <p><strong>രക്ഷിതാവിന്റെ സമ്മതം ഒരു ഇളവല്ല.</strong> ഉത്തരവാദിത്തം പൂർണമായും പ്ലാറ്റ്ഫോമുകൾക്കാണ് (പാലിക്കാത്തതിന് $49.5 മില്യൺ വരെ പിഴ). <strong>കുട്ടിക്കോ രക്ഷിതാവിനോ ഒരു ശിക്ഷയുമില്ല.</strong></p>
+          <p><strong>ഇതിൽ പെടാത്തവ:</strong> മെസ്സേജിംഗ് ആപ്പുകൾ (WhatsApp, Messenger), ഗെയിമിംഗ് (Roblox, Discord), വിദ്യാഭ്യാസ-ആരോഗ്യ സേവനങ്ങൾ. അക്കൗണ്ട് ഇല്ലാതെ കാണാവുന്ന ഉള്ളടക്കം ഇപ്പോഴും ലഭ്യമാണ്.</p>
+        </div>
+        <ul class="plain">
+          <li><strong>പ്രായോഗികമായി:</strong> കുട്ടികൾ പട്ടികയിൽ ഇല്ലാത്ത ആപ്പുകളിലേക്ക് (Lemon8, yope) മാറുന്നുണ്ട്, VPN ഉപയോഗിക്കുന്നുണ്ട്. <strong>നിയമം ഉണ്ടെന്നതുകൊണ്ട് മാത്രം മേൽനോട്ടം ആവശ്യമില്ലാതാകുന്നില്ല.</strong></li>
+          <li><strong>കേരളത്തിലെ ബന്ധുക്കളുമായുള്ള ബന്ധം:</strong> ഇത് കുട്ടികൾ നാട്ടിലെ കസിൻസുമായി ബന്ധപ്പെടുന്ന രീതിയെ ബാധിക്കും. WhatsApp വീഡിയോ കോൾ, കുടുംബ ഗ്രൂപ്പുകൾ എന്നിവ ഇപ്പോഴും സാധ്യമാണ് — ഇത് ബോധപൂർവം ക്രമീകരിക്കുക.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="s8">
+      <div class="wrap">
+        <div class="sechead"><span class="num">08</span><h2>സമയം, പണം, ഗതാഗതം, ജോലി</h2></div>
+        <p class="lede">ഋതുക്കൾ തലകീഴാണ്, സാമ്പത്തിക വർഷം വ്യത്യസ്തമാണ്, റെസ്യൂമെ രീതി മാറ്റണം.</p>
+
+        <h3>സമയം, കലണ്ടർ, സീസണുകൾ</h3>
+        <ul class="plain">
+          <li><strong>ഋതുക്കൾ തലകീഴാണ്.</strong> ഡിസംബർ–ഫെബ്രുവരി വേനൽ, ജൂൺ–ഓഗസ്റ്റ് ശൈത്യം. <strong>ക്രിസ്മസ് വേനൽക്കാലത്താണ്</strong> (ബീച്ചിലും ബാർബിക്യൂവിലും). ആദ്യ വർഷം ഇത് വിചിത്രമായി തോന്നും.</li>
+          <li><strong>ശൈത്യം ഗൗരവമായി എടുക്കുക.</strong> കേരളത്തിൽ നിന്ന് വരുന്നവർ ഇത് കുറച്ചുകാണുന്നു. സിഡ്നി/വൊളൊങ്ഗോങ്ങിൽ 5–8°C വരെ താഴും; മെൽബൺ, കാൻബറ, ടാസ്മാനിയ അതിലും തണുപ്പ്. <strong>ഓസ്‌ട്രേലിയൻ വീടുകളിൽ ഇൻസുലേഷൻ മോശമാണ്,</strong> അതിനാൽ അകത്തും തണുക്കും. നല്ല പുതപ്പ്, ഒരു ഹീറ്റർ, പാളികളായി ധരിക്കാവുന്ന വസ്ത്രങ്ങൾ (layers) — ആദ്യ ശൈത്യത്തിന് മുൻപ് വാങ്ങുക.</li>
+          <li><strong>ഡേലൈറ്റ് സേവിംഗ് (DST):</strong> ഒക്ടോബർ ആദ്യ ഞായറാഴ്ച ഘടികാരം ഒരു മണിക്കൂർ മുന്നോട്ട്, ഏപ്രിൽ ആദ്യ ഞായറാഴ്ച പിന്നോട്ട്.
+            <ul>
+              <li><strong>പാലിക്കുന്നവ:</strong> NSW, VIC, SA, TAS, ACT</li>
+              <li><strong>പാലിക്കാത്തവ:</strong> QLD, WA, NT — അതിനാൽ വേനൽക്കാലത്ത് സിഡ്നിയും ബ്രിസ്ബേനും വ്യത്യസ്ത സമയത്തിലാകും</li>
+            </ul>
+          </li>
+          <li><strong>കേരളവുമായുള്ള സമയവ്യത്യാസം</strong> (സിഡ്നി/വൊളൊങ്ഗോങ്): ശൈത്യകാലത്ത് (AEST) <strong>4 മണിക്കൂർ 30 മിനിറ്റ് മുന്നിൽ</strong>, DST കാലത്ത് (AEDT) <strong>5 മണിക്കൂർ 30 മിനിറ്റ് മുന്നിൽ</strong>. വർഷത്തിൽ രണ്ടുതവണ ഇത് മാറുമെന്ന് നാട്ടിലുള്ളവരോട് പറയുക.</li>
+          <li><strong>സാമ്പത്തിക വർഷം: ജൂലൈ 1 – ജൂൺ 30.</strong> (ഇന്ത്യയിലെ ഏപ്രിൽ–മാർച്ച് അല്ല.) നികുതി റിട്ടേൺ, ഇൻഷുറൻസ്, ശമ്പള വർധന എല്ലാം ഈ ചക്രത്തിലാണ്.</li>
+          <li><strong>സ്കൂൾ വർഷം: ജനുവരി അവസാനം – ഡിസംബർ പകുതി, 4 ടേമുകൾ.</strong> ഓരോ ടേമിനും ഇടയിൽ 2 ആഴ്ച അവധി, ഡിസംബർ–ജനുവരിയിൽ ഏകദേശം 6 ആഴ്ച വേനൽ അവധി. <strong>നാട്ടിലേക്കുള്ള യാത്ര ഈ അവധിക്കാലത്താണ് ആസൂത്രണം ചെയ്യേണ്ടത്</strong> — അപ്പോൾ വിമാന നിരക്ക് ഏറ്റവും ഉയർന്നതായിരിക്കും; മാസങ്ങൾക്ക് മുൻപ് ബുക്ക് ചെയ്യുക.</li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">കടകളുടെ സമയം — ഇത് ആസൂത്രണം ചെയ്യണം</span>
+          <p><strong>ക്രിസ്മസ് ദിനം, ഗുഡ് ഫ്രൈഡേ</strong> — മിക്ക കടകളും അടഞ്ഞുകിടക്കും. <strong>ANZAC Day (ഏപ്രിൽ 25) രാവിലെ</strong> പല സ്ഥലങ്ങളിലും കടകൾ ഉച്ചവരെ തുറക്കില്ല. ഈ ദിവസങ്ങൾക്ക് മുൻപ് സാധനങ്ങൾ വാങ്ങിവെക്കുക.</p>
+          <p>സാധാരണ ദിവസങ്ങളിൽ ചെറിയ കടകൾ 5–5:30-ന് അടയ്ക്കും. <strong>വ്യാഴാഴ്ച (ചിലയിടത്ത് വെള്ളി) "late night shopping"</strong> ആണ്, 9 മണി വരെ. ഡോക്ടർമാർ, സർക്കാർ ഓഫീസുകൾ, ബാങ്കുകൾ വാരാന്ത്യത്തിൽ അടഞ്ഞിരിക്കും — വെള്ളിയാഴ്ച വൈകുന്നേരം അസുഖം വന്നാൽ after-hours GP അല്ലെങ്കിൽ healthdirect.</p>
+        </div>
+
+        <h3>പൊതു ഗതാഗതം</h3>
+        <ul class="plain">
+          <li><strong>സ്മാർട്ട് കാർഡ്:</strong> NSW-ൽ <strong>Opal</strong>, വിക്ടോറിയയിൽ <strong>Myki</strong>, ക്വീൻസ്ലാൻഡിൽ <strong>go card</strong>. മിക്കയിടത്തും സാധാരണ ഡെബിറ്റ്/ക്രെഡിറ്റ് കാർഡോ ഫോണോ നേരിട്ട് ടാപ്പ് ചെയ്യാം.</li>
+          <li><strong>ഏറ്റവും ചെലവേറിയ തെറ്റ്: ഇറങ്ങുമ്പോൾ ടാപ്പ് ഓഫ് ചെയ്യാതിരിക്കൽ.</strong> കയറുമ്പോൾ ടാപ്പ് ഓൺ, ഇറങ്ങുമ്പോൾ <strong>നിർബന്ധമായും ടാപ്പ് ഓഫ്.</strong> ചെയ്തില്ലെങ്കിൽ ആ റൂട്ടിലെ ഏറ്റവും ഉയർന്ന നിരക്ക് (default fare) ഈടാക്കും. ബസ്സിലും ഫെറിയിലും ലൈറ്റ് റെയിലിലും ബാധകം.</li>
+          <li><strong>ടിക്കറ്റ് പരിശോധകർ സാദാ വസ്ത്രത്തിൽ വരാറുണ്ട്.</strong> ടിക്കറ്റില്ലാതെ യാത്ര ചെയ്താൽ $200-ന് മുകളിൽ പിഴ. "അറിയില്ലായിരുന്നു" ഒരു ഒഴികഴിവല്ല.</li>
+          <li><strong>അർഹതയില്ലാതെ കൺസഷൻ കാർഡ് ഉപയോഗിക്കുന്നത് തട്ടിപ്പാണ്,</strong> വലിയ പിഴയുണ്ട്.</li>
+        </ul>
+
+        <h3>സ്വന്തം കാർ</h3>
+        <ul class="plain">
+          <li><strong>രജിസ്ട്രേഷൻ ("rego")</strong> വർഷം തോറും പുതുക്കണം. NSW-ൽ ഇതിനോടൊപ്പം <strong>CTP green slip</strong> (Compulsory Third Party — നിർബന്ധിത വ്യക്തിഗത പരിക്ക് ഇൻഷുറൻസ്) പ്രത്യേകം വാങ്ങണം; VIC/QLD-യിൽ ഇത് rego-യിൽ ഉൾപ്പെടും. 5 വർഷത്തിൽ പഴയ വാഹനങ്ങൾക്ക് NSW-ൽ <strong>pink slip</strong> (സുരക്ഷാ പരിശോധന) വേണം.</li>
+        </ul>
+        <div class="call stop">
+          <span class="tag">CTP മതിയെന്ന മാരകമായ തെറ്റിദ്ധാരണ</span>
+          <p><strong>CTP green slip ആളുകൾക്കുണ്ടാകുന്ന പരിക്ക് മാത്രമേ കവർ ചെയ്യൂ. വാഹനങ്ങൾക്കുണ്ടാകുന്ന നാശനഷ്ടം കവർ ചെയ്യില്ല.</strong></p>
+          <p><strong>കുറഞ്ഞത് "Third Party Property Damage" ഇൻഷുറൻസ് എടുക്കുക</strong> (വർഷത്തിൽ ഏകദേശം $300–$500). ഇല്ലെങ്കിൽ, നിങ്ങളുടെ തെറ്റുകൊണ്ട് ഒരു പുതിയ BMW-യിൽ ഇടിച്ചാൽ <strong>ആ മുഴുവൻ തുകയും നിങ്ങളുടെ ബാധ്യതയാണ്.</strong> $80,000 കടത്തിൽ വീണ കുടിയേറ്റക്കാരുടെ കഥകൾ ധാരാളമുണ്ട്.</p>
+          <p><strong>Comprehensive</strong> ഇൻഷുറൻസ് നിങ്ങളുടെ കാറിനെയും കവർ ചെയ്യും; പുതിയ/വിലയുള്ള കാറിന് ഇതാണ് ശരി.</p>
+        </div>
+        <div class="call money">
+          <span class="tag">സെക്കൻഡ് ഹാൻഡ് കാർ വാങ്ങുമ്പോൾ</span>
+          <p><strong>PPSR check</strong> (Personal Property Securities Register) ചെയ്യുക — വെറും $2. കാറിന്മേൽ കടമുണ്ടോ, മോഷ്ടിക്കപ്പെട്ടതാണോ, write-off ആയിരുന്നോ എന്ന് അറിയാം. <strong>കടമുള്ള കാർ വാങ്ങിയാൽ ധനകാര്യ സ്ഥാപനത്തിന് അത് തിരിച്ചെടുക്കാം.</strong></p>
+          <p>കൂടാതെ ഒരു മെക്കാനിക്കിനെ കൊണ്ട് <strong>pre-purchase inspection</strong> ചെയ്യിക്കുക ($150–$250). <strong>ഡീലറിൽ നിന്ന് വാങ്ങിയാൽ ചില സംരക്ഷണങ്ങളുണ്ട്; സ്വകാര്യ വിൽപ്പനയിൽ ഒന്നുമില്ല</strong> — വാങ്ങിയാൽ വാങ്ങി.</p>
+        </div>
+
+        <h3>നികുതി, ആനുകൂല്യങ്ങൾ, പണമയയ്ക്കൽ</h3>
+        <ul class="plain">
+          <li><strong>നികുതി റിട്ടേൺ നിർബന്ധമാണ്.</strong> സാമ്പത്തിക വർഷം ജൂൺ 30-ന് അവസാനിക്കും.
+            <ul>
+              <li><strong>സ്വയം ഫയൽ ചെയ്യുന്നെങ്കിൽ ഒക്ടോബർ 31 ആണ് അവസാന തീയതി.</strong> myGov → ATO → myTax വഴി സൗജന്യമായി ചെയ്യാം; ജൂലൈ അവസാനത്തോടെ ശമ്പളവും ബാങ്ക് പലിശയും സ്വയമേവ നിറയ്ക്കപ്പെടും (prefill), അതിനാൽ കാത്തിരിക്കുന്നതാണ് എളുപ്പം.</li>
+              <li><strong>രജിസ്റ്റേർഡ് tax agent വഴിയാണെങ്കിൽ കൂടുതൽ സമയം കിട്ടും,</strong> പക്ഷേ <strong>ഒക്ടോബർ 31-ന് മുൻപ് agent-ൽ രജിസ്റ്റർ ചെയ്തിരിക്കണം.</strong></li>
+              <li><strong>കിഴിവുകൾ:</strong> ജോലിയുമായി ബന്ധപ്പെട്ട ചെലവുകൾ (ഉപകരണങ്ങൾ, ഹോം ഓഫീസ്, യൂണിഫോം, പ്രൊഫഷണൽ അംഗത്വം, ചില കോഴ്സുകൾ). <strong>രസീതുകൾ സൂക്ഷിക്കുക</strong> — ATO ആപ്പിൽ ഫോട്ടോ എടുത്ത് വെക്കാം.</li>
+              <li><strong>ആദ്യ വർഷം ഒരു tax agent-നെ ഉപയോഗിക്കുന്നത് മൂല്യമുള്ളതാണ്</strong> ($100–$200); അവരുടെ ഫീസും അടുത്ത വർഷം കിഴിവായി ക്ലെയിം ചെയ്യാം.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="call warn">
+          <span class="tag">Centrelink — കാത്തിരിപ്പ് കാലാവധി ഉണ്ട്</span>
+          <p>കുടുംബങ്ങൾക്കുള്ള പ്രധാന ആനുകൂല്യങ്ങൾ: <strong>Family Tax Benefit (FTB), Child Care Subsidy (CCS), Parental Leave Pay.</strong></p>
+          <p><strong>പക്ഷേ: "Newly Arrived Resident's Waiting Period" (NARWP) ബാധകമാണ്.</strong> പുതിയ സ്ഥിരതാമസക്കാർക്ക് പല പേയ്‌മെന്റുകൾക്കും കാത്തിരിപ്പ് കാലാവധിയുണ്ട് (പലതിനും 4 വർഷം വരെ; ചിലതിന് കുറവ്; ചില ഇളവുകളും ഉണ്ട്). <strong>താൽക്കാലിക വിസയിലുള്ളവർക്ക് മിക്കതും ലഭിക്കില്ല.</strong></p>
+          <p>നിങ്ങളുടെ വിസയ്ക്കും സാഹചര്യത്തിനും എന്താണ് ബാധകമെന്ന് <span class="en">servicesaustralia.gov.au</span>-ൽ പരിശോധിക്കുക — <strong>അനുമാനിക്കരുത്.</strong></p>
+        </div>
+        <div class="call money">
+          <span class="tag">നാട്ടിലേക്ക് പണമയയ്ക്കൽ</span>
+          <p><strong>ബാങ്ക് വഴി അയയ്ക്കുന്നതാണ് ഏറ്റവും ചെലവേറിയ വഴി</strong> — ഫീസ് മാത്രമല്ല, exchange rate-ൽ 3–4% മറഞ്ഞിരിക്കുന്ന മാർജിൻ ഉണ്ടാകും. Wise, Remitly, OrbitRemit, Instarem പോലുള്ള സേവനങ്ങൾ താരതമ്യം ചെയ്യുക; വ്യത്യാസം ഒരു വർഷത്തിൽ നൂറുകണക്കിന് ഡോളർ വരും.</p>
+          <p><strong>സേവനം AUSTRAC-ൽ രജിസ്റ്റർ ചെയ്തതാണെന്ന് ഉറപ്പാക്കുക.</strong> WhatsApp ഗ്രൂപ്പുകളിലെ "നല്ല റേറ്റ്" വാഗ്ദാനം ചെയ്യുന്ന അനൗപചാരിക ഹവാല ഇടപാടുകൾ നിയമവിരുദ്ധമാണ്, പണം നഷ്ടപ്പെട്ടാൽ ഒരു സംരക്ഷണവുമില്ല, <strong>കൂടാതെ നിങ്ങൾ ഒരു കുറ്റകൃത്യത്തിൽ പങ്കാളിയാകാം.</strong></p>
+        </div>
+
+        <h3>ജോലി തേടൽ: ഓസ്‌ട്രേലിയൻ രീതി</h3>
+        <div class="call stop">
+          <span class="tag">ഇന്ത്യൻ റെസ്യൂമെ ഇവിടെ പ്രവർത്തിക്കില്ല</span>
+          <p><strong>ഒരിക്കലും ചേർക്കരുത്:</strong> ഫോട്ടോ · ജനനത്തീയതി/പ്രായം · ലിംഗം · വൈവാഹിക നില · മതം · ജാതി · ദേശീയത · അച്ഛന്റെ പേര് · പാസ്പോർട്ട് വിവരങ്ങൾ · ശമ്പള പ്രതീക്ഷ.</p>
+          <p><strong>ഇവ ചേർക്കുന്നത് വിവേചന നിയമങ്ങൾ കാരണം റിക്രൂട്ടർമാർക്ക് അസ്വസ്ഥത ഉണ്ടാക്കും,</strong> പലപ്പോഴും അപേക്ഷ ഒഴിവാക്കപ്പെടും.</p>
+        </div>
+        <ul class="plain">
+          <li><strong>ചേർക്കേണ്ടത്:</strong> പേര്, ഫോൺ, ഇമെയിൽ, നഗരം (പൂർണ വിലാസം വേണ്ട), LinkedIn. <strong>ജോലി ചെയ്യാനുള്ള അവകാശം</strong> ഒരു വരിയിൽ ("Australian Permanent Resident" അല്ലെങ്കിൽ "Full working rights").</li>
+          <li><strong>നീളം:</strong> 2–3 പേജ് സ്വീകാര്യമാണ് (അമേരിക്കയിലെ 1 പേജ് നിയമം ഇവിടെയില്ല). പക്ഷേ <strong>ഓരോ റോളിനും നേട്ടങ്ങൾ (achievements) എഴുതുക, ഉത്തരവാദിത്തങ്ങളുടെ പട്ടികയല്ല.</strong> അക്കങ്ങൾ ഉപയോഗിക്കുക.</li>
+          <li><strong>ഓസ്‌ട്രേലിയൻ സ്പെല്ലിംഗ്</strong> ഉപയോഗിക്കുക (organisation, centre, analyse). ഓരോ അപേക്ഷയ്ക്കും റെസ്യൂമെ ഇഷ്ടാനുസൃതമാക്കുക; പല കമ്പനികളും ATS ഉപയോഗിക്കുന്നു — ജോലി പരസ്യത്തിലെ വാക്കുകൾ ഉൾപ്പെടുത്തുക.</li>
+          <li><strong>Referees:</strong> സാധാരണ രണ്ട് പേർ. "Available on request" എന്ന് എഴുതാം. <strong>അവരോട് മുൻകൂട്ടി ചോദിച്ച് അനുമതി വാങ്ങുക.</strong></li>
+          <li><strong>Cover letter</strong> മിക്ക അപേക്ഷകൾക്കും വേണം; സർക്കാർ ജോലികൾക്ക് "selection criteria"-യ്ക്ക് പ്രത്യേക മറുപടി വേണ്ടിവരും.</li>
+          <li><strong>അഭിമുഖത്തിൽ STAR രീതി</strong> (Situation, Task, Action, Result) ഉപയോഗിച്ച് ഉത്തരം പറയുക. <strong>"We did" എന്നല്ല, "I did" എന്ന് പറയുക</strong> — നിങ്ങളുടെ സംഭാവന എന്തായിരുന്നു എന്നാണ് അവർ അറിയേണ്ടത്. <em>(നാട്ടിലെ ടീം-കേന്ദ്രീകൃത വിനയം ഇവിടെ ദോഷം ചെയ്യും.)</em></li>
+        </ul>
+        <div class="call good">
+          <span class="tag">"ഓസ്‌ട്രേലിയൻ എക്സ്പീരിയൻസ്" എന്ന തടസ്സം</span>
+          <p>ഇത് യഥാർത്ഥമാണ്. മറികടക്കാനുള്ള വഴികൾ:</p>
+          <p><strong>സന്നദ്ധസേവനം</strong> (നിങ്ങളുടെ മേഖലയിൽ, അല്ലെങ്കിൽ ഒരു ലാഭേതര സ്ഥാപനത്തിൽ) — ഇത് ഒരു ഓസ്‌ട്രേലിയൻ referee നൽകും.</p>
+          <p><strong>പ്രാദേശിക സർട്ടിഫിക്കേഷനുകൾ:</strong> നിർമാണ മേഖലയിൽ <strong>White Card</strong>, ഹോസ്പിറ്റാലിറ്റിയിൽ <strong>RSA</strong> (Responsible Service of Alcohol), ഭക്ഷ്യമേഖലയിൽ Food Safety, കുട്ടികളുമായുള്ള ജോലിക്ക് <strong>WWCC</strong> (Working With Children Check).</p>
+          <p><strong>നെറ്റ്‌വർക്കിംഗ്:</strong> ഓസ്‌ട്രേലിയയിലെ പല ജോലികളും പരസ്യം ചെയ്യപ്പെടുന്നില്ല. LinkedIn, വ്യവസായ മീറ്റപ്പുകൾ, പ്രൊഫഷണൽ സംഘടനകൾ. <strong>"Coffee chat" ചോദിക്കുന്നത് ഇവിടെ പൂർണമായും സ്വീകാര്യമാണ്.</strong></p>
+        </div>
+        <ul class="plain">
+          <li><strong>യോഗ്യതാ അംഗീകാരം (skills assessment):</strong> ഐടിക്ക് <strong>ACS</strong>, എൻജിനീയറിംഗിന് <strong>Engineers Australia</strong>, അക്കൗണ്ടിംഗിന് CPA/CA, ആരോഗ്യ മേഖലയ്ക്ക് <strong>AHPRA</strong>, മറ്റ് പല തൊഴിലുകൾക്കും <strong>VETASSESS</strong>.</li>
+          <li><strong>ഡോക്ടർമാർ, നഴ്സുമാർ, അധ്യാപകർ, ഇലക്ട്രീഷ്യൻമാർ എന്നിവർക്ക് ഓസ്‌ട്രേലിയയിൽ പ്രാക്ടീസ് ചെയ്യാൻ പ്രത്യേക രജിസ്ട്രേഷൻ നിർബന്ധമാണ്;</strong> ഇന്ത്യൻ യോഗ്യത സ്വയമേവ അംഗീകരിക്കപ്പെടില്ല.</li>
+          <li><strong>WWCC (Working With Children Check):</strong> കുട്ടികളുമായി ബന്ധപ്പെട്ട ഏത് ജോലിക്കും, <strong>സ്കൂളിലോ സ്പോർട്സ് ക്ലബ്ബിലോ സന്നദ്ധസേവനം ചെയ്യാനും</strong> ഇത് വേണം. സന്നദ്ധസേവകർക്ക് സൗജന്യമാണ് — രക്ഷിതാക്കൾ ഇത് നേരത്തെ എടുത്തുവെക്കുന്നത് നല്ലതാണ്.</li>
+        </ul>
+
+        <h3>സമൂഹവും സാംസ്കാരിക സാക്ഷരതയും</h3>
+        <ul class="plain">
+          <li><strong>തദ്ദേശീയ ഓസ്‌ട്രേലിയക്കാർ (Aboriginal and Torres Strait Islander peoples):</strong> മീറ്റിംഗുകളും പരിപാടികളും പലപ്പോഴും <strong>"Acknowledgement of Country"</strong> കൊണ്ട് തുടങ്ങും — ഈ ഭൂമിയുടെ പരമ്പരാഗത ഉടമകളെ അംഗീകരിക്കുന്ന ഒരു ചെറിയ പ്രസ്താവന. ഒരു തദ്ദേശീയ മുതിർന്നയാൾ നടത്തുന്നതിനെ <strong>"Welcome to Country"</strong> എന്ന് പറയും. ഇത് നടക്കുമ്പോൾ നിശ്ശബ്ദമായി ബഹുമാനത്തോടെ നിൽക്കുക. <strong>ഇതൊരു ഗൗരവമുള്ള വിഷയമാണ് — തമാശയാക്കരുത്, പുതിയ ആളായി ശക്തമായ അഭിപ്രായം പറയരുത്.</strong></li>
+          <li><strong>ANZAC Day (ഏപ്രിൽ 25):</strong> യുദ്ധത്തിൽ മരിച്ചവരെ സ്മരിക്കുന്ന ദിവസം. <strong>ഇതൊരു ആഘോഷമല്ല, ഒരു അനുസ്മരണമാണ്.</strong> പുലർച്ചെയുള്ള dawn service-ൽ പങ്കെടുക്കുന്നത് സമൂഹവുമായി ഇണങ്ങാനുള്ള നല്ല വഴിയാണ്. ഒരു മിനിറ്റ് മൗനം ആചരിക്കുമ്പോൾ ഫോൺ ഒഴിവാക്കുക.</li>
+          <li><strong>Australia Day (ജനുവരി 26):</strong> ഇത് <strong>വിവാദപരമായ ഒരു ദിവസമാണ്.</strong> പലർക്കും ഇത് ദേശീയ ദിനമാണ്; തദ്ദേശീയ ജനതയ്ക്കും പലർക്കും ഇത് "Invasion Day"/"Survival Day" ആണ്. <strong>ഒരു പുതിയ കുടിയേറ്റക്കാരൻ എന്ന നിലയിൽ ഇതിൽ ശക്തമായ നിലപാട് പ്രഖ്യാപിക്കാതിരിക്കുന്നതാണ് ബുദ്ധി.</strong> പൗരത്വ ചടങ്ങുകൾ പലപ്പോഴും ഈ ദിവസമാണ് നടക്കുന്നത്.</li>
+          <li><strong>പള്ളികളും ആരാധനാലയങ്ങളും:</strong> മിക്ക പ്രധാന നഗരങ്ങളിലും സീറോ-മലബാർ, ഓർത്തഡോക്സ്, മാർത്തോമ്മാ, CSI, പെന്തക്കോസ്ത് മലയാളി ഇടവകകളുണ്ട്; ഹിന്ദു ക്ഷേത്രങ്ങളും മസ്ജിദുകളും ഉണ്ട്. ഇവ പുതിയ കുടുംബങ്ങൾക്ക് വലിയ പിന്തുണാ ശൃംഖലയാണ്.</li>
+          <li><strong>പൊതു ലൈബ്രറി — ഏറ്റവും കുറച്ച് ഉപയോഗിക്കപ്പെടുന്ന സൗജന്യ വിഭവം.</strong> അംഗത്വം സൗജന്യമാണ് (വിലാസം തെളിയിച്ചാൽ മതി). പുസ്തകങ്ങൾ, സൗജന്യ wifi, പഠനമുറികൾ, കുട്ടികൾക്കുള്ള storytime, സൗജന്യ ഓൺലൈൻ കോഴ്സുകൾ, പത്രങ്ങൾ, ഇ-ബുക്കുകൾ. <strong>കുട്ടികളുള്ള കുടുംബങ്ങൾക്ക് ഇത് ആദ്യ ആഴ്ചയിൽ ചെയ്യേണ്ട കാര്യമാണ്.</strong></li>
+          <li><strong>Op shops (Vinnies, Salvos, Red Cross):</strong> ചാരിറ്റി കടകൾ. ഫർണിച്ചർ, വസ്ത്രം, പുസ്തകം, അടുക്കള സാമഗ്രികൾ വളരെ കുറഞ്ഞ വിലയ്ക്ക്. <strong>ഇവിടെ നിന്ന് വാങ്ങുന്നതിൽ ഒരു നാണക്കേടുമില്ല</strong> — എല്ലാ വരുമാന വിഭാഗത്തിലുള്ളവരും ഉപയോഗിക്കുന്നു. പുതുതായി വീട് സജ്ജമാക്കുന്നവർക്ക് Facebook Marketplace, Gumtree, കൗൺസിലിന്റെ hard rubbish എന്നിവയും നോക്കുക.</li>
+          <li><strong>ക്രിസ്മസിലെ ഓഫീസ് സമ്മാനം:</strong> പല ടീമുകളും <strong>"Secret Santa" / "Kris Kringle"</strong> നടത്തും — ഒരു നിശ്ചിത ബജറ്റിൽ ($15–$25) ഒരാൾക്ക് മാത്രം സമ്മാനം. ആതിഥേയന്റെ വീട്ടിൽ പോകുമ്പോൾ ഒരു കുപ്പി വൈൻ, ചോക്ലേറ്റ്, അല്ലെങ്കിൽ ഒരു ഡെസേർട്ട് കൊണ്ടുപോകുന്നത് പതിവാണ്.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="s9">
+      <div class="wrap">
+        <div class="sechead"><span class="num">09</span><h2>താരതമ്യ പട്ടിക</h2></div>
+        <p class="lede">നാട്ടിലെ സ്വാഭാവിക പ്രതികരണവും ഇവിടത്തെ പ്രതീക്ഷയും. വേഗത്തിൽ നോക്കാൻ.</p>
+      </div>
+      <figure style="padding:0;overflow:hidden">
+        <div class="tscroll wide" style="margin:0;border:none;border-radius:11px">
+          <table class="cmp">
+            <thead>
+              <tr><th></th><th>സന്ദർഭം</th><th>നാട്ടിലെ പതിവ്</th><th>ഇവിടത്തെ രീതി</th><th>എന്തുകൊണ്ട്</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">1</td><td><strong>ബാത്ത്റൂം</strong></td><td>മഗ്ഗ്, തറയിൽ വെള്ളമൊഴിച്ച് കുളി</td><td>ഷവർ ഏരിയയ്ക്ക് പുറത്ത് വെള്ളമില്ല; exhaust fan ഓണാക്കുക</td><td>ഷവറിന് പുറത്ത് ഫ്ലോർ ഡ്രെയിൻ ഇല്ല. ബോണ്ട് നഷ്ടപ്പെടും</td></tr>
+              <tr><td class="num">2</td><td><strong>മാലിന്യം</strong></td><td>എല്ലാം ഒരു ബിന്നിൽ</td><td>ബിൻ അനുസരിച്ച് വേർതിരിക്കൽ; നിശ്ചിത രാത്രി റോഡരികിൽ</td><td>തെറ്റായ ബിൻ = മുഴുവൻ ലോഡ് നിരസിക്കും</td></tr>
+              <tr><td class="num">3</td><td><strong>വിലപേശൽ</strong></td><td>കടയിൽ പേശാം</td><td>നിശ്ചിത വില; കാർ, second-hand സാധനങ്ങളിൽ മാത്രം</td><td>പേശുന്നത് ജീവനക്കാരന് അപമാനമായി തോന്നാം</td></tr>
+              <tr><td class="num">4</td><td><strong>അധ്യാപകൻ/ഡോക്ടർ</strong></td><td>"Sir", "Madam", "ടീച്ചർ"</td><td>ആദ്യ പേര് (രക്ഷിതാവ്); കുട്ടികൾ Mr/Ms + കുടുംബപ്പേര്</td><td>"Sir/Madam" അകലവും അസ്വസ്ഥതയും ഉണ്ടാക്കും</td></tr>
+              <tr><td class="num">5</td><td><strong>അയൽവാസികൾ</strong></td><td>എപ്പോൾ വേണമെങ്കിലും കയറിച്ചെല്ലാം</td><td>ഒരിക്കൽ പരിചയപ്പെടുക, പിന്നെ അകലം; മുൻകൂട്ടി പറഞ്ഞ് മാത്രം</td><td>സ്വകാര്യത പരമപ്രധാനം; അതിക്രമമായി തോന്നും</td></tr>
+              <tr><td class="num">6</td><td><strong>ബോസിനോട് വിയോജിപ്പ്</strong></td><td>നിശ്ശബ്ദമായി അനുസരിക്കുക</td><td>"I see it differently because…"; അറിയില്ലെങ്കിൽ "I don't know"</td><td>മിണ്ടാതിരിക്കുന്നത് കഴിവില്ലായ്മയായി വായിക്കും</td></tr>
+              <tr><td class="num">7</td><td><strong>അതിഥികളെ ക്ഷണിക്കൽ</strong></td><td>പെട്ടെന്ന് വിളിക്കുക; നിർബന്ധിച്ച് വിളമ്പൽ</td><td>തീയതിയും സമയവും മുൻകൂട്ടി; <strong>അലർജി ചോദിക്കൽ</strong></td><td>അലർജി മരണകാരണമാകാം</td></tr>
+              <tr><td class="num">8</td><td><strong>ബിൽ അടയ്ക്കൽ</strong></td><td>ഒരാൾ എല്ലാവർക്കും വേണ്ടി</td><td>Split the bill; PayID വഴി ഉടനെ തിരികെ അയക്കൽ</td><td>മറ്റൊരാൾക്ക് വേണ്ടി അടയ്ക്കുന്നത് അവരെ കടക്കാരാക്കുന്നതായി തോന്നും</td></tr>
+              <tr><td class="num">9</td><td><strong>കുട്ടിയെ ശാസിക്കൽ</strong></td><td>ചിലപ്പോൾ ഒരു അടി</td><td>ശാരീരിക ശിക്ഷ ഇല്ല; അനന്തരഫലങ്ങൾ, സംഭാഷണം</td><td>അധ്യാപകർ mandatory reporters; child protection അന്വേഷണം വരാം</td></tr>
+              <tr><td class="num">10</td><td><strong>വാഹനമോടിക്കൽ</strong></td><td>ഹോൺ പതിവ്; വേഗപരിധി ഏകദേശം</td><td>ഹോൺ അപൂർവം; 5–10 km/h അധികം = പിഴ; ഫോൺ തൊട്ടാൽ ക്യാമറ പിടിക്കും</td><td>നിർവഹണം യന്ത്രവൽകൃതം; പോയിന്റ് തീർന്നാൽ ലൈസൻസ് പോകും</td></tr>
+              <tr><td class="num">11</td><td><strong>ബീച്ചിൽ</strong></td><td>ശാന്തമായ ഭാഗം സുരക്ഷിതം</td><td>ചുവപ്പ്-മഞ്ഞ കൊടികൾക്കിടയിൽ മാത്രം</td><td>ശാന്തമായി തോന്നുന്ന ഭാഗം പലപ്പോഴും rip current ആണ്</td></tr>
+              <tr><td class="num">12</td><td><strong>വെയിൽ</strong></td><td>"ചൂടില്ലല്ലോ, കുഴപ്പമില്ല"</td><td>UV index നോക്കുക; SPF 50+, തൊപ്പി എപ്പോഴും</td><td>ഇവിടെ UV വളരെ ഉയർന്നത്; തണുത്ത ദിവസവും പൊള്ളും</td></tr>
+              <tr><td class="num">13</td><td><strong>അസുഖം വന്നാൽ</strong></td><td>ഫാർമസിയിൽ ആന്റിബയോട്ടിക്; നേരിട്ട് സ്പെഷ്യലിസ്റ്റ്</td><td>GP-യെ കാണണം; പ്രിസ്ക്രിപ്ഷൻ വേണം; സ്പെഷ്യലിസ്റ്റിന് റഫറൽ</td><td>റഫറൽ ഇല്ലാതെ Medicare റീബേറ്റ് കിട്ടില്ല</td></tr>
+              <tr><td class="num">14</td><td><strong>വൈദ്യുതി പണി</strong></td><td>സ്വയം ചെയ്യാം</td><td>ലൈസൻസുള്ള ഇലക്ട്രീഷ്യൻ മാത്രം (ലൈറ്റ് ഫിറ്റിംഗ് പോലും)</td><td>നിയമവിരുദ്ധം; ഇൻഷുറൻസ് ക്ലെയിം നിരസിക്കും</td></tr>
+              <tr><td class="num">15</td><td><strong>എണ്ണ/ഭക്ഷണാവശിഷ്ടം</strong></td><td>സിങ്കിൽ ഒഴിക്കാം</td><td>തണുപ്പിച്ച് ജാറിൽ, ചുവന്ന ബിന്നിൽ</td><td>പൈപ്പ് അടയും; റിപ്പയർ ചെലവ് വാടകക്കാരന്റേത്</td></tr>
+              <tr><td class="num">16</td><td><strong>നടക്കുമ്പോൾ</strong></td><td>റോഡിന്റെ വക്കിലൂടെ; എവിടെയും മുറിച്ചുകടക്കാം</td><td>ഫുട്പാത്തിലൂടെ മാത്രം; crossing 20 മീ. ഉള്ളിലാണെങ്കിൽ അത്</td><td>Rule 238 പ്രകാരം നിയമം; jaywalking-ന് പിഴ</td></tr>
+              <tr><td class="num">17</td><td><strong>എസ്കലേറ്റർ</strong></td><td>എവിടെ വേണമെങ്കിലും നിൽക്കാം</td><td><strong>ഇടതുവശത്ത് നിൽക്കുക, വലതുവശം നടക്കുന്നവർക്ക്</strong></td><td>വലതുവശം തടയുന്നത് ഏറ്റവും ശ്രദ്ധിക്കപ്പെടുന്ന "പുതിയ ആൾ" അടയാളം</td></tr>
+              <tr><td class="num">18</td><td><strong>അപരിചിതരെ നോക്കൽ</strong></td><td>നോക്കിയിരിക്കുന്നത് സാധാരണം</td><td>1–2 സെക്കൻഡിൽ കൂടുതൽ അരുത്; ചിരിച്ച് തലയാട്ടി മാറ്റുക</td><td>തുറിച്ചുനോട്ടം, പ്രത്യേകിച്ച് സ്ത്രീകളെ, harassment ആയി കണക്കാക്കാം</td></tr>
+              <tr><td class="num">19</td><td><strong>വഴി കൊടുത്താൽ</strong></td><td>പ്രതികരണം വേണ്ട</td><td>കൈ ഉയർത്തി നന്ദി (thank-you wave)</td><td>ഇത് ചെയ്യാതിരിക്കുന്നത് പരുഷമായി കാണും</td></tr>
+              <tr><td class="num">20</td><td><strong>വിടപറയൽ</strong></td><td>"ശരി" എന്ന് പറഞ്ഞ് പോകാം</td><td>"Have a good day/one"; മറുപടി <strong>"You too, thanks"</strong></td><td>മറുപടി പറയാതെ പോകുന്നത് ഏറ്റവും സാധാരണമായ പിഴവ്</td></tr>
+              <tr><td class="num">21</td><td><strong>കൈകൊണ്ട് കഴിക്കൽ</strong></td><td>എപ്പോഴും സ്വാഭാവികം</td><td>വീട്ടിലും ഇന്ത്യൻ റെസ്റ്റോറന്റിലും കുഴപ്പമില്ല; ഔപചാരികമായിടത്ത് cutlery</td><td>കൈയല്ല, ശബ്ദമുണ്ടാക്കി കഴിക്കുന്നതാണ് ശ്രദ്ധിക്കപ്പെടുന്നത്</td></tr>
+              <tr><td class="num">22</td><td><strong>അതിഥിക്ക് വിളമ്പൽ</strong></td><td>പ്ലേറ്റ് നിറയ്ക്കുക, നിർബന്ധിക്കുക</td><td>കുറച്ച് വിളമ്പുക, വേണമെങ്കിൽ വീണ്ടും എടുക്കാൻ പറയുക</td><td>ഭക്ഷണം ബാക്കിവെക്കുന്നത് ഇവിടെ മോശമായി കാണും</td></tr>
+              <tr><td class="num">23</td><td><strong>ബസ്/ട്രെയിൻ</strong></td><td>ടിക്കറ്റ് എടുത്താൽ തീർന്നു</td><td>കയറുമ്പോൾ ടാപ്പ് ഓൺ, <strong>ഇറങ്ങുമ്പോൾ ടാപ്പ് ഓഫ്</strong></td><td>ടാപ്പ് ഓഫ് ചെയ്തില്ലെങ്കിൽ ഏറ്റവും ഉയർന്ന നിരക്ക് ഈടാക്കും</td></tr>
+              <tr><td class="num">24</td><td><strong>റെസ്യൂമെ</strong></td><td>ഫോട്ടോ, DOB, വൈവാഹിക നില, അച്ഛന്റെ പേര്</td><td>ഇവയൊന്നും വേണ്ട; നേട്ടങ്ങളും അക്കങ്ങളും, work rights ഒരു വരിയിൽ</td><td>വിവേചന നിയമങ്ങൾ കാരണം ഇവ റിക്രൂട്ടർമാർക്ക് പ്രശ്നമാണ്</td></tr>
+              <tr><td class="num">25</td><td><strong>കാർ ഇൻഷുറൻസ്</strong></td><td>rego/CTP മതി എന്ന ധാരണ</td><td>CTP ആളുകളുടെ പരിക്ക് മാത്രം; <strong>Third Party Property Damage എടുക്കുക</strong></td><td>നിങ്ങളുടെ തെറ്റിൽ മറ്റൊരാളുടെ കാറിന്റെ മുഴുവൻ ചെലവും നിങ്ങളുടേത്</td></tr>
+              <tr><td class="num">26</td><td><strong>പാർക്കിംഗ്</strong></td><td>ഇടമുള്ളിടത്ത് നിർത്താം; nature strip-ൽ കയറ്റാം</td><td>സൈൻ വായിക്കണം; nature strip-ൽ അരുത്; ഗതാഗത ദിശയിൽ മാത്രം</td><td>ANPR ക്യാമറ പരിശോധിക്കും; പിഴ തപാലിൽ വരും (ticketless)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption>ഇടത്തെ നിറം <b style="color:var(--lat)">കേരളത്തെയും</b> വലത്തെ നിറം <b style="color:var(--euc)">ഓസ്‌ട്രേലിയയെയും</b> സൂചിപ്പിക്കുന്നു. ഫോണിൽ പട്ടിക വശത്തേക്ക് നീക്കി വായിക്കാം.</figcaption>
+      </figure>
+    </section>
+
+    <section id="s10">
+      <div class="wrap">
+        <div class="sechead"><span class="num">★</span><h2>ആദ്യ 30 ദിവസത്തെ ചെക്ക്‌ലിസ്റ്റ്</h2></div>
+        <p class="lede">മുൻഗണനാ ക്രമത്തിൽ. ടിക്ക് ചെയ്താൽ ഈ ബ്രൗസറിൽ സൂക്ഷിക്കപ്പെടും.</p>
+        <div class="ckhead">
+          <div class="ckbar"><i id="ckfill"></i></div>
+          <span class="ckcount" id="ckcount">0 / 22</span>
+          <button class="iconbtn" id="ckreset">വീണ്ടും തുടങ്ങുക</button>
+        </div>
+        <ul class="cklist" id="cklist">
+          <li><label><input type="checkbox" id="ck1"><span><strong>TFN</strong> (Tax File Number) ATO-യിൽ അപേക്ഷിക്കുക — സൗജന്യം</span></label></li>
+          <li><label><input type="checkbox" id="ck2"><span><strong>myGov</strong> അക്കൗണ്ട് ഉണ്ടാക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck3"><span>ബാങ്ക് അക്കൗണ്ട് സ്ഥിരീകരിക്കുക, <strong>PayID സജ്ജമാക്കുക</strong></span></label></li>
+          <li><label><input type="checkbox" id="ck4"><span><strong>Medicare</strong>-ന് അപേക്ഷിക്കുക (അർഹതയുണ്ടെങ്കിൽ); ഇല്ലെങ്കിൽ OVHC/OSHC സാധുവാണെന്ന് ഉറപ്പാക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck5"><span>ഒരു <strong>GP ക്ലിനിക്കിൽ രജിസ്റ്റർ</strong> ചെയ്യുക — അസുഖം വരുന്നതിന് മുൻപ്</span></label></li>
+          <li><label><input type="checkbox" id="ck6"><span><strong>Ambulance cover</strong> എടുക്കുക (QLD/TAS അല്ലാത്തിടത്ത്)</span></label></li>
+          <li><label><input type="checkbox" id="ck7"><span>മൊബൈൽ പ്ലാൻ എടുക്കുക; <strong>000</strong> എന്ന അടിയന്തര നമ്പർ കുടുംബത്തെ പഠിപ്പിക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck8"><span>കൗൺസിലിന്റെ <strong>ബിൻ കലണ്ടർ/ആപ്പ്</strong> ഡൗൺലോഡ് ചെയ്യുക; FOGO ഉണ്ടോ എന്ന് നോക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck9"><span><strong>ഡ്രൈവിംഗ് ലൈസൻസ്</strong> നിയമങ്ങൾ പരിശോധിക്കുക — ഇന്ത്യൻ ലൈസൻസ് എത്ര കാലം സാധു?</span></label></li>
+          <li><label><input type="checkbox" id="ck10"><span>കുട്ടികളെ സ്കൂളിൽ ചേർക്കുക; അലർജി-ലഞ്ച് നയങ്ങൾ വായിക്കുക; <strong>രണ്ട് തൊപ്പി വാങ്ങുക</strong></span></label></li>
+          <li><label><input type="checkbox" id="ck11"><span>വൈദ്യുതി/ഗ്യാസ്/ഇന്റർനെറ്റ് ദാതാക്കളെ <span class="en">energymadeeasy.gov.au</span>-ൽ താരതമ്യം ചെയ്യുക</span></label></li>
+          <li><label><input type="checkbox" id="ck12"><span>വാടകവീടിന്റെ <strong>condition report</strong> ഫോട്ടോ സഹിതം പൂരിപ്പിച്ച് 7 ദിവസത്തിനുള്ളിൽ തിരികെ നൽകുക</span></label></li>
+          <li><label><input type="checkbox" id="ck13"><span><strong>Flybuys / Everyday Rewards</strong> കാർഡുകൾ എടുക്കുക — സൗജന്യം</span></label></li>
+          <li><label><input type="checkbox" id="ck14"><span>അടുത്തുള്ള ഇന്ത്യൻ ഗ്രോസറി, കൗൺസിൽ പൂൾ, പാർക്ക് കണ്ടെത്തുക</span></label></li>
+          <li><label><input type="checkbox" id="ck15"><span>കുട്ടികൾക്ക് <strong>നീന്തൽ ക്ലാസും ഒരു സ്പോർട്സ് ക്ലബ്ബും</strong> (സർക്കാർ വൗച്ചർ ഉപയോഗിച്ച്)</span></label></li>
+          <li><label><input type="checkbox" id="ck16"><span><strong>പൊതു ലൈബ്രറിയിൽ അംഗത്വം</strong> എടുക്കുക — സൗജന്യം, കുടുംബത്തിന് മുഴുവൻ</span></label></li>
+          <li><label><input type="checkbox" id="ck17"><span>പൊതു ഗതാഗത കാർഡ് (Opal/Myki/go card) എടുത്ത് <strong>ടാപ്പ് ഓഫ്</strong> ശീലമാക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck18"><span>കാർ വാങ്ങുന്നെങ്കിൽ: <strong>PPSR check + pre-purchase inspection + കുറഞ്ഞത് Third Party Property Damage ഇൻഷുറൻസ്</strong></span></label></li>
+          <li><label><input type="checkbox" id="ck19"><span>ജോലി തേടുന്നെങ്കിൽ <strong>റെസ്യൂമെ ഓസ്‌ട്രേലിയൻ ഫോർമാറ്റിലേക്ക് മാറ്റുക</strong> — ഫോട്ടോ, DOB, വൈവാഹിക നില നീക്കുക</span></label></li>
+          <li><label><input type="checkbox" id="ck20"><span>സ്കൂളിലോ ക്ലബ്ബിലോ സന്നദ്ധസേവനം ചെയ്യാൻ <strong>WWCC</strong> എടുക്കുക — സന്നദ്ധസേവകർക്ക് സൗജന്യം</span></label></li>
+          <li><label><input type="checkbox" id="ck21"><span>നാട്ടിലേക്ക് പണമയയ്ക്കാൻ ബാങ്കിന് പകരം <strong>Wise/Remitly</strong> പോലുള്ളവ താരതമ്യം ചെയ്യുക</span></label></li>
+          <li><label><input type="checkbox" id="ck22"><span>ആദ്യ ശൈത്യത്തിന് മുൻപ് <strong>ചൂട് വസ്ത്രവും പുതപ്പും ഹീറ്ററും</strong> വാങ്ങുക</span></label></li>
+        </ul>
+
+        <div class="close">
+          <h3>ഒരു അവസാന കുറിപ്പ്</h3>
+          <p style="margin-top:12px">ആദ്യത്തെ ആറു മാസം ബുദ്ധിമുട്ടായിരിക്കും. ഭാഷ അറിയാമെങ്കിലും സൂചനകൾ അറിയില്ല. അത് സ്വാഭാവികമാണ്.</p>
+          <p style="margin-top:14px">മൂന്ന് കാര്യങ്ങൾ വേഗം സഹായിക്കും:</p>
+          <ul class="plain" style="margin-top:12px">
+            <li><strong>ചോദിക്കുക.</strong> ഓസ്‌ട്രേലിയക്കാർ വിശദീകരിക്കാൻ സന്തോഷമുള്ളവരാണ്. "Sorry, I'm new here, how does this work?" എന്നത് മതി.</li>
+            <li><strong>സന്നദ്ധസേവനം ചെയ്യുക.</strong> സ്കൂൾ, സ്പോർട്സ് ക്ലബ്, ലൈബ്രറി — ഇവയാണ് ഏറ്റവും വേഗമേറിയ വഴി.</li>
+            <li><strong>മലയാളി സമൂഹത്തിൽ മാത്രം ഒതുങ്ങാതിരിക്കുക.</strong> മലയാളി അസോസിയേഷനുകൾ വിലപ്പെട്ട പിന്തുണയാണ്, പക്ഷേ അതു മാത്രമായാൽ പത്തു വർഷം കഴിഞ്ഞും നിങ്ങൾ പുറത്തുനിന്ന് നോക്കിനിൽക്കുന്ന അവസ്ഥയിലാകും.</li>
+          </ul>
+          <p style="margin-top:18px">സംശയമുള്ളപ്പോൾ ഔദ്യോഗിക ഉറവിടങ്ങൾ നോക്കുക: നിങ്ങളുടെ കൗൺസിൽ വെബ്സൈറ്റ്, സംസ്ഥാന സർക്കാർ സൈറ്റ്, <span class="en">servicesaustralia.gov.au</span>, <span class="en">fairwork.gov.au</span>, <span class="en">health.gov.au</span>, <span class="en">esafety.gov.au</span>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- theme toggle ----
+  var tbtn = document.getElementById('themebtn');
+  function readStore(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function writeStore(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  var saved = readStore('ka-theme');
+  if (saved === 'dark' || saved === 'light') document.documentElement.setAttribute('data-theme', saved);
+  if (tbtn) tbtn.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var isDark;
+    if (cur) { isDark = cur === 'dark'; }
+    else { isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
+    var next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    writeStore('ka-theme', next);
+  });
+
+  // ---- mobile nav ----
+  var nbtn = document.getElementById('navbtn');
+  var side = document.getElementById('side');
+  if (nbtn && side) {
+    nbtn.addEventListener('click', function(){
+      var open = side.classList.toggle('open');
+      nbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    side.addEventListener('click', function(e){
+      if (e.target.closest('a') && window.innerWidth < 1000) {
+        side.classList.remove('open');
+        nbtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // ---- active section in TOC ----
+  var links = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function setActive(id){
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+  if ('IntersectionObserver' in window && targets.length) {
+    var seen = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ seen[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0; });
+      var best = null, bestVal = 0;
+      Object.keys(seen).forEach(function(k){ if (seen[k] > bestVal) { bestVal = seen[k]; best = k; } });
+      if (best) setActive(best);
+    }, { rootMargin: '-80px 0px -55% 0px', threshold: [0, 0.1, 0.4, 1] });
+    targets.forEach(function(t){ io.observe(t); });
+  }
+
+  // ---- checklist ----
+  var list = document.getElementById('cklist');
+  var fill = document.getElementById('ckfill');
+  var count = document.getElementById('ckcount');
+  var reset = document.getElementById('ckreset');
+  if (list && fill && count) {
+    var boxes = Array.prototype.slice.call(list.querySelectorAll('input[type="checkbox"]'));
+    function render(){
+      var done = boxes.filter(function(b){ return b.checked; }).length;
+      fill.style.width = (boxes.length ? (done / boxes.length * 100) : 0) + '%';
+      count.textContent = done + ' / ' + boxes.length;
+    }
+    boxes.forEach(function(b){
+      if (readStore('ka-' + b.id) === '1') b.checked = true;
+      b.addEventListener('change', function(){
+        writeStore('ka-' + b.id, b.checked ? '1' : '0');
+        render();
+      });
+    });
+    if (reset) reset.addEventListener('click', function(){
+      boxes.forEach(function(b){ b.checked = false; writeStore('ka-' + b.id, '0'); });
+      render();
+    });
+    render();
+  }
+})();
+</script>
