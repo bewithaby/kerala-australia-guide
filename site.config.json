@@ -46,6 +46,34 @@
   ],
   "sections": [
     {
+      "id": "s11",
+      "slug": "about-australia",
+      "titleEn": "About Australia: facts & history",
+      "title": "ഓസ്‌ട്രേലിയ എന്ന രാജ്യം",
+      "blurb": "കേരളത്തിന്റെ 198 മടങ്ങ് വിസ്തൃതി, പക്ഷേ കുറവ് ആളുകൾ. സംസ്ഥാനങ്ങൾ, സമയം, ഋതുക്കൾ, ചരിത്രം, Acknowledgement of Country, നിർബന്ധ വോട്ടിംഗ്, UV അപകടം.",
+      "descriptionEn": "Australia in brief for new arrivals from Kerala: size and population compared with Kerala, states and time zones, reversed seasons, First Nations history and why Acknowledgement of Country happens everywhere, compulsory voting, and the sun.",
+      "keywords": "about australia for migrants, australia states time zones, acknowledgement of country meaning, compulsory voting australia, australia history for new migrants, australia UV sun danger",
+      "icon": "globe",
+      "navLabel": "ഓസ്‌ട്രേലിയ"
+    },
+    {
+      "id": "s12",
+      "slug": "before-you-fly",
+      "titleEn": "Before you fly",
+      "title": "പറക്കും മുൻപ്",
+      "blurb": "നാട്ടിൽ നിന്നേ ചെയ്യേണ്ടത്: ബാങ്ക് അക്കൗണ്ട്, ലൈസൻസ് പരിഭാഷ, വാക്സിൻ രേഖ, മരുന്നുകൾ, ബയോസെക്യൂരിറ്റി, എന്ത് കൊണ്ടുവരണം.",
+      "descriptionEn": "What to arrange in Kerala before flying to Australia: opening an Australian bank account from India, licence translation and driving history, immunisation records, the three-month medicine rule, what you must declare at biosecurity, and what to pack versus buy here.",
+      "keywords": "moving to australia checklist before you fly, australia biosecurity declare food india, bring medicines into australia rules, open australian bank account from india, kerala driving licence translation australia",
+      "icon": "plane",
+      "volatile": [
+        {
+          "what": "Incoming Passenger Card-ന് പകരം ഡിജിറ്റൽ Australia Travel Declaration വരുന്നു",
+          "source": "https://www.abf.gov.au/entering-and-leaving-australia/crossing-the-border/arrival"
+        }
+      ],
+      "navLabel": "പറക്കും മുൻപ്"
+    },
+    {
       "id": "s0",
       "slug": "whats-changed-2026",
       "titleEn": "What changed in 2026",
@@ -98,6 +126,23 @@
       "icon": "food"
     },
     {
+      "id": "s13",
+      "slug": "sim-internet",
+      "titleEn": "SIM, internet & calling India",
+      "title": "SIM, ഇന്റർനെറ്റ്, നാട്ടിലേക്ക് വിളി",
+      "blurb": "ടവറുകൾ മൂന്ന് കമ്പനികളുടേത് മാത്രം. 28 ദിവസ പ്ലാനിന്റെ കണക്ക്, ഇന്ത്യയിലേക്ക് അൺലിമിറ്റഡ് കോൾ, നാട്ടിലെ സിം നിലനിർത്തൽ, NBN.",
+      "descriptionEn": "How Australian mobile plans actually work: only three networks exist and everyone else resells them, why 28-day plans cost 13 recharges a year, which brands include unlimited calls to India, how to keep your Indian number alive for bank OTPs, and choosing an NBN plan.",
+      "keywords": "cheapest sim australia malayali, unlimited calls to india australia plan, keep indian sim active abroad otp, which network telstra optus vodafone mvno, nbn plan speed tier family",
+      "icon": "phone",
+      "volatile": [
+        {
+          "what": "പ്ലാൻ വിലകളും ഇന്ത്യയിലേക്കുള്ള കോൾ വ്യവസ്ഥകളും ഇടയ്ക്ക് മാറും",
+          "source": "https://www.accc.gov.au/consumers/internet-and-phone"
+        }
+      ],
+      "navLabel": "SIM"
+    },
+    {
       "id": "s4",
       "slug": "health-services",
       "titleEn": "Healthcare, banking & services",
@@ -115,7 +160,8 @@
           "what": "Private health waiting periods, LHC loading",
           "source": "https://www.privatehealth.gov.au"
         }
-      ]
+      ],
+      "navLabel": "Medicare"
     },
     {
       "id": "s5",
@@ -147,7 +193,8 @@
           "what": "പിഴത്തുകകളും ഡീമെറിറ്റ് പോയിന്റുകളും",
           "source": "https://www.nsw.gov.au/driving-boating-and-transport"
         }
-      ]
+      ],
+      "navLabel": "റോഡും പാർക്കിംഗും"
     },
     {
       "id": "s7",
@@ -164,6 +211,17 @@
           "source": "https://www.esafety.gov.au/social-media-age-restrictions"
         }
       ]
+    },
+    {
+      "id": "s14",
+      "slug": "community-faith",
+      "titleEn": "Community, church & temple",
+      "title": "സമൂഹവും ആരാധനയും",
+      "blurb": "സീറോ മലബാർ ഇടവകകൾ, മറ്റ് സഭകൾ, ക്ഷേത്രങ്ങൾ, മസ്ജിദുകൾ, കുട്ടികൾക്ക് മലയാളം, സമൂഹ ഗ്രൂപ്പുകളിലെ തട്ടിപ്പുകൾ.",
+      "descriptionEn": "Finding the Malayali community in Australia: Syro-Malabar parishes in every state, other Kerala church denominations, temples and mosques, Malayalam classes for children, and the scams that arrive through trusted community groups.",
+      "keywords": "syro malabar church australia parish, malayalam mass australia, malayali association melbourne sydney, malayalam class for children australia, kerala temple australia, migration agent scam check MARA",
+      "icon": "people",
+      "navLabel": "സമൂഹം"
     },
     {
       "id": "s8",
@@ -199,33 +257,43 @@
       "blurb": "TFN, myGov, PayID, GP, ambulance cover, ബിൻ കലണ്ടർ, സ്കൂൾ, ലൈബ്രറി — മുൻഗണനാ ക്രമത്തിൽ 22 ഇനം.",
       "descriptionEn": "A printable 22-item checklist for your first month in Australia, in priority order, from Tax File Number and myGov through to buying a winter coat.",
       "keywords": "moving to australia checklist, first month in australia, tax file number apply, new migrant australia to do list",
-      "icon": "check"
+      "icon": "check",
+      "navLabel": "ചെക്ക്‌ലിസ്റ്റ്"
     }
   ],
-  "brand": "Vazhi വഴി",
-  "heroPill": "പുതിയതായി എത്തുന്ന മലയാളി കുടുംബങ്ങൾക്ക് · For newly-arrived Malayali families",
+  "brand": "",
+  "heroPill": "പുതിയതായി എത്തുന്ന മലയാളി കുടുംബങ്ങൾക്ക്",
   "heroStats": [
     {
       "icon": "check",
-      "value": "22 steps",
-      "label": "ആദ്യ 30 ദിവസത്തെ ചെക്ക്‌ലിസ്റ്റ്"
+      "value": "30 ദിവസം",
+      "label": "എത്തിയ ശേഷമുള്ള ചെക്ക്‌ലിസ്റ്റ്"
     },
     {
-      "icon": "wage",
-      "value": "$26.44/hr",
-      "label": "2026 മിനിമം വേതനം"
+      "icon": "alert",
+      "value": "000",
+      "label": "പോലീസ് · ഫയർ · ആംബുലൻസ്"
     }
   ],
   "navHighlights": [
-    "whats-changed-2026",
+    "about-australia",
+    "before-you-fly",
+    "sim-internet",
     "health-services",
-    "roads-parking-safety",
-    "comparison"
+    "roads-parking-safety"
   ],
   "quickChips": [
     {
+      "slug": "before-you-fly",
+      "label": "പറക്കും മുൻപ്"
+    },
+    {
       "slug": "health-services",
       "label": "Medicare ആർക്ക് കിട്ടും"
+    },
+    {
+      "slug": "sim-internet",
+      "label": "ഏത് SIM എടുക്കണം"
     },
     {
       "slug": "home-bathroom-bins",
@@ -236,10 +304,6 @@
       "label": "പാർക്കിംഗ് സൈൻ"
     },
     {
-      "slug": "food-groceries",
-      "label": "കോഫി ഓർഡർ"
-    },
-    {
       "slug": "first-30-days",
       "label": "ചെക്ക്‌ലിസ്റ്റ്"
     }
@@ -247,9 +311,9 @@
   "journey": [
     {
       "phase": "PHASE 0",
-      "slug": "food-groceries",
+      "slug": "before-you-fly",
       "title": "പറക്കും മുൻപ് · Before you fly",
-      "body": "Biosecurity: വിത്ത്, മാംസം, മുട്ട, തേൻ, അച്ചാർ — സംശയമുണ്ടെങ്കിൽ പ്രഖ്യാപിക്കുക."
+      "body": "ബാങ്ക് അക്കൗണ്ട്, ലൈസൻസ് പരിഭാഷ, വാക്സിൻ രേഖ, മരുന്ന്, ബയോസെക്യൂരിറ്റി — നാട്ടിൽ നിന്നേ ചെയ്യേണ്ടത്."
     },
     {
       "phase": "PHASE 1",
@@ -371,5 +435,6 @@
       "what": "Fair Work — വേതന ചൂഷണ പരാതി",
       "number": "13 13 94"
     }
-  ]
+  ],
+  "heroPillEn": "For newly-arrived Malayali families"
 }

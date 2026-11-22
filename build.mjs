@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { THEME_CSS } from './theme.css.mjs';
+import { scene, hasScene } from './art.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
@@ -58,6 +59,8 @@ const I = {
   cash: '<path d="M2.5 6.5h19v11h-19zM12 9.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5"/>',
   wage: '<path d="M4 17 9 11l4 3.5L20 6M20 6h-5M20 6v5"/>',
   phone: '<path d="M8 3.5H5.5A2 2 0 0 0 3.5 5.7c.4 6.8 7 13.4 13.8 13.8a2 2 0 0 0 2.2-2V15l-4-1.5-2 2a14 14 0 0 1-4-4l2-2L8 3.5Z"/>',
+  globe: '<path d="M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17ZM3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5S14.2 18.2 12 20.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/>',
+  people: '<path d="M9.5 11.5a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5ZM3.5 20v-1.2c0-2.2 2.7-4 6-4s6 1.8 6 4V20M16.2 5.4a3.25 3.25 0 0 1 0 6.2M17.5 14.9c1.8.5 3 1.7 3 3.1V20"/>',
   bank: '<path d="M3.5 9.5 12 4l8.5 5.5M5.5 10v8M18.5 10v8M9.5 10v8M14.5 10v8M3 20h18"/>',
   search: '<circle cx="11" cy="11" r="7"/><path d="m16.4 16.4 4.1 4.1"/>',
   arrow: '<path d="M5 12h13M13 6.5 18.5 12 13 17.5"/>',
@@ -71,6 +74,7 @@ const TINT = {
   calendar: 'var(--indigo)', speech: '#7C3AED', home: 'var(--bin-purple)', food: '#C2410C',
   health: '#0891B2', work: '#DB2777', road: 'var(--rose)', school: '#059669',
   money: '#475569', table: '#D97706', check: 'var(--teal)',
+  globe: 'var(--teal-deep)', plane: 'var(--indigo-deep)', phone: '#0E7490', people: '#9333EA',
 };
 
 /* a photo for a slug, if one has been dropped in content/photos/ */
@@ -81,41 +85,61 @@ const photo = (name) => {
   return null;
 };
 
-/* Stand-in artwork when a slug has no photo. A flat block with one huge
-   centred glyph reads as a placeholder, so this is composed instead: a
-   two-tone wash, a dot screen, the section numeral set large and ghosted,
-   and the icon at a sane size. Any photo dropped in replaces it. */
-const tile = (slug, iconName, n) => {
+/* Section artwork. Every section has a drawn scene in art.mjs, so this composes
+   the shared parts around it: a two-tone wash in the section's colour, a dot
+   screen, the scene, and a small numeral badge. Sections without a scene fall
+   back to their line icon so a new slug is never a blank panel.
+
+   The scenes paint with currentColor, so `color` is set on the group: that is
+   what currentColor resolves against, and it lets one drawing carry the
+   section's own hue without duplicating the file per colour. */
+const grad = (iconName) =>
+  `linear-gradient(120deg,${TINT[iconName] || 'var(--teal)'},#0F172A)`;
+
+const tile = (slug, iconName, fit = 'slice') => {
   const c = TINT[iconName] || 'var(--teal)';
-  const uid = slug.replace(/[^a-z0-9]/g, '');
+  const uid = slug.replace(/[^a-z0-9]/g, '') + (fit === 'meet' ? 'b' : '');
   const dots = [];
   for (let y = 18; y < 300; y += 38) for (let x = 18; x < 640; x += 38) dots.push(`<circle cx="${x}" cy="${y}" r="1.7"/>`);
-  return `<svg viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice" role="presentation">
-<defs><linearGradient id="w${uid}" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="#0F172A" stop-opacity=".82"/></linearGradient></defs>
+  const art = hasScene(slug)
+    ? `<g style="color:#0F172A" opacity=".97">${scene(slug)}</g>`
+    : `<g transform="translate(290 126) scale(3.9) translate(-12 -12)" fill="none" stroke="#fff"
+         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".92">${I[iconName] || I.table}</g>`;
+  /* A banner is far wider than the 640x300 artboard, so slicing it would crop
+     the scene to a thin middle band. There the scene is fitted whole and the
+     wash moves to the container, which can fill any shape. */
+  const bg = fit === 'meet' ? '' :
+    `<defs><linearGradient id="w${uid}" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="#0F172A" stop-opacity=".72"/></linearGradient></defs>
 <rect width="640" height="300" fill="${c}"/><rect width="640" height="300" fill="url(#w${uid})"/>
-<g fill="#fff" opacity=".11">${dots.join('')}</g>
-${n ? `<text x="610" y="252" text-anchor="end" font-family="Plus Jakarta Sans,system-ui,sans-serif"
-  font-size="188" font-weight="800" fill="#fff" opacity=".13">${String(n).padStart(2, '0')}</text>` : ''}
-<g transform="translate(56 150) scale(2.9) translate(-12 -12)" fill="none" stroke="#fff"
-   stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">${I[iconName] || I.table}</g></svg>`;
+<g fill="#fff" opacity=".1">${dots.join('')}</g>`;
+  return `<svg viewBox="0 0 640 300" preserveAspectRatio="xMidYMid ${fit}" role="presentation">
+${bg}
+${art}</svg>`;
 };
 
 /* ------------------------------------------------ 3. shared chrome */
 function navBar(active) {
   const items = (CFG.navHighlights || []).map((slug) => {
     const s = sections.find((x) => x.slug === slug);
-    return s ? `<a class="item${s.slug === active ? ' on' : ''}" href="${href(s.slug)}">${s.title}</a>` : '';
+    /* navLabel, not title: full section titles are long enough in Malayalam to
+       fill the bar and squeeze the wordmark into an ellipsis. */
+    return s ? `<a class="item${s.slug === active ? ' on' : ''}" href="${href(s.slug)}">${s.navLabel || s.title}</a>` : '';
   }).join('');
+  /* The checklist is what most readers actually come for, so the nav button goes
+     straight to it. Found by slug, not by position, so reordering the sections in
+     the config cannot silently repoint it somewhere else. */
+  const ck = sections.find((s) => s.slug === 'first-30-days') || sections[sections.length - 1];
   return `<div class="topbar"><nav class="nav wrap" aria-label="Main">
   <a class="logo" href="${href('')}">
     <span class="mark">${ic('plane')}</span>
-    <span>${esc(CFG.brand || CFG.siteNameEn)}<small>${CFG.siteName}</small></span>
+    <span class="nm">${CFG.siteName}<small>${esc(CFG.siteNameEn)}</small></span>
   </a>
   ${items}
   <button class="iconbtn" id="themebtn" aria-label="Light or dark theme" title="Light / dark">${ic('sun')}</button>
-  <button class="navbtn" id="navbtn" aria-expanded="false" aria-controls="sheet">ഉള്ളടക്കം</button>
-  <a class="call" href="${href(sections[sections.length - 1].slug)}">ആരംഭിക്കുക<span> →</span></a>
+  <button class="navbtn" id="navbtn" aria-expanded="false" aria-controls="sheet"
+    aria-label="ഉള്ളടക്കം">${ic('menu')}<span>ഉള്ളടക്കം</span></button>
+  <a class="cta" href="${href(ck.slug)}">${ic('check')}<span>ചെക്ക്‌ലിസ്റ്റ്</span></a>
 </nav></div>`;
 }
 
@@ -163,7 +187,7 @@ function page({ slug, title, titleEn, desc, descEn, keywords, body, jsonld, isHo
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(title)} · ${esc(CFG.brand || CFG.siteName)}</title>
+<title>${esc(title)} · ${esc(CFG.siteName)}</title>
 <meta name="description" content="${esc(descEn)}">
 <meta name="keywords" content="${esc(keywords || '')}">
 <meta name="author" content="${esc(CFG.author)}">
@@ -246,26 +270,43 @@ function prepare(html, n, s) {
      returns the hidden one — so the ring's reset silently does nothing.
      Remove the old bar outright, then wrap the list in the ring card. */
   html = cutBlock(html, '<div class="ckhead">');
+  /* Server-render the real total so the ring never flashes a stale number
+     before app.js runs. Counting the source beats hard-coding it, which went
+     wrong the moment the checklist grew. */
+  const ckTotal = (html.match(/<input[^>]+type="checkbox"/g) || []).length;
   html = html.replace(/<ul class="cklist"[^>]*>/, (m) =>
     `<div class="checkcard"><div class="side">
       <div class="ring"><svg width="148" height="148" aria-hidden="true">
         <circle cx="74" cy="74" r="64" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="12"/>
         <circle id="ringfg" cx="74" cy="74" r="64" fill="none" stroke="#fff" stroke-width="12"
           stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="402"/></svg>
-        <div class="val" id="ringval">0/22</div></div>
+        <div class="val" id="ringval">0/${ckTotal}</div></div>
       <div class="lbl">പൂർത്തിയായത് · done</div>
       <button type="button" id="ckreset">വീണ്ടും തുടങ്ങുക</button></div>${m}`);
+  /* Close the card at the checklist's OWN </ul>. Matching the last </ul> in the
+     section instead swallowed everything after the list — the closing note ended
+     up rendered inside the two-column card, which is what made it look
+     misaligned. Walk the ul nesting from the opening tag and close there. */
   if (html.includes('class="checkcard"')) {
-    html = html.replace(/<\/ul>(?![\s\S]*<\/ul>)/, '</ul></div>');
+    const open = html.indexOf('<ul class="cklist"');
+    const re = /<ul\b[^>]*>|<\/ul>/g;
+    re.lastIndex = open;
+    let depth = 0, m, cut = -1;
+    while ((m = re.exec(html))) {
+      depth += m[0] === '</ul>' ? -1 : 1;
+      if (depth === 0) { cut = m.index + m[0].length; break; }
+    }
+    if (cut < 0) throw new Error('checklist <ul class="cklist"> is not closed in the source');
+    html = html.slice(0, cut) + '</div>' + html.slice(cut);
   }
 
   const ph = photo(s.slug);
-  const banner = `<div class="banner">${ph
-    ? `<img src="${BP}/assets/photos/${ph}" alt="" loading="lazy" decoding="async">`
-    : tile(s.slug, s.icon, n)}</div>`;
+  const banner = ph
+    ? `<div class="banner"><img src="${BP}/assets/photos/${ph}" alt="" loading="lazy" decoding="async"></div>`
+    : `<div class="banner art" style="background:${grad(s.icon)}">${tile(s.slug, s.icon, 'meet')}</div>`;
 
   const head = `<header class="ahead">
-    <a class="crumb" href="${href('')}">${ic('back')}${esc(CFG.brand || CFG.siteName)}</a>
+    <a class="crumb" href="${href('')}">${ic('back')}${esc(CFG.siteName)}</a>
     <h1>${s.title}<span class="en-sub">${String(n).padStart(2, '0')} · ${esc(s.titleEn)}</span></h1>
     <p class="lede">${s.blurb}</p>${banner}</header>`;
 
@@ -305,10 +346,15 @@ function homeBody() {
     `<a class="step reveal" href="${href(j.slug)}"><div class="n">${esc(j.phase)}</div>
       <h3>${j.title}</h3><p>${j.body}</p></a>`).join('');
 
+  /* Every card carries artwork. A photo for some and nothing for the rest reads
+     as an unfinished page, so the cards use the drawn scenes throughout and the
+     set stays consistent however many sections there are. */
   const guides = sections.map((s, i) => {
     const p = photo(s.slug);
-    const thumb = p ? `<span class="thumb"><img src="${BP}/assets/photos/${p}" alt="" loading="lazy" decoding="async"></span>` : '';
-    return `<a class="g reveal" href="${href(s.slug)}"><span class="num">${String(i + 1).padStart(2, '0')}</span>
+    const thumb = `<span class="thumb">${p
+      ? `<img src="${BP}/assets/photos/${p}" alt="" loading="lazy" decoding="async">`
+      : tile(s.slug, s.icon)}</span>`;
+    return `<a class="g reveal" href="${href(s.slug)}">
       ${thumb}<span class="ico" style="background:${TINT[s.icon] || 'var(--teal)'}">${ic(s.icon)}</span>
       <small class="lbl">${esc(s.titleEn)}</small><h3>${s.title}</h3><p>${s.blurb}</p></a>`;
   }).join('');
@@ -328,8 +374,8 @@ function homeBody() {
   return `<main id="main">
 <section class="hero"><div class="blob"></div><div class="wrap grid">
   <div>
-    <span class="pill">${CFG.heroPill}</span>
-    <h1>${CFG.tagline}<span class="en">${esc(CFG.taglineEn)}</span></h1>
+    <div class="eyebrow"><span>${CFG.heroPill}</span><em>${esc(CFG.heroPillEn || '')}</em></div>
+    <h1>${CFG.tagline}</h1>
     <p class="lede">${CFG.description}</p>
     <div class="find">
       <form class="box" role="search" onsubmit="return false">
@@ -341,7 +387,7 @@ function homeBody() {
       <div class="res" id="results" hidden></div>
     </div>
     <div class="chips">${chips}</div>
-    <div class="meta"><span>അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</span><span>${sections.length} വിഭാഗം · സൗജന്യം</span></div>
+    <div class="meta"><span>അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</span><span>സൗജന്യം · ലോഗിൻ വേണ്ട</span></div>
   </div>
   <div class="heroimg reveal"><div class="frame">${heroArt}</div>${floats}</div>
 </div></section>
@@ -353,8 +399,8 @@ function homeBody() {
 </div></section>
 
 <section class="sec" id="guides"><div class="wrap">
-  <div class="sechead"><div><h2>${sections.length} guides, zero jargon</h2>
-    <p class="sub">ഓരോ വിഭാഗവും വേറെ പേജാണ് — ആവശ്യമുള്ളത് മാത്രം വായിക്കാം, ആ ലിങ്ക് മാത്രം പങ്കുവെക്കാം.</p></div></div>
+  <div class="sechead"><div><h2>വിഭാഗങ്ങൾ · Sections</h2>
+    <p class="sub">ഓരോ വിഭാഗവും വേറെ പേജാണ്. ആവശ്യമുള്ളത് മാത്രം വായിക്കാം, ആ ലിങ്ക് മാത്രം പങ്കുവെക്കാം.</p></div></div>
   <div class="ggrid">${guides}</div>
 </div></section>
 
@@ -593,7 +639,7 @@ fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'),
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#0D9488"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#g)"/><path d="M14 38 L50 20 L40 46 L33 34 Z" fill="none" stroke="#fff" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`);
 
 fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({
-  name: CFG.siteNameEn, short_name: CFG.brand || 'KL→AU', description: CFG.descriptionEn,
+  name: CFG.siteNameEn, short_name: 'KL → AU', description: CFG.descriptionEn,
   start_url: BP + '/', display: 'standalone',
   background_color: '#F5F7FB', theme_color: '#4F46E5', lang: CFG.lang,
   icons: [{ src: BP + '/assets/icon.svg', sizes: 'any', type: 'image/svg+xml' }],

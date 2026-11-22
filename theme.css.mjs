@@ -102,24 +102,35 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
   background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(16px);
   border:1px solid color-mix(in srgb,var(--line) 90%,transparent);border-radius:999px;
   padding:8px 10px 8px 16px;box-shadow:0 8px 30px -14px rgba(15,23,42,.22)}
+/* The logo is the one item that may shrink: the buttons beside it are fixed
+   actions, so if anything has to give it is the wordmark, which truncates. With
+   nowrap on the whole row and no min-width:0 the row simply overflowed instead. */
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--f-ui);font-weight:800;
-  font-size:1rem;margin-right:auto;white-space:nowrap}
+  font-size:1rem;margin-right:auto;min-width:0;flex:1 1 auto}
 .logo .mark{width:34px;height:34px;border-radius:11px;background:var(--grad);
   display:grid;place-items:center;flex:none;box-shadow:0 4px 12px -4px rgba(79,70,229,.6)}
 .logo .mark svg{width:19px;height:19px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.logo small{display:block;font-family:var(--f-display);font-weight:600;font-size:.64rem;
-  color:var(--soft);line-height:1.2;margin-top:1px}
+/* The wordmark is Malayalam, so it needs the Malayalam display face — the UI
+   face on .logo has no Malayalam glyphs and would silently fall back. */
+.logo .nm{font-family:var(--f-display);font-weight:700;font-size:1rem;line-height:1.16;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.logo small{display:block;font-family:var(--f-ui);font-weight:700;font-size:.58rem;
+  letter-spacing:.055em;text-transform:uppercase;color:var(--soft);line-height:1.2;margin-top:2px}
 .nav .item{padding:9px 14px;border-radius:999px;font-family:var(--f-display);font-weight:600;
   font-size:.88rem;color:var(--soft);transition:.2s;white-space:nowrap}
 .nav .item:hover{background:var(--card-2);color:var(--ink)}
 .nav .item.on{background:var(--indigo-soft);color:var(--indigo-deep)}
-.nav .call{display:inline-flex;align-items:center;gap:4px;flex:none;background:var(--grad);color:#fff;
+.nav .cta{display:inline-flex;align-items:center;gap:4px;flex:none;background:var(--grad);color:#fff;
   font-family:var(--f-display);font-weight:700;font-size:.88rem;padding:10px 17px;
   border-radius:999px;transition:.2s;white-space:nowrap}
-.nav .call:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(79,70,229,.6)}
-.navbtn{display:none;background:var(--card);border:1px solid var(--line);border-radius:999px;
+.nav .cta:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(79,70,229,.6)}
+.nav .cta svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.navbtn{display:none;align-items:center;gap:7px;background:var(--card);
+  border:1px solid var(--line);border-radius:999px;
   padding:9px 15px;font-family:var(--f-display);font-weight:600;font-size:.85rem;
-  color:var(--ink);cursor:pointer}
+  color:var(--ink);cursor:pointer;flex:none}
+.navbtn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
 .iconbtn{background:var(--card);border:1px solid var(--line);border-radius:999px;
   width:38px;height:38px;display:grid;place-items:center;cursor:pointer;color:var(--soft);flex:none}
 .iconbtn:hover{color:var(--ink);border-color:var(--indigo)}
@@ -127,9 +138,14 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
 .iconbtn .half{fill:currentColor;stroke:none}
 @media(max-width:1060px){
   .nav .item{display:none}
-  .navbtn{display:block}
+  .navbtn{display:inline-flex}
 }
-@media(max-width:520px){.nav .call span{display:none}.logo small{display:none}}
+/* Below this the labels go and the buttons are icon-only, which is what keeps
+   the row inside a 390px phone. */
+@media(max-width:620px){.navbtn span{display:none}.navbtn{padding:9px 11px}}
+@media(max-width:520px){.nav .cta span{display:none}.logo small{display:none}
+  .logo .nm{font-size:.92rem}.logo{gap:8px}.logo .mark{width:30px;height:30px;border-radius:9px}
+  .logo .mark svg{width:16px;height:16px}.nav .cta{padding:10px 12px}.nav{gap:7px}}
 /* mobile sheet */
 .sheet{position:fixed;inset:0;z-index:120;background:color-mix(in srgb,var(--ink) 45%,transparent);
   backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.22s;overflow:hidden}
@@ -169,6 +185,14 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
   font-weight:700;letter-spacing:-.01em;margin:20px 0 0}
 .hero h1 .en{display:block;font-family:var(--f-ui);font-size:.42em;color:var(--indigo);
   font-weight:700;margin-top:12px;letter-spacing:-.01em;line-height:1.3}
+/* Who this is for, Malayalam over English on two lines. Not a pill: a pill is
+   one line by nature, and forcing two into it looks like a mistake. */
+.eyebrow{display:block;max-width:100%}
+.eyebrow span{display:block;font-family:var(--f-display);font-weight:600;font-size:1rem;
+  line-height:1.4;color:var(--indigo-deep)}
+.eyebrow em{display:block;font-family:var(--f-ui);font-style:normal;font-weight:700;
+  font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--soft);margin-top:4px}
+@media(max-width:560px){.eyebrow span{font-size:.94rem}.eyebrow em{font-size:.68rem;letter-spacing:.05em}}
 .hero .lede{color:var(--soft);font-size:1.04rem;max-width:36em;margin-top:16px}
 .hero .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;font-family:var(--f-ui);
   font-size:.78rem;color:var(--faint)}
@@ -245,11 +269,9 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
 .g small.lbl{font-family:var(--f-ui);font-size:.64rem;font-weight:700;letter-spacing:.07em;
   text-transform:uppercase;color:var(--faint)}
 .g p{font-size:.86rem;color:var(--soft);line-height:1.6}
-.g .num{position:absolute;top:17px;right:19px;font-family:var(--f-ui);font-size:.76rem;
-  font-weight:800;color:var(--line)}
 .g .thumb{border-radius:16px;overflow:hidden;height:130px;margin-bottom:3px;background:var(--card-2)}
 .g .thumb img,.g .thumb svg{width:100%;height:100%;object-fit:cover;transition:.4s;display:block}
-.g:hover .thumb img{transform:scale(1.06)}
+.g:hover .thumb img,.g:hover .thumb svg{transform:scale(1.06)}
 
 /* 2026 notification cards */
 .notifwrap{display:grid;grid-template-columns:1fr 1fr;gap:15px}
@@ -316,6 +338,14 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
 .ahead .banner{margin-top:22px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
   height:200px;background:var(--card-2)}
 .ahead .banner img,.ahead .banner svg{width:100%;height:100%;object-fit:cover;display:block}
+/* A drawn banner carries its wash on the container, so the scene can be fitted
+   whole instead of cropped to a strip. The dots are the same texture the card
+   thumbs get, redrawn in CSS because the SVG no longer paints its background. */
+.ahead .banner.art{background-size:cover;position:relative}
+.ahead .banner.art::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.14) 1.6px,transparent 1.6px);
+  background-size:38px 38px}
+.ahead .banner.art svg{object-fit:contain;position:relative}
 /* the single-page build's own heading block is replaced by .ahead */
 .sechead-legacy{display:none}
 
@@ -425,6 +455,21 @@ figcaption b{color:var(--ink);font-weight:600}
 .verify a{color:var(--indigo-deep);text-decoration:underline;text-underline-offset:2px}
 .verify p{margin-top:10px;font-size:.9rem;color:var(--soft)}
 
+/* official links.
+   Readers act on these, so they have to look different from ordinary bold text
+   and be obviously government sources. The arrow is generated, not typed, so it
+   never ends up in the search index or in a copied quote. */
+.ol{color:var(--indigo-deep);text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:3px;font-weight:600}
+.ol::after{content:" \\2197";text-decoration:none;display:inline-block;font-weight:700}
+.ol:hover{color:var(--teal-deep)}
+.olinks{margin-top:22px;padding:17px 20px;border-radius:var(--r-sm);background:var(--card);
+  border:1px solid var(--line);border-left:3px solid var(--indigo);
+  display:flex;flex-direction:column;gap:9px;box-shadow:var(--shadow)}
+.olinks .ttl{font-family:var(--f-ui);font-size:.66rem;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--indigo-deep)}
+.olinks .ol{font-size:.97rem;line-height:1.5}
+
 /* checklist */
 /* The card sits inside a 68ch reading column, so its own width is what should
    drive the split — a viewport breakpoint would give it two columns in 430px
@@ -449,6 +494,11 @@ figcaption b{color:var(--ink);font-weight:600}
 .cklist{padding:20px 22px;display:grid;grid-template-columns:1fr;gap:3px 20px;list-style:none}
 @container (min-width:1020px){.cklist{grid-template-columns:1fr 1fr}}
 .cklist li{border:none}
+/* An official link sits outside the <label> on purpose: inside it, clicking the
+   link would also toggle the checkbox, because a label activates its control
+   from anywhere in its subtree. The indent lines it up with the item's text
+   (20px box + 11px gap + 8px label padding). */
+.cklist li .ol{display:inline-block;margin:-2px 0 8px 39px;font-size:.84rem;line-height:1.45}
 .cklist label{display:flex;gap:11px;align-items:flex-start;padding:10px 8px;border-radius:11px;
   cursor:pointer;font-size:.95rem;line-height:1.6;transition:.15s}
 .cklist label:hover{background:var(--card-2)}

@@ -19,23 +19,32 @@ content/photos/*.jpg    ← section photographs, matched by filename to slug
 content/og/*.png        ← link-preview cards (regenerate only if titles change)
 site.config.json        ← domain, slugs, titles, dates, home-page blocks (edit this)
 theme.css.mjs           ← the whole design system, one exported string
+art.mjs                 ← the drawn banner artwork, one scene per section
 build.mjs               ← splits the source into dist/
 og.mjs                  ← renders the link-preview PNGs
 serve.mjs               ← local preview
 dist/                   ← generated. Never edit, never commit.
 ```
 
-### Photographs
+### Artwork
 
-`photo(slug)` looks in `content/photos/` for `<slug>.jpg|jpeg|png|webp`. Drop a
-file named after a section's slug and that section's page and home-page card use
-it. Leave it out and the build draws a generated banner instead, so a missing
-photo is never a broken page. `hero.jpg` is the home page; `coffee.jpg` sits
-behind the coffee-ordering panel.
+Every section has a drawn scene in `art.mjs`, keyed by slug, and that is what
+the cards and section banners use. Add a section without a scene and it falls
+back to its line icon, so a new slug is never a blank panel.
 
-**Check the rights on anything you add here.** These sit on a public page under
-a named author, so a photograph needs to be yours, licensed, or public domain,
-and the licence needs to be recorded somewhere you can find it again.
+They are drawings rather than photographs on purpose. Every image here sits on a
+public page under a named author, so each one needs a licence that can be
+produced on request. Stock photography cannot clear that without a paper trail,
+and generated photographs carry no usable provenance at all. Drawings also cost
+nothing to ship, recolour with the theme, and cover every section, which a photo
+set never manages.
+
+To use a photograph instead, drop `<slug>.jpg|jpeg|png|webp` into
+`content/photos/` and it takes over for that section automatically. `hero.jpg`
+is the home page and `coffee.jpg` sits behind the coffee panel.
+
+**Check the rights on anything you add there,** and record the licence somewhere
+you can find it again.
 
 ### Theming
 
@@ -50,7 +59,7 @@ you rename or delete a variable, and grep `content/guide.html` first.
 
 ```bash
 node build.mjs      # builds dist/
-npm run dev         # builds, then serves at http://localhost:4321
+npm run dev         # builds, then serves at http://localhost:4321/kerala-australia-guide/
 ```
 
 No dependencies are needed for the build. Node 18+ is enough.
@@ -97,7 +106,11 @@ These keys drive it, and each one is safe to shorten or drop:
 | `changes2026` | the what-changed cards |
 | `coffee` | the coffee-ordering panel, one tab per drink |
 | `emergency` | the numbers in the emergency drawer |
-| `navHighlights` | the promoted links in the sidebar |
+| `navHighlights` | which sections appear in the top bar |
+
+Each section may also carry `navLabel`, a short name used in the top bar. Full
+Malayalam titles are long enough to fill the bar and squeeze the wordmark into
+an ellipsis, so the promoted ones get a two-word label instead.
 
 `heroStats` and `changes2026` carry figures that go stale. They belong in the
 1 July review along with everything under `volatile`.
