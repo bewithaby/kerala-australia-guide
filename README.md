@@ -56,6 +56,12 @@ If you are serving from a sub-path instead of a subdomain — say
 While you are in there, also set `feedbackEmail` (or `feedbackUrl`) so readers
 can report an error, and bump `lastVerified` whenever you re-check the content.
 
+`description` does double duty: it is the paragraph under the home-page heading
+*and* the text WhatsApp, Facebook and Google show. Keep it short enough to
+survive a link preview, which shows roughly two lines. If you ever want the page
+copy to run longer than the share copy, add a `heroText` field — the build uses
+it for the page and leaves `description` for the preview.
+
 ---
 
 ## Deploying
