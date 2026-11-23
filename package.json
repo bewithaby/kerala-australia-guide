@@ -11,7 +11,7 @@
     "dev": "node build.mjs && node serve.mjs"
   },
   "devDependencies": {
-    "playwright": "1.56.0"
+    "playwright": "^1.65.1"
   },
   "engines": {
     "node": ">=18"
