@@ -184,7 +184,6 @@ function footer() {
     <div><h4>ഔദ്യോഗിക ഉറവിടങ്ങൾ</h4><div class="list">${src}</div></div>
     <div><h4>ഈ ഗൈഡിനെക്കുറിച്ച്</h4>
       <p>${byline} എഴുതിയത്. ഓരോ വിഭാഗവും വേറെ പേജാണ്, ആവശ്യമുള്ള ലിങ്ക് മാത്രം പങ്കുവെക്കാം.</p>
-      <p style="margin-top:9px">അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</p>
       ${hire}</div>
   </div>
   <div class="wrap legal"><span>നിയമങ്ങൾ സംസ്ഥാനവും കൗൺസിലും അനുസരിച്ച് മാറും. അവസാന വാക്ക് ഔദ്യോഗിക ഉറവിടമാണ്.</span>${fb ? `<span>${fb}</span>` : ''}</div>
