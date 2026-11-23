@@ -301,8 +301,13 @@ function prepare(html, n, s) {
   }
 
   const ph = photo(s.slug);
+  /* The section art is square and the banner is a wide strip, so cropping to
+     fill would behead every figure in it. The same image is used twice instead:
+     blurred and scaled to fill the strip, with the untouched square centred on
+     top. Nothing is cut, and the wash picks up each picture's own colours. */
   const banner = ph
-    ? `<div class="banner"><img src="${BP}/assets/photos/${ph}" alt="" loading="lazy" decoding="async"></div>`
+    ? `<div class="banner photo" style="--img:url('${BP}/assets/photos/${ph}')">
+         <img src="${BP}/assets/photos/${ph}" alt="" loading="lazy" decoding="async"></div>`
     : `<div class="banner art" style="background:${grad(s.icon)}">${tile(s.slug, s.icon, 'meet')}</div>`;
 
   const head = `<header class="ahead">
@@ -571,7 +576,17 @@ let photoCount = 0;
 if (fs.existsSync(PH)) {
   const out = path.join(DIST, 'assets', 'photos');
   fs.mkdirSync(out, { recursive: true });
-  for (const f of fs.readdirSync(PH)) { fs.copyFileSync(path.join(PH, f), path.join(out, f)); photoCount++; }
+  /* Only files, and only real image types. Keeping source art in a subfolder
+     here is a reasonable thing to do, and a flat copyFileSync throws EISDIR on
+     the first directory it meets, which fails the whole build. */
+  const OK = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg']);
+  for (const f of fs.readdirSync(PH)) {
+    const from = path.join(PH, f);
+    if (!fs.statSync(from).isFile()) continue;
+    if (!OK.has(path.extname(f).toLowerCase())) continue;
+    fs.copyFileSync(from, path.join(out, f));
+    photoCount++;
+  }
 }
 
 /* search index */

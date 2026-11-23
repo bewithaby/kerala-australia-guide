@@ -269,7 +269,9 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
 .g small.lbl{font-family:var(--f-ui);font-size:.64rem;font-weight:700;letter-spacing:.07em;
   text-transform:uppercase;color:var(--faint)}
 .g p{font-size:.86rem;color:var(--soft);line-height:1.6}
-.g .thumb{border-radius:16px;overflow:hidden;height:130px;margin-bottom:3px;background:var(--card-2)}
+/* 4:3, not a fixed height: the section art is square, and a 130px band out of
+   a square frame cut the tops off the people in it. */
+.g .thumb{border-radius:16px;overflow:hidden;aspect-ratio:4/3;margin-bottom:3px;background:var(--card-2)}
 .g .thumb img,.g .thumb svg{width:100%;height:100%;object-fit:cover;transition:.4s;display:block}
 .g:hover .thumb img,.g:hover .thumb svg{transform:scale(1.06)}
 
@@ -337,6 +339,21 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wr
 .ahead .lede{color:var(--soft);font-size:1.04rem;margin-top:14px;max-width:62ch;line-height:1.7}
 .ahead .banner{margin-top:22px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
   height:200px;background:var(--card-2)}
+/* A square picture in a wide strip: blur a copy to fill the strip, then sit the
+   whole square on top of it. Cropping to fill would cut the subject in half,
+   and letterboxing against flat grey would look like a mistake. */
+.ahead .banner.photo{height:auto;aspect-ratio:21/9;max-height:380px;position:relative;isolation:isolate}
+.ahead .banner.photo::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:var(--img);background-size:cover;background-position:center;
+  filter:blur(30px) saturate(1.25);transform:scale(1.2)}
+.ahead .banner.photo::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 28%,transparent 72%,rgba(255,255,255,.22))}
+.ahead .banner.photo img{width:auto;max-width:100%;height:100%;margin:0 auto;object-fit:contain}
+@media(max-width:700px){.ahead .banner.photo{aspect-ratio:16/9}}
+:root[data-theme="dark"] .ahead .banner.photo::after{
+  background:linear-gradient(90deg,rgba(15,23,42,.3),transparent 28%,transparent 72%,rgba(15,23,42,.3))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ahead .banner.photo::after{
+  background:linear-gradient(90deg,rgba(15,23,42,.3),transparent 28%,transparent 72%,rgba(15,23,42,.3))}}
 .ahead .banner img,.ahead .banner svg{width:100%;height:100%;object-fit:cover;display:block}
 /* A drawn banner carries its wash on the container, so the scene can be fitted
    whole instead of cropped to a strip. The dots are the same texture the card

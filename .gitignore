@@ -1,8 +1,14 @@
 node_modules/
 node_modules_pw
 dist/
-.DS_Store
 *.log
 
 # scratch test harnesses (screenshots, overflow probes, functional checks)
 .*.mjs
+
+# macOS junk
+.DS_Store
+
+# source art kept beside the exports; the build skips subfolders here.
+# The shipped files are content/photos/<slug>.jpg.
+content/photos/section images/
