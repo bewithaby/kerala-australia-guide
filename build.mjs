@@ -179,9 +179,15 @@ function footer() {
 /* ------------------------------------------------ 4. page shell */
 function page({ slug, title, titleEn, desc, descEn, keywords, body, jsonld, isHome, prog }) {
   const canonical = url(slug);
-  const png = `og${slug ? '-' + slug : ''}.png`;
-  const hasPng = fs.existsSync(path.join(ROOT, 'content', 'og', png));
-  const ogImg = `${BASE}/assets/${hasPng ? png : 'og.png'}`;
+  /* Cards are JPEG now; .png is still accepted so a half-finished migration
+     never leaves a page with no preview image at all. */
+  const ogDir = path.join(ROOT, 'content', 'og');
+  const names = slug
+    ? [`og-${slug}.jpg`, `og-${slug}.png`, 'og.jpg', 'og.png']
+    : ['og.jpg', 'og.png'];
+  const ogFile = names.find((f) => fs.existsSync(path.join(ogDir, f))) || 'og.jpg';
+  const ogImg = `${BASE}/assets/${ogFile}`;
+  const ogType = ogFile.endsWith('.png') ? 'image/png' : 'image/jpeg';
   return `<!doctype html>
 <html lang="${CFG.lang}">
 <head>
@@ -199,7 +205,7 @@ function page({ slug, title, titleEn, desc, descEn, keywords, body, jsonld, isHo
 <meta property="og:title" content="${esc(title)} — ${esc(titleEn)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${ogImg}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="${ogType}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
