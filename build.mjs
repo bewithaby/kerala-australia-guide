@@ -176,7 +176,7 @@ function footer() {
   const h = CFG.hire || {};
   const hire = h.ml || h.en ? `<div class="hire">
       ${h.ml ? `<p>${h.ml}</p>` : ''}
-      ${h.en ? `<p class="en">${esc(h.en)}</p>` : ''}
+      ${h.en ? `<p${h.ml ? ' class="en"' : ''}>${esc(h.en)}</p>` : ''}
       ${h.url ? `<a href="${esc(h.url)}" rel="noopener" target="_blank">${esc(h.cta || h.url)}<span>&rsaquo;</span></a>` : ''}
     </div>` : '';
   return `<footer><div class="wrap foot">
@@ -712,7 +712,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
 const OG = path.join(ROOT, 'content', 'og');
 let ogCount = 0;
 if (fs.existsSync(OG)) for (const f of fs.readdirSync(OG)) {
-  if (f.endsWith('.png')) { fs.copyFileSync(path.join(OG, f), path.join(DIST, 'assets', f)); ogCount++; }
+  if (/\.(jpe?g|png)$/.test(f)) { fs.copyFileSync(path.join(OG, f), path.join(DIST, 'assets', f)); ogCount++; }
 }
 
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
