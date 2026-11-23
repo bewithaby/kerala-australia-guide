@@ -165,16 +165,41 @@ function footer() {
     `<a href="${esc(o.url)}" rel="noopener nofollow" target="_blank">${esc(o.label)}</a>`).join('');
   const fb = CFG.feedbackUrl ? `<a href="${esc(CFG.feedbackUrl)}" rel="noopener">തെറ്റ് കണ്ടോ? അറിയിക്കുക</a>`
     : (CFG.feedbackEmail ? `<a href="mailto:${esc(CFG.feedbackEmail)}?subject=Guide%20correction">തെറ്റ് കണ്ടോ? അറിയിക്കുക</a>` : '');
+
+  /* The byline links to the author's own site. rel is "author me", not nofollow:
+     this is a real attribution, and nofollow here would tell search engines to
+     ignore the one link that establishes who wrote the guide. */
+  const byline = CFG.authorUrl
+    ? `<a class="me" href="${esc(CFG.authorUrl)}" rel="author me noopener" target="_blank">${esc(CFG.author)}</a>`
+    : esc(CFG.author);
+
+  const h = CFG.hire || {};
+  const hire = h.ml || h.en ? `<div class="hire">
+      ${h.ml ? `<p>${h.ml}</p>` : ''}
+      ${h.en ? `<p class="en">${esc(h.en)}</p>` : ''}
+      ${h.url ? `<a href="${esc(h.url)}" rel="noopener" target="_blank">${esc(h.cta || h.url)}<span>&rsaquo;</span></a>` : ''}
+    </div>` : '';
   return `<footer><div class="wrap foot">
     <div><h4>ശ്രദ്ധിക്കുക · Please note</h4><p>${CFG.disclaimer}</p></div>
     <div><h4>ഔദ്യോഗിക ഉറവിടങ്ങൾ</h4><div class="list">${src}</div></div>
     <div><h4>ഈ ഗൈഡിനെക്കുറിച്ച്</h4>
-      <p>${esc(CFG.author)} എഴുതിയത്. ഓരോ വിഭാഗവും വേറെ പേജാണ് — ആവശ്യമുള്ള ലിങ്ക് മാത്രം പങ്കുവെക്കാം.</p>
-      <p style="margin-top:9px">അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</p></div>
+      <p>${byline} എഴുതിയത്. ഓരോ വിഭാഗവും വേറെ പേജാണ്, ആവശ്യമുള്ള ലിങ്ക് മാത്രം പങ്കുവെക്കാം.</p>
+      <p style="margin-top:9px">അവസാനം പരിശോധിച്ചത്: ${esc(CFG.lastVerified)}</p>
+      ${hire}</div>
   </div>
   <div class="wrap legal"><span>നിയമങ്ങൾ സംസ്ഥാനവും കൗൺസിലും അനുസരിച്ച് മാറും. അവസാന വാക്ക് ഔദ്യോഗിക ഉറവിടമാണ്.</span>${fb ? `<span>${fb}</span>` : ''}</div>
 </footer>`;
 }
+
+/* One author identity for every page's structured data. url is the author's own
+   site and sameAs carries the other profiles, which is how a search engine ties
+   the byline to a person rather than to a bare name string. */
+const PERSON = {
+  '@type': 'Person',
+  name: CFG.author,
+  url: CFG.authorUrl || undefined,
+  sameAs: (CFG.authorProfiles || []).length ? CFG.authorProfiles : undefined,
+};
 
 /* ------------------------------------------------ 4. page shell */
 function page({ slug, title, titleEn, desc, descEn, keywords, body, jsonld, isHome, prog }) {
@@ -626,7 +651,7 @@ sections.forEach((s, i) => {
       '@context': 'https://schema.org', '@type': 'Article',
       headline: `${s.title} — ${s.titleEn}`, description: s.descriptionEn,
       inLanguage: CFG.lang, url: url(s.slug), dateModified: CFG.lastVerified,
-      author: { '@type': 'Person', name: CFG.author, url: CFG.authorUrl || undefined },
+      author: PERSON,
       isPartOf: { '@type': 'WebSite', name: CFG.siteNameEn, url: url('') },
     },
   }));
@@ -641,7 +666,7 @@ fs.writeFileSync(path.join(DIST, 'index.html'), page({
     '@context': 'https://schema.org', '@type': 'WebSite',
     name: CFG.siteNameEn, alternateName: CFG.siteName,
     description: CFG.descriptionEn, inLanguage: CFG.lang, url: url(''),
-    author: { '@type': 'Person', name: CFG.author, url: CFG.authorUrl || undefined },
+    author: PERSON,
     hasPart: sections.map((s) => ({ '@type': 'Article', name: s.titleEn, url: url(s.slug) })),
   },
 }));

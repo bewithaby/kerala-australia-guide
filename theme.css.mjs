@@ -568,14 +568,33 @@ figcaption b{color:var(--ink);font-weight:600}
 .drawer .row .n{font-family:var(--f-ui);font-weight:800;font-size:1rem;color:var(--rose);white-space:nowrap}
 
 /* ============================================================ footer */
+/* The emergency button is fixed to the bottom-right of the viewport, so at the
+   very bottom of the page it sat on top of the legal row and covered the
+   "spotted an error" link. The extra bottom padding parks it in clear space. */
 footer{margin-top:70px;background:#0F172A;color:#B9C4D6;
-  padding:52px 0 calc(32px + env(safe-area-inset-bottom,0px))}
+  padding:52px 0 calc(96px + env(safe-area-inset-bottom,0px))}
 .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:38px}
 @media(max-width:820px){.foot{grid-template-columns:1fr;gap:28px}}
 footer h4{color:#fff;margin-bottom:11px;font-size:1rem}
 footer p{font-size:.86rem;opacity:.8;line-height:1.7}
 footer .list a{display:block;font-family:var(--f-ui);font-size:.86rem;padding:4px 0;opacity:.85}
 footer .list a:hover{color:#7EE0D2;opacity:1}
+/* byline link: readable against the dark footer, underlined so it is obviously
+   a link and not just the author's name set in a different colour */
+footer a.me{color:#fff;font-weight:600;text-decoration:underline;
+  text-decoration-color:rgba(126,224,210,.6);text-underline-offset:3px}
+footer a.me:hover{color:#7EE0D2;text-decoration-color:#7EE0D2}
+
+/* available-for-work note */
+.hire{margin-top:16px;padding:14px 16px;border-radius:14px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13)}
+.hire p{font-size:.85rem;line-height:1.6;opacity:.92}
+.hire p.en{font-family:var(--f-ui);font-size:.78rem;opacity:.68;margin-top:4px}
+.hire a{display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+  font-family:var(--f-ui);font-size:.84rem;font-weight:700;color:#7EE0D2}
+.hire a span{transition:transform .2s}
+.hire a:hover span{transform:translateX(3px)}
+
 .legal{margin-top:34px;padding-top:19px;border-top:1px solid rgba(255,255,255,.12);
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;opacity:.72}
 .legal a{color:#7EE0D2}
